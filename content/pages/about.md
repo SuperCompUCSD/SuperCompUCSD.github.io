@@ -2,6 +2,7 @@
 title: 'Who are we'
 image: images/writer.jpeg
 url: "about"
+author: org
 question: true
 menu:
   main:

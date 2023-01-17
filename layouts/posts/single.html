@@ -3,7 +3,8 @@
 {{ define "main" }}
   <div class="blog">
     {{ if .Site.Params.showAuthorOnPosts }}
-      {{ partial "author.html" . }}
+      {{ $author := index .Site.Data.author .Params.author }}
+      {{ partial "author.html" (dict "context" . "author" $author) }}
     {{ end }}
     <div class="intro">
       <h1>{{ .Title }}{{ if .Params.dot }}<span class="dot">.</span>{{ end }}{{ if .Params.question }}<span class="dot">?</span>{{ end }}{{ if .Params.bang }}<span class="dot">!</span>{{ end }}</h1>
