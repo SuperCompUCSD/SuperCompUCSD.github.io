@@ -1,0 +1,13 @@
+.sponsors {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .sponsor {
+        padding: 1rem;
+        --ring-color: rgb(17 24 39 / 0.05);
+        border-radius: 0.5rem;
+        box-shadow: 2 2 2 black;
+        width: 20%;
+    }
+}
