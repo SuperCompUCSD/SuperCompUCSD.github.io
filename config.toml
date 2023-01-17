@@ -16,10 +16,10 @@ pygmentsUseClasses = true
 [params]
   google_analytics_id = ""
   twitter_handle = "@SuperCompUCSD"
-  showAuthorOnHomepage = true
-  showAuthorOnPosts = false
+  showAuthorOnHomepage = false
+  showAuthorOnPosts = true
   showPostsOnHomepage = false
-  addDot = true
+  addBang = true
   addFrame = true
   highlightColor = '#7b16ff'
   baseColor = "#ffffff"

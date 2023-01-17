@@ -1,7 +1,8 @@
 ---
-title: 'About'
+title: 'Who are we'
 image: images/writer.jpeg
 url: "about"
+question: true
 menu:
   main:
     name: "About"

@@ -1,5 +1,7 @@
 {
-  "name": "Winston Smith",
-  "title": "Writer & Futurist",
-  "image": "images/author.jpg"
+  "org": {
+    "name": "Supercomputing @ UCSD",
+    "title": "",
+    "image": "images/authors/supercompucsd.jpg"
+  }
 }
