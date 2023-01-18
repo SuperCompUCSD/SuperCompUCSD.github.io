@@ -1,6 +1,6 @@
 ---
 title: 'Who are we'
-image: images/writer.jpeg
+image: images/team.jpeg
 url: "about"
 author: org
 question: true
@@ -10,44 +10,16 @@ menu:
     weight: 3
 ---
 
-## Contra vagos
+Supercomputing @ UCSD was founded in 2019 as a group of a few students looking to participate
+in [SCC](https://sc22.supercomputing.org/program/studentssc/student-cluster-competition/),
+the Student Cluster Competition, a competition where students from around the world compete
+to build the most efficient supercomputer. Since then, we have been competing each year and
+slowly but surely building our repertoire of knowledge and experience in HPC. This year,
+however, we've become interested in sharing our knowledge with fellow students at UCSD
+and empowering them to join this exciting field.
 
-Lorem _markdownum notam si_ lintea meque certa [en meumque
-illis](#cohibentem-iuvenaliter), diu fatigant, nec praedae concustodita arcet.
-[Paviunt castris](#nemorisque-urimur-violentus) cur errat ventis causa! Silvas
-sine satis vocat praedam moverat, precor, non sola bovis neque mihi. Primum
-utilis nympham, et certus amplexas Deiphobum palmis credas ambo, nec.
-
-> Excidit gente, si orat suo quaeque dura Calydon nata? Pars auro post stetit
-> adfusique imis amplexus. Agmina per fabricator
-> mittere Erymanthon habetque tot.
-
-**Cineres Nile ipsa** origine discurrunt adest Unde, et quem clausus, imo,
-virens quoque tales, potuit. Ingentes insilit corpore nutricis praebebat roganti
-licuit. Denique a vestros adulantum in bella lina parte et arte generi di igitur
-quis, digitis pedes. Cum resonant tamen, namque in anxia. Non nostri trahens
-ancora.
-
-## Ducem oculos pallor tale quoque
-
-Pectora de Hebe veste mansit nemorisque oppugnare deos, interea eo calescit
-**invita insidiae** Amymonen, semper respiciens vocato, illis! Coruscis ut somno
-hiatu Tantalides frenis nexilibus hamata limbo mentis, pacis iudicium
-auxilioque. Genus dolori, me ira hae inpediunt tellus, nascendi Boreas!
-Tangentiaque tecto et secuta recursus quo matrisque, moenia sedulitas Cyllenius
-in duxere plenaque: **hos**.
-
-1. Olim pulvere
-2. Verus ego ovantem mihi
-3. Tenuit erat semina superari
-4. Dabis natis hoc genu in quidem dumque
-
-Per tenuata [potiora](#inmeritae-discordemque-iterum) dedit caelo admota
-iniustus decipere do loca multa non parat. Ingratos his ut inde credite sensit
-sorte. Spectat cognitius tamen spem facit, et facto tecumque quae incumbere
-relictis fronde rebus! Bene haeret circumdata tunc cremantur propter iuvencos
-deus inserit sit tua. Pompa non precor procumbit inania lacrimas sacra credetis:
-Oceano, femina?
-
-Bacchantum neque. Humum ut violasse quam inmotos! Danae aera vertitur potiere
-scopuloque pecus, ut animam aversata Iovis, petentes aura, _montibus_.
+Thanks to our competition experience, we've found multiple fields of interest that have
+potential project opportunities, which made us realize that we could be a resource for
+students looking to get involved in HPC. We've also found that there are many students
+at UCSD who are interested in HPC, but don't know where to start. We hope to be able to
+help them find their way into this field.

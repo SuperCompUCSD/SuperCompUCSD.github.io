@@ -1,7 +1,8 @@
 ---
 title: We ♥️ parallel computing
 author: org
-description: The hallway smelt of boiled cabbage and old rag mats.
+description: We are Supercomputing @ UCSD!
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero ligula. Donec viverra ultricies leo, vitae varius tellus feugiat vitae. Nullam tristique orci vitae leo ornare blandit. Nunc nec massa sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla facilisi. Suspendisse eros enim, ornare eget nulla at, pretium luctus risus.
+We are Supercomputing @ UCSD, a club dedicated in all things high-performance computing (HPC). We love challenging ourselves with interesting projects in domains such as mesh networking, high-performance storage access, accelerated computing and highly-distributed applications. All UCSD students are welcome to join us at our workshops
+and projects with real applications!
