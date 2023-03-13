@@ -7,3 +7,4 @@ menu:
     name: "Blog"
     weight: 2
 ---
+We will be publishing a few technical articles and papers soon, so stay tuned!

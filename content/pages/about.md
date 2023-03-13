@@ -1,13 +1,13 @@
 ---
 title: 'Who are we'
-image: images/team.jpeg
+image: images/team-official.jpg
 url: "about"
 author: org
 question: true
 menu:
   main:
     name: "About"
-    weight: 3
+    weight: 4
 ---
 
 Supercomputing @ UCSD was founded in 2019 as a group of a few students looking to participate

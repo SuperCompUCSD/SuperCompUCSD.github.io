@@ -7,14 +7,38 @@
   {{ end }}
 
   <div class="intro">
-    <h1>{{ .Title }}{{ if .Site.Params.addBang }}<span class="dot">!</span>{{ end }}</h1>
-    <div class="intro-content">{{ .Content }}</div>
+    <h1>{{ .Title }}{{ if .Site.Params.addBang }}{{ end }}</h1>
+    <div class="container">
+      <div class="intro-content">
+        {{ .Content }}
+        <div class="intro-content">
+          <button class="intro-btn" onclick="window.location.href = 'https://forms.gle/AT2LRzvXk8MfrLKn6';"> 
+            Get Involved 
+          </button>
+          <button class="intro-btn" onclick="window.location.href = 'https://discord.gg/sXTvyh7J';"> 
+            Join Discord 
+          </button>
+        </div>
+      </div>
+      <img class="intro-img" src="/images/supercomp.jpeg" />
+    </div>
+    
   </div>
 
-  <h2>Celebrating our sponsors:</h2>
+  <h2>Sponsors</h2>
   <div class="sponsors">
-    <img class="sponsor" src="/images/sponsors/amd.svg" />
+    <img class="sponsor" src="/images/sponsors/AMD.png" />
     <img class="sponsor" src="/images/sponsors/supermicro.png" />
+    <img class="sponsor" src="/images/sponsors/IEEE.png" />
+    <img class="sponsor" src="/images/sponsors/intel.png" />
+    <img class="sponsor" src="/images/sponsors/liqid.png" />
+    <img class="sponsor" src="/images/sponsors/graid.png" />
+    <img class="sponsor" src="/images/sponsors/azure.png" />
+    <img class="sponsor" src="/images/sponsors/nvidia.png" />
+    <img class="sponsor" src="/images/sponsors/sdsc.jpeg" />
+    <img class="sponsor" src="/images/sponsors/ucsd.png" />
+    <!-- <img class="sponsor" src="/images/sponsors/liqid.svg" />
+    <img class="sponsor" src="/images/sponsors/SDSC.svg" />  -->
   </div>
 
   {{ if .Site.Params.showPostsOnHomepage }}
