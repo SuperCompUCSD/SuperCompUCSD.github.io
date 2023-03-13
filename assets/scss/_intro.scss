@@ -23,19 +23,19 @@
     }
   }
   p {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 26px;
     @include breakpoint('small') {
-      font-size: 22px;
+      font-size: 20px;
       line-height: 32px;
     }
   }
   .read-more {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 26px;
     font-weight: bold;
     @include breakpoint('small') {
-      font-size: 22px;
+      font-size: 20px;
       line-height: 32px;
     }
   }

@@ -3,7 +3,6 @@ title: IEEE Supercomputing
 author: org
 description: We are Supercomputing @ UCSD!
 ---
-
 We are a sub-community of the Institute of Electrical and Electronics Engineers (IEEE) UC San Diego student branch, dedicated to high-performance computing specifically. 
 
 **[>> Check out IEEE at UC San Diego!](https://ieeeucsd.org/)**
