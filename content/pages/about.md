@@ -23,3 +23,10 @@ potential project opportunities, which made us realize that we could be a resour
 students looking to get involved in HPC. We've also found that there are many students
 at UCSD who are interested in HPC, but don't know where to start. We hope to be able to
 help them find their way into this field.
+
+The San Diego Supercomputer Center (SDSC) is one of our mains sponsors and benefactors. 
+It was established as one of the nation’s first supercomputer centers in 1985, and for the
+past 35 years it has maintained its position as a leader in data-intensive computing and
+computer infrastructure. SDSC provides resources, hardware and services to many organizations
+in UCSD, in other UC campuses and beyond using its massive community clusters, such as Voyager
+and Expanse.
