@@ -7,4 +7,4 @@ To get started
 git clone https://github.com/ieeeucsd/ieeeucsd.org.git
 git submodule update --init --recursive
 ```
-once that is done simply run `hugo serve` and it should be on localhost:1313
+Once that is done simply run `hugo serve` and it should be on [localhost:1313](https://localhost:1313)
