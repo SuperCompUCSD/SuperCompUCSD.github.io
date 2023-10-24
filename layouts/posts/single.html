@@ -1,0 +1,19 @@
+{{ define "body_classes" }}page-blog-single{{ end }}
+
+{{ define "main" }}
+  <div class="blog">
+    {{ if .Site.Params.showAuthorOnPosts }}
+      {{ $author := index .Site.Data.author .Params.author }}
+      {{ partial "author.html" (dict "context" . "author" $author) }}
+    {{ end }}
+    <div class="intro">
+      <h1>{{ .Title }}{{ if .Params.dot }}<span class="dot">.</span>{{ end }}{{ if .Params.question }}<span class="dot">?</span>{{ end }}{{ if .Params.bang }}<span class="dot">!</span>{{ end }}</h1>
+      {{ if .Params.image }}
+      <img src="{{ .Params.image | relURL }}" />
+      {{ end }}
+    </div>
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </div>
+{{ end }}

@@ -1,0 +1,19 @@
+{
+  "links": [
+    {
+      "name": "discord",
+      "url" : "https://discord.com/invite/TA7Kmunpsm",
+      "image": "images/social/discord.svg"
+    },
+    {
+      "name": "github",
+      "url": "https://github.com/SuperCompUCSD",
+      "image": "images/social/github.svg"
+    },
+    {
+      "name": "email",
+      "url": "mailto:ucsdsupercomputing@gmail.com",
+      "image": "images/social/email.svg"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{{ define "body_classes" }}page-home{{ end }}
+
+{{ define "main" }}
+
+  {{ if .Site.Params.showAuthorOnHomepage }}
+    {{ partial "author-large.html" . }}
+  {{ end }}
+
+  <div class="intro">
+    <h1>{{ .Title }}{{ if .Site.Params.addBang }}{{ end }}</h1>
+    <div class="container">
+      <div class="intro-content">
+        {{ .Content }}
+        <div class="intro-content">
+          <!--
+          <button class="intro-btn" onclick="window.location.href = 'https://forms.gle/AT2LRzvXk8MfrLKn6';"> 
+            Get Involved 
+          </button>
+          -->
+          <button class="intro-btn" onclick="window.location.href = 'https://discord.gg/TA7Kmunpsm';"> 
+            Join Discord 
+          </button>
+        </div>
+      </div>
+      <img class="intro-img" src="/images/supercomp.jpeg" />
+    </div>
+    
+  </div>
+
+  <h2>Sponsors</h2>
+  <div class="sponsors">
+    <img class="sponsor" src="/images/sponsors/sdsc.png" />
+    <img class="sponsor" src="/images/sponsors/ucsd.png" />
+    <img class="sponsor" src="/images/sponsors/IEEE.png" />
+    <img class="sponsor" src="/images/sponsors/supermicro.png" />
+    <img class="sponsor" src="/images/sponsors/AMD.png" />
+    <img class="sponsor" src="/images/sponsors/ddn.jpg" />
+    <img class="sponsor" src="/images/sponsors/liqid.png" />
+    <img class="sponsor" src="/images/sponsors/microsoft.png" />
+    <img class="sponsor" src="/images/sponsors/cloudbank.png" />
+    <img class="sponsor" src="/images/sponsors/nvidia.png" />
+    <!-- 
+      past sponsors
+      <img class="sponsor" src="/images/sponsors/graid.png" />
+      <img class="sponsor" src="/images/sponsors/liqid.svg" /> 
+      <img class="sponsor" src="/images/sponsors/intel.png" />
+    -->
+  </div>
+
+  {{ if .Site.Params.showPostsOnHomepage }}
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") }}
+    {{ range $paginator.Pages }}
+      {{ .Render "summary" }}
+    {{ end }}
+    {{ partial "paginator" . }}
+  {{ end }}
+
+{{ end }}
+
+{{ define "footer_js" }}
+{{ end }}
