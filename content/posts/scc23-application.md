@@ -1,7 +1,8 @@
 ---
 title: SCC Application Now Open!
-date: 2023-04-19
 author: org
+date: 2023-04-19
+expiryDate: 2023-04-22T00:00:00Z
 ---
 
 Hi folks, our team application for the UCSD/SDSC Undergraduate Supercomputing Team is now open. You may apply for the [UCSD SCC Application](https://na.eventscloud.com/ereg/newreg.php?eventid=746928&.) until Friday night (If you found out for example on Saturday see if you can still apply anyways). We encourage you to apply!
