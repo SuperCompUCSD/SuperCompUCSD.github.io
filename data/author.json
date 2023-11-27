@@ -8,5 +8,15 @@
     "name": "Matei-Alexandru Gardus",
     "title": "Hyperwall Lead",
     "image": "images/authors/matei.png"
+  },
+  "paco": {
+    "name": "Francisco Gutierrez",
+    "title": "ProjectilePaco",
+    "image": "images/authors/paco.png"
+  },
+  "austin": {
+    "name": "Austin Garcia",
+    "title": "Austin",
+    "image": "images/authors/austin.webp"
   }
 }
