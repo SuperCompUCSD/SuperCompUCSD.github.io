@@ -1,8 +1,8 @@
 ---
 title: "Terminal Guide"
-date: 2023-11-27
+date: 2023-11-28
 author: ["austin"]
-publishDate: 2023-11-27T08:00:00Z
+publishDate: 2023-11-28T08:00:00Z
 draft: true # change to true to have page render. Visit posts/austins_terminal_guide and it will render even if publish date has yet to come.
 ---
 
