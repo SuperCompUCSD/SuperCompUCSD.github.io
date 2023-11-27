@@ -10,10 +10,10 @@ draft: true
 # List of programs per day:
 
 
-1. Gping/mtr - Khai
+1. Gping/mtr/nmap - Khai
 2. ncdu/diskonaut/Dust - Paco/Khai/Francisco
 3. gnuplot - Khai
-4. sagemath - Khai
+4. sagemath - Rito
 5. thefuck - Matei
 6. Ab-av1 / ffmpeg - Yuchen/Khai
 7. Tokei - Yuchen
