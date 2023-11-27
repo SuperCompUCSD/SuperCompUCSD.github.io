@@ -12,7 +12,7 @@ draft: true
 
 1. Gping/mtr - Khai
 2. ncdu/diskonaut/Dust - Paco/Khai/Francisco
-3. Qrencode or ipcalc
+3. gnuplot
 5. WeeChat - Matei
 6. Ab-av1
 7. Tokei - Yuchen
