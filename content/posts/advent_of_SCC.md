@@ -35,3 +35,7 @@ draft: true
 23. 0x0.st Null Pointer - Francisco
 24. jq and htmlq - Matei
 25. tldr - Francisco/Matei
+
+
+# Other mentions: curl ifconfig.me; curl wtfismyip.com/text
+# Alternatives to 0x0.st is transfer.sh, bashupload.com
