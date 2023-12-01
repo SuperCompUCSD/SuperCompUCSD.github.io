@@ -2,7 +2,7 @@
 title: "Advent of the SuperComputing Club: Day 1"
 date: 2023-12-01
 author: ["khai"]
-publishDate: 2023-12-01T08:00:00Z
+#publishDate: 2023-12-01T08:00:00Z
 draft: false
 ---
 
@@ -13,7 +13,7 @@ draft: false
 ## pings
 In most cases when trying to network connectivity `ping` is just enough for checking the latency of a connection to a given host.
 ```bash
-19:23:31 ~ $ ping 8.8.8.8
+$ ping 8.8.8.8
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 64 bytes from 8.8.8.8: icmp_seq=1 ttl=54 time=6.64 ms
 64 bytes from 8.8.8.8: icmp_seq=2 ttl=54 time=15.2 ms
@@ -24,8 +24,8 @@ rtt min/avg/max/mdev = 6.644/10.901/15.159/4.257 ms
 ```
 but there are often cases when you want to view a graphed form of your ping statistics over time, that is where `gping` comes in.
 
-```
-10:30:51 ~ $ gping -s 1.1.1.1
+```bash
+$ gping -s 1.1.1.1
 1.1.1.1 (1.1.1.1)                 last 6.11ms min 5.19ms max 58.9ms avg 8.458ms jtr 360µs  p95 23.1ms  t/o 0
 56.199ms│
         │
@@ -73,7 +73,7 @@ but there are often cases when you want to view a graphed form of your ping stat
 
 On top of being able to graph out ping with the `cmd` argument you're able to do the same for any arbirary command other than just ping, for example with `sleep`
 ```bash
-19:28:15 ~ $ gping -s --cmd 'sleep 0.1'
+$ gping -s --cmd 'sleep 0.1'
 sleep 0.1                         last 102.203min 101.138max 102.509avg 102.083mjtr 27µs   p95 102.467mt/o 0
 109.654ms│
          │
@@ -122,7 +122,7 @@ sleep 0.1                         last 102.203min 101.138max 102.509avg 102.083m
 ## routes
 similar is true for the `traceroute` command
 ```bash
-19:32:55 ~ $ traceroute 1.1.1.1
+$ traceroute 1.1.1.1
 traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
  1  100.80.240.2 (100.80.240.2)  3.450 ms  3.407 ms  3.397 ms
  2  m-core-vlan2966-gw.ucsd.edu (132.239.255.114)  3.367 ms  3.357 ms  3.255 ms
@@ -137,7 +137,7 @@ traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
 ```
 with the same command if we use `mtr` it will give us a persistant traceroute along with running ping statistics to a given hop.
 ```bash
-19:32:59 ~ $ mtr 1.1.1.1
+$ mtr 1.1.1.1
                                               My traceroute  [v0.95]
 magnapinnidae (100.80.240.228) -> 1.1.1.1 (1.1.1.1)                                      2023-11-30T19:33:43-0800
 Keys:  Help   Display mode   Restart statistics   Order of fields   quit
@@ -157,6 +157,7 @@ Keys:  Help   Display mode   Restart statistics   Order of fields   quit
 we can even change how its displayed with by hitting `d`
 
 ```bash
+$ mtr 1.1.1.1
                                               My traceroute  [v0.95]
 magnapinnidae (100.80.240.228) -> 1.1.1.1 (1.1.1.1)                                      2023-11-30T19:37:14-0800
 Keys:  Help   Display mode   Restart statistics   Order of fields   quit
@@ -185,7 +186,7 @@ For basic utiization for scanning a subnet `nmap 10.0.0.1/24` is much better int
 
 If you try such on the UCSD-PROTECTED wifi it will give you
 ```bash
-19:44:22 ~ $ nmap 100.80.240.228/20
+$ nmap 100.80.240.228/20
 Starting Nmap 7.94 ( https://nmap.org ) at 2023-11-30 19:44 PST
 mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify
  valid servers with --dns-servers
