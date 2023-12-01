@@ -1,6 +1,6 @@
 ---
 title: "Advent of the SuperComputing Club: Day 1"
-date: 2023-11-27
+date: 2023-12-01
 author: ["khai"]
 publishDate: 2023-12-01T08:00:00Z
 draft: false
