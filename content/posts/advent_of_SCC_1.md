@@ -2,7 +2,7 @@
 title: "Advent of the SuperComputing Club: Day 1"
 date: 2023-12-01
 author: ["khai"]
-publishDate: 2023-12-01T08:00:00Z
+#publishDate: 2023-12-01T08:00:00Z
 draft: false
 ---
 
@@ -179,10 +179,11 @@ where `?` denotes any dropped packets and `>` denotes that the ping to that give
 
 
 ## exploration
-outside of pure connectivity we also may want to know what ports and possibly services are open to those and that is where `nmap` comes in
+outside of pure connectivity we also may want to know what ports and possibly services are open to those and that is where `nmap` comes in.
 
-for basic utiization for scanning a subnet `nmap 10.0.0.1/24` is much better interms of scanning a subnet rather than a bash for loop with ping `for i in $(seq 1 255); do ping -c1 -t2 10.0.0.$i; done`
-If you try such on UCSD-PROTECTED wifi it will give you
+For basic utiization for scanning a subnet `nmap 10.0.0.1/24` is much better interms of scanning a subnet rather than a bash for loop with ping `for i in $(seq 1 255); do ping -c1 -t2 10.0.0.$i; done`.
+
+If you try such on the UCSD-PROTECTED wifi it will give you
 ```bash
 19:44:22 ~ $ nmap 100.80.240.228/20
 Starting Nmap 7.94 ( https://nmap.org ) at 2023-11-30 19:44 PST
