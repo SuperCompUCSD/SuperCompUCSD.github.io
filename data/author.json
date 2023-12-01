@@ -18,5 +18,10 @@
     "name": "Austin Garcia",
     "title": "Austin",
     "image": "images/authors/austin.webp"
+  },
+  "khai": {
+    "name": "Khai Vu",
+    "title": "",
+    "image": "images/authors/khai.png"
   }
 }
