@@ -1,11 +1,9 @@
 ---
-title: "Advent of the SuperComputing Club: Day 2"
+title: "Advent of Supercomputing: Day 2"
 date: 2023-12-02
 author: ["org"]
-publishDate: 2023-12-02T08:00:00Z
 draft: false
 ---
-
 
 # `ncdu`, `diskonaut`, `dust`
 

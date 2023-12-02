@@ -23,5 +23,10 @@
     "name": "Khai Vu",
     "title": "",
     "image": "images/authors/khai.jpg"
+  },
+  "yuchen": {
+    "name": "Yuchen Jing",
+    "title": "Cofounder, Officer, & Sysadmin",
+    "image": "images/authors/yuchen.png"
   }
 }

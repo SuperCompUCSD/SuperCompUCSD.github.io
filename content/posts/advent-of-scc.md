@@ -1,5 +1,5 @@
 ---
-title: "Advent of the SuperComputing Club: Index"
+title: "Advent of Supercomputing: Index"
 date: 2023-12-25
 author: ["paco"]
 publishDate: 2023-12-25T08:00:00Z
@@ -20,8 +20,8 @@ draft: true
 8. Mdbook - Yuchen
 9. Rr - Yuchen
 10. lazygit - Matei
-11. caca library. timg. ascii libraries. - Paco
-12. Eye candy: cbonsai, pipes.sh, cmatrix, neofetch, btop, asciiquarium - Paco/Yuchen/Matei
+11. Eye candy: caca library. timg. ascii libraries. - Paco then cbonsai, pipes.sh, cmatrix, neofetch, btop, asciiquarium - Paco/Yuchen/Matei
+12. lstopo - Khai
 13. xev/wev  - Paco
 14. figlet - Austin/Khai
 15. pushd popd - Austin
@@ -30,11 +30,11 @@ draft: true
 18. taskset - Khai
 19. gitignore template - Matei
 20. mktemp/tmpfs - Khai
-21. rclone - Khai
-22. wttr.in - Matei
-23. 0x0.st Null Pointer - Francisco
-24. jq and htmlq - Matei
-25. tldr - Francisco/Matei
+22. rclone - Khai
+23. wttr.in - Matei
+24. 0x0.st Null Pointer - Francisco
+25. jq and htmlq - Matei
+26. tldr - Francisco/Matei
 
 
 # Other mentions: curl ifconfig.me; curl wtfismyip.com/text

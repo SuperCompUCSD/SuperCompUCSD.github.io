@@ -1,14 +1,11 @@
 ---
-title: "Advent of the SuperComputing Club: Day 1"
+title: "Advent of Supercomputing: Day 1"
 date: 2023-12-01
 author: ["khai"]
-publishDate: 2023-12-01T08:00:00Z
 draft: false
 ---
 
-
-# Day 1:  `gping, mtr and nmap`
-
+# `gping, mtr and nmap`
 
 ## pings
 In most cases when trying to network connectivity `ping` is just enough for checking the latency of a connection to a given host.
@@ -71,7 +68,7 @@ $ gping -s 1.1.1.1
 ```
 (note I use `-s` here due to hugo having issues rendering braille characters as monospace)
 
-On top of being able to graph out ping with the `cmd` argument you're able to do the same for any arbirary command other than just ping, for example with `sleep`
+On top of being able to graph out ping with the `cmd` argument you're able to do the same for any arbirary command other than just ping, for example with `sleep`:
 ```bash
 $ gping -s --cmd 'sleep 0.1'
 sleep 0.1                         last 102.203min 101.138max 102.509avg 102.083mjtr 27µs   p95 102.467mt/o 0
@@ -120,7 +117,7 @@ sleep 0.1                         last 102.203min 101.138max 102.509avg 102.083m
 
 
 ## routes
-similar is true for the `traceroute` command
+Similar is true for the `traceroute` command:
 ```bash
 $ traceroute 1.1.1.1
 traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
@@ -135,7 +132,7 @@ traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
  9  * 162.158.88.5 (162.158.88.5)  5.334 ms 172.70.208.4 (172.70.208.4)  6.057 ms
 10  one.one.one.one (1.1.1.1)  5.149 ms  5.134 ms  5.121 ms
 ```
-with the same command if we use `mtr` it will give us a persistant traceroute along with running ping statistics to a given hop.
+With the same command if we use `mtr` it will give us a persistant traceroute along with running ping statistics to a given hop.
 ```bash
 $ mtr 1.1.1.1
                                               My traceroute  [v0.95]
@@ -154,7 +151,7 @@ Keys:  Help   Display mode   Restart statistics   Order of fields   quit
  9. 172.70.204.4                                                        0.0%    21   67.2  14.2   5.8  67.2  16.4
 10. one.one.one.one                                                     0.0%    21    5.5   6.8   5.5  13.0   1.8
 ```
-we can even change how its displayed with by hitting `d`
+We can even change how its displayed with by hitting `d`:
 
 ```bash
 $ mtr 1.1.1.1
@@ -176,15 +173,15 @@ Keys:  Help   Display mode   Restart statistics   Order of fields   quit
 
 Scale:  .:7 ms  1:25 ms  2:54 ms  3:95 ms  a:147 ms  b:211 ms  c:287 ms  >
 ```
-where `?` denotes any dropped packets and `>` denotes that the ping to that given host returned faster than the previous hop due to how routes are dynamically determined. Note this is just the brief of it you can also export the data for any external analysis.
+Where `?` denotes any dropped packets and `>` denotes that the ping to that given host returned faster than the previous hop due to how routes are dynamically determined. Note this is just the brief of it you can also export the data for any external analysis.
 
 
 ## exploration
-outside of pure connectivity we also may want to know what ports and possibly services are open to those and that is where `nmap` comes in.
+Outside of pure connectivity we also may want to know what ports and possibly services are open to those and that is where `nmap` comes in.
 
 For basic utiization for scanning a subnet `nmap 10.0.0.1/24` is much better interms of scanning a subnet rather than a bash for loop with ping `for i in $(seq 1 255); do ping -c1 -t2 10.0.0.$i; done`.
 
-If you try such on the UCSD-PROTECTED wifi it will give you
+If you try such on the UCSD-PROTECTED wifi it will give you:
 ```bash
 $ nmap 100.80.240.228/20
 Starting Nmap 7.94 ( https://nmap.org ) at 2023-11-30 19:44 PST
@@ -222,4 +219,4 @@ Not shown: 1000 filtered tcp ports (net-unreach)
 
 Nmap done: 4096 IP addresses (6 hosts up) scanned in 31.99 seconds
 ```
-along with the AP blacklisting your mac address for roughly 10 minutes.
+Along with the AP blacklisting your mac address for roughly 10 minutes.

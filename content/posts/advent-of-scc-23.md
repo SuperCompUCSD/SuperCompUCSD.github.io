@@ -1,5 +1,5 @@
 ---
-title: "Advent of the SuperComputing Club: Day 23"
+title: "Advent of Supercomputing: Day 23"
 date: 2023-12-23
 author: ["paco"]
 publishDate: 2023-12-23T08:00:00Z

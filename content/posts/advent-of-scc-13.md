@@ -1,11 +1,9 @@
 ---
-title: "Advent of the SuperComputing Club: Day 13"
+title: "Advent of Supercomputing: Day 13"
 date: 2023-12-13
 author: ["paco"]
-publishDate: 2023-12-13T08:00:00Z
 draft: true 
 ---
-
 
 # Day 13: xev/wev
 
