@@ -3,7 +3,7 @@ title: "Advent of Supercomputing: Day 13"
 date: 2023-12-13
 publishDate: 2023-12-13:00:00Z
 author: ["org"]
-draft: true
+draft: false
 ---
 
 # `ncdu`, `diskonaut`, `dust`
