@@ -1,6 +1,7 @@
 ---
 title: "Advent of Supercomputing: Day 2"
 date: 2023-12-02
+publishDate: 2023-12-02T08:00:00Z
 author: ["org"]
 draft: false
 ---
