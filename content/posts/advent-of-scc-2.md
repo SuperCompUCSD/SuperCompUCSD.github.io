@@ -1,24 +1,30 @@
 ---
 title: "Advent of Supercomputing: Day 2"
 date: 2023-12-02
-publishDate: 2023-12-02T08:00:00Z
-author: ["org"]
-draft: false
+author: ["paco"]
+draft: false 
 ---
 
-# `ncdu`, `diskonaut`, `dust`
+# Day 13: xev/wev
 
-These commands are usually better (more interactive) tools to view disk usage than the `du` command itself. And sure, maybe using `balboa` or other GUI disk usage utilities can display how your disk is used just fine, but unlike them the servers we remote into usually don't have that option. (It's also just easier)
-
-`ncdu` is literally `NCurses du`. It's simple and allows you to get around your system pretty easy while viewing file size. In order not to be repetitve you can read more about it here:
-https://voidlinux.org/news/2018/12/advent-ncdu.html
+Sometimes when setting up a keyboard shortcut or in some application finding the correct *keycodes* is important. For that reason `xev` can **print X events*. Equivalently for wayland there is `wev` to **show wayland events**.
 
 
-`diskonaut` is a similar tool, but will fill the entire screen with blocks denoting the size of directories and files. While less configurable than `ncdu` it still allows one to delete files and traverse quite quickly (yay vim movement). It's written in Rust and can be installed via most default package managers, but also `cargo` of course if it wasn't available for whatever reason.
+```bash
+wev
+```
 
-![diskonaut-image](/post-media/advent-2-diskonaut.png)
+This will open a checkerboarded window where you can interact and test input. A previous usecase of mine has been when setting up keybdinginds for `dwl`, a wlr-roots based wayland compositor that forks off `dwm`, a [suckless](https://suckless.org/) window manager.
 
-> It doesn't seem to follow symbolic links though, so I think I'll keep using `ncdu` - Paco
+It also reads the placement of the mouse on the screen whenever it is moved, making it for a useful way to read location of the monitors, though `xrandr` or `wlr-randr` is probably more suitable for that.
 
+In order to add a keybinding one must edit the source code. A lot of the keys are reffered to as `XKB_KEY_<KEY-HERE>`. Some of these are straightforward, like `XKB_KEY_a` or `XKB_KEY_A` for lowercase *a* and upper case *A*. But some were trickier like the *\^* symbol:
 
-`dust`
+```bash
+wev
+...
+[14:     wl_keyboard] key: serial: 44043; time: 18982926; key: 15; state: 0 (released)
+                      sym: asciicircum  (94), utf8: ''
+```
+
+From this I can see the key is *asciicircum*, and I edited my own config to have `XKB_asciicircum` do whatever I wished it to do.

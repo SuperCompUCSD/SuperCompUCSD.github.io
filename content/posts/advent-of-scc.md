@@ -11,7 +11,7 @@ draft: true
 
 
 1. Gping/mtr/nmap - Khai
-2. ncdu/diskonaut/Dust - Paco/Khai/Francisco
+2. xev/wev  - Paco
 3. gnuplot - Khai
 4. sagemath - Rito
 5. thefuck - Matei
@@ -22,7 +22,7 @@ draft: true
 10. lazygit - Matei
 11. Eye candy: caca library. timg. ascii libraries. - Paco then cbonsai, pipes.sh, cmatrix, neofetch, btop, asciiquarium - Paco/Yuchen/Matei
 12. lstopo - Khai
-13. xev/wev  - Paco
+13. ncdu/diskonaut/Dust - Paco/Khai/Francisco
 14. figlet - Austin/Khai
 15. pushd popd - Austin
 16. setxcbmap - Austin
