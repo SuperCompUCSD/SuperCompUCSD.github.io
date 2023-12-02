@@ -18,7 +18,7 @@ This will open a checkerboarded window where you can interact and test input. A 
 
 It also reads the placement of the mouse on the screen whenever it is moved, making it for a useful way to read location of the mouse through where monitors are placed relative to each other, though `xrandr` or `wlr-randr` is probably more suitable for that.
 
-In order to add a keybinding one must edit the source code. A lot of the keys are reffered to as `XKB_KEY_<KEY-HERE>`. Some of these are straightforward, like `XKB_KEY_a` or `XKB_KEY_A` for lowercase *a* and upper case *A*. But some were trickier like the *\^* symbol:
+dwl/dwm has the option to add a keybindings one must edit the source code. A lot of the keys are reffered to as `XKB_KEY_<KEY-HERE>`. Some of these are straightforward, like `XKB_KEY_a` or `XKB_KEY_A` for lowercase *a* and upper case *A*. But some were trickier like the *\^* symbol:
 
 ```bash
 wev
