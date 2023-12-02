@@ -1,13 +1,12 @@
 ---
-title: "Advent of the SuperComputing Club: Day 3"
+title: "Advent of Supercomputing: Day 3"
 date: 2023-12-03
 author: ["khai"]
 publishDate: 2023-12-03T08:00:00Z
 draft: false
 ---
 
-
-# Day 3:  `gnuplot`
+# Day 3: `gnuplot`
 
 Because `gnuplot` supports its own languages for parsing and displaying data, it can be its own long rabbit hole see: http://www.gnuplot.info/. So instead we will cover only a super small subset of it.
 

@@ -1,6 +1,7 @@
 ---
 title: "Advent of Supercomputing: Day 1"
 date: 2023-12-01
+publishDate: 2023-12-01T08:00:00Z
 author: ["khai"]
 draft: false
 ---
