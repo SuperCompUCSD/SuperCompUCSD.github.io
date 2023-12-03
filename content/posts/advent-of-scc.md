@@ -15,7 +15,7 @@ draft: true
 3. gnuplot - Khai
 4. sagemath - Rito
 5. thefuck - Matei
-6. Ab-av1 / ffmpeg - Yuchen/Khai
+6. Ab-av1 / ffmpeg - Yuchen
 7. Tokei - Yuchen
 8. Mdbook - Yuchen
 9. Rr - Yuchen
@@ -23,7 +23,7 @@ draft: true
 11. Eye candy: caca library. timg. ascii libraries. - Paco then cbonsai, pipes.sh, cmatrix, neofetch, btop, asciiquarium - Paco/Yuchen/Matei
 12. lstopo - Khai
 13. ncdu/diskonaut/Dust - Paco/Khai/Francisco
-14. figlet - Austin/Khai
+14. figlet - Austin
 15. pushd popd - Austin
 16. setxcbmap - Austin
 17. tesseract-ocr - Franciso
