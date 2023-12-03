@@ -6,7 +6,7 @@ author: ["khai"]
 draft: false
 ---
 
-# Day 3: `gnuplot`
+# `gnuplot`
 
 Because `gnuplot` supports its own languages for parsing and displaying data, it can be its own long rabbit hole see: http://www.gnuplot.info/. So instead we will cover only a super small subset of it.
 

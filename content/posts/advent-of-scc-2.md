@@ -5,7 +5,7 @@ author: ["paco"]
 draft: false 
 ---
 
-# Day 2: xev/wev
+# xev/wev
 
 Sometimes when setting up a keyboard shortcut or in some application finding the correct *keycodes* is important. `xev` can **print X events*. Equivalently for wayland there is `wev` to **show wayland events**.
 
