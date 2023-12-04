@@ -13,9 +13,9 @@ draft: true
 1. Gping/mtr/nmap - Khai
 2. xev/wev  - Paco
 3. gnuplot - Khai
-4. sagemath - Rito
+4. Ab-av1 / ffmpeg - Yuchen
 5. thefuck - Matei
-6. Ab-av1 / ffmpeg - Yuchen
+6. sagemath - Rito
 7. Tokei - Yuchen
 8. Mdbook - Yuchen
 9. Rr - Yuchen
@@ -35,7 +35,6 @@ draft: true
 24. 0x0.st Null Pointer - Francisco
 25. jq and htmlq - Matei
 26. tldr - Francisco/Matei
-
 
 # Other mentions: curl ifconfig.me; curl wtfismyip.com/text
 # Alternatives to 0x0.st is transfer.sh, bashupload.com
