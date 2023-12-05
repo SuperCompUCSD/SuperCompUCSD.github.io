@@ -6,23 +6,21 @@ publishDate: 2023-12-25T08:00:00Z
 draft: true 
 ---
 
-
 # List of programs per day:
-
 
 - [x] 1. Gping/mtr/nmap - Khai
 - [x] 2. xev/wev  - Paco
 - [x] 3. gnuplot - Khai
 - [x] 4. Ab-av1 / ffmpeg - Yuchen
 - [ ] 5. thefuck - Matei
-- [ ] 6. sagemath - Rito
-- [ ] 7. Tokei - Yuchen
-- [ ] 8. 0x0.st Null Pointer - Francisco
-- [ ] 9. Rr - Yuchen
+- [x] 6. sagemath - Rito
+- [x] 7. mdbook - Yuchen
+- [ ] 8. 0x0.st Null Pointer, (magic warmhole - suggestion from Khai) - Francisco
+- [ ] 9. lstopo - Khai
 - [ ] 10. lazygit - Matei
-- [ ] 11. Eye candy: caca library. timg. ascii libraries. - Paco then cbonsai, pipes.sh, cmatrix, neofetch, btop, asciiquarium - Paco/Yuchen/Matei
-- [ ] 12. lstopo - Khai
-- [x] 13. ncdu/diskonaut/Dust - Paco/Khai/Francisco
+- [ ] 11. Eye candy: caca library. timg. ascii libraries. - Paco then cbonsai, pipes.sh, sl, cmatrix, neofetch, btop, asciiquarium - Paco/Yuchen/Matei
+- [x] 12. ncdu/diskonaut/Dust - Paco/Khai/Francisco
+- [ ] 13. rr - Yuchen
 - [ ] 14. figlet - Austin
 - [ ] 15. pushd popd - Austin
 - [ ] 16. setxcbmap - Austin
@@ -32,7 +30,7 @@ draft: true
 - [ ] 20. mktemp/tmpfs - Khai
 - [ ] 22. rclone - Khai
 - [ ] 23. wttr.in - Matei
-- [ ] 24. Mdbook - Yuchen
+- [ ] 24. mosh - Yuchen
 - [ ] 25. jq and htmlq - Matei
 - [ ] 26. tldr - Francisco/Matei
 

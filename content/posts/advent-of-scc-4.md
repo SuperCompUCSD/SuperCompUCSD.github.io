@@ -1,6 +1,6 @@
 ---
 title: "Advent of Supercomputing: Day 4"
-date: 2023-12-08
+date: 2023-12-04
 publishDate: 2023-12-04T08:00:00Z
 author: ["yuchen"]
 draft: false
