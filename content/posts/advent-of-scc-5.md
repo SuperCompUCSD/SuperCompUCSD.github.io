@@ -117,7 +117,7 @@ tar -cvf Downloads.tar Downloads/*
 
 You can setup the `??` alias like so:
 ```sh
-alias \?\?'='chatgpt-cli -c $SHELL -t $OPENAI_KEY -C'
+alias \?\?='chatgpt-cli -c $SHELL -t $OPENAI_KEY -C'
 ```
 
 Hopefully, with the help of the above commands, you'll have less trouble navigating the shell and getting your work done at the
