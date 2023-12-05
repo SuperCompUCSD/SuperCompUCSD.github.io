@@ -1,8 +1,8 @@
 ---
 title: "Advent of Supercomputing: Day 6"
-date: 2023-12-03
+date: 2023-12-06
 author: ["ritoban"]
-#publishDate: 2023-12-03T08:00:00Z
+publishDate: 2023-12-06T08:00:00Z
 draft: false
 ---
 
