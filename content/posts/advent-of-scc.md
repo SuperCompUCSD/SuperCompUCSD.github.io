@@ -12,7 +12,7 @@ draft: true
 - [x] 2. xev/wev  - Paco
 - [x] 3. gnuplot - Khai
 - [x] 4. Ab-av1 / ffmpeg - Yuchen
-- [ ] 5. thefuck - Matei
+- [x] 5. thefuck - Matei
 - [x] 6. sagemath - Rito
 - [x] 7. mdbook - Yuchen
 - [ ] 8. 0x0.st Null Pointer, (magic warmhole - suggestion from Khai) - Francisco
