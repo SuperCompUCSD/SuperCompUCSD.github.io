@@ -15,11 +15,11 @@ draft: true
 - [x] 5. thefuck - Matei
 - [x] 6. sagemath - Rito
 - [x] 7. mdbook - Yuchen
-- [ ] 8. 0x0.st Null Pointer, (magic warmhole - suggestion from Khai) - Francisco
+- [x] 8. ncdu/diskonaut/Dust - Paco/Khai/Francisco
 - [ ] 9. lstopo - Khai
 - [ ] 10. lazygit - Matei
 - [ ] 11. Eye candy: caca library. timg. ascii libraries. - Paco then cbonsai, pipes.sh, sl, cmatrix, neofetch, btop, asciiquarium - Paco/Yuchen/Matei
-- [x] 12. ncdu/diskonaut/Dust - Paco/Khai/Francisco
+- [ ] 12. 0x0.st Null Pointer, (magic warmhole - suggestion from Khai) - Francisco
 - [ ] 13. rr - Yuchen
 - [ ] 14. figlet - Austin
 - [ ] 15. pushd popd - Austin
