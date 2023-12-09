@@ -1,8 +1,7 @@
 ---
 title: "Advent of Supercomputing: Day 9"
-date: 2023-12-08
-#date: 2023-12-09
-#publishDate: 2023-12-09T08:00:00Z
+date: 2023-12-09
+publishDate: 2023-12-09T08:00:00Z
 author: ["khai"]
 draft: false
 ---
