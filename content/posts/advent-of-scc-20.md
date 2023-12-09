@@ -1,8 +1,8 @@
 ---
 title: "Advent of Supercomputing: Day 20"
-date: 2023-12-08
-#date: 2023-12-20
-#publishDate: 2023-12-20T08:00:00Z
+#date: 2023-12-08
+date: 2023-12-20
+publishDate: 2023-12-20T08:00:00Z
 author: ["khai"]
 draft: false
 ---
