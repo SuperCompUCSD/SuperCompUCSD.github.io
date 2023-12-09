@@ -1,8 +1,8 @@
 ---
 title: "Advent of Supercomputing: Day 20"
-#date: 2023-12-08
-date: 2023-12-20
-publishDate: 2023-12-20T08:00:00Z
+date: 2023-12-08
+#date: 2023-12-20
+#publishDate: 2023-12-20T08:00:00Z
 author: ["khai"]
 draft: false
 ---
@@ -96,4 +96,4 @@ dd: error writing 'random.img': No space left on device
 10737418240 bytes (11 GB, 10 GiB) copied, 2.10537 s, 5.1 GB/s
 ```
 
-As we can see writing the file in `/tmp` which is mounted in system memory gets much faster write performance compared to writing to the system disk
+As we can see writing the file in `/tmp` which is mounted in system memory gets much faster write performance compared to writing to the system disk. To set this up on systems with systemd it is typically named under the `tmp.mount` target, on windows look into ramdisks. And for an interesting read on fast disk writes see this [ramdisk setup](https://www.tomshardware.com/news/amd-3d-v-cache-ram-disk-182-gbs-12x-faster-pcie-5-ssd) on the AMD Ryzen 7800X3D processor
