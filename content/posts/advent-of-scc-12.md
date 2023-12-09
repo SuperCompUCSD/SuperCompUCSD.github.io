@@ -8,3 +8,7 @@ draft: false
 
 # 0x0.st
 
+# magic wormhole
+
+
+#alternatives, transfer.sh, croc
