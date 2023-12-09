@@ -16,7 +16,7 @@ draft: true
 - [x] 6. sagemath - Rito
 - [x] 7. mdbook - Yuchen
 - [x] 8. ncdu/diskonaut/Dust - Paco/Khai/Francisco
-- [ ] 9. lstopo - Khai
+- [x] 9. lstopo - Khai
 - [ ] 10. lazygit - Matei
 - [ ] 11. Eye candy: caca library. timg. ascii libraries. - Paco then cbonsai, pipes.sh, sl, cmatrix, neofetch, btop, asciiquarium - Paco/Yuchen/Matei
 - [ ] 12. 0x0.st Null Pointer, (magic warmhole - suggestion from Khai) - Francisco
@@ -25,7 +25,7 @@ draft: true
 - [ ] 15. pushd popd - Austin
 - [ ] 16. setxcbmap - Austin
 - [x] 17. tesseract-ocr - Franciso
-- [ ] 18. taskset - Khai
+- [x] 18. taskset - Khai
 - [ ] 19. gitignore template - Matei
 - [ ] 20. mktemp/tmpfs - Khai
 - [ ] 22. rclone - Khai
