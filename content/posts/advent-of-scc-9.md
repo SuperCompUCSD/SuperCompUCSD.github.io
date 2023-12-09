@@ -29,3 +29,5 @@ lstopo-no-graphics [ options ] ... [ filename ]
 ```
 
 Where the export format is an `xml` file. Once you have the exported `xml` you can copy it to your local machine and view it with `lstopo -i <xml>`. To export either the xml or the the local machine's topology to an image simply make the last argument the file name of a png.
+
+for more indepth information and some intuition on the lstopo output checkout this awsome overview by [Grant Curell](https://grantcurell.github.io/How%20to%20Read%20lstopo%20and%20a%20PCIe%20Overview/)     
