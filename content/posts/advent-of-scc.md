@@ -27,7 +27,7 @@ draft: true
 - [x] 17. tesseract-ocr - Franciso
 - [x] 18. taskset - Khai
 - [ ] 19. gitignore template - Matei
-- [ ] 20. mktemp/tmpfs - Khai
+- [x] 20. mktemp/tmpfs - Khai
 - [ ] 22. rclone - Khai
 - [ ] 23. wttr.in - Matei
 - [ ] 24. mosh - Yuchen
