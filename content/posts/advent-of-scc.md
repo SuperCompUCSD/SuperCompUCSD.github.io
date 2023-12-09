@@ -28,7 +28,7 @@ draft: true
 - [x] 18. taskset - Khai
 - [ ] 19. gitignore template - Matei
 - [x] 20. mktemp/tmpfs - Khai
-- [ ] 22. rclone - Khai
+- [x] 22. rclone - Khai
 - [ ] 23. wttr.in - Matei
 - [ ] 24. mosh - Yuchen
 - [ ] 25. jq and htmlq - Matei
