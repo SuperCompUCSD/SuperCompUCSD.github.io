@@ -17,22 +17,22 @@ draft: true
 - [x] 7. mdbook - Yuchen
 - [x] 8. ncdu/diskonaut/Dust - Paco/Khai/Francisco
 - [x] 9. lstopo - Khai
-- [ ] 10. lazygit - Matei
-- [ ] 11. Eye candy: caca library. timg. ascii libraries. - Paco then cbonsai, pipes.sh, sl, cmatrix, neofetch, btop, asciiquarium - Paco/Yuchen/Matei
-- [ ] 12. 0x0.st Null Pointer, (magic warmhole - suggestion from Khai) - Francisco
+- [x] 10. lazygit - Matei
+- [ ] 11. 0x0.st Null Pointer, (magic warmhole - suggestion from Khai) - Francisco
+- [x] 12. rclone - Khai
 - [ ] 13. rr - Yuchen
 - [ ] 14. figlet - Austin
-- [ ] 15. pushd popd - Austin
-- [ ] 16. setxcbmap - Austin
-- [x] 17. tesseract-ocr - Franciso
-- [x] 18. taskset - Khai
-- [ ] 19. gitignore template - Matei
+- [ ] 15. setxcbmap - Austin
+- [x] 16. tesseract-ocr - Franciso
+- [x] 17. taskset - Khai
+- [ ] 18. gitignore template - Matei
+- [ ] 19. pushd popd - Austin
 - [x] 20. mktemp/tmpfs - Khai
-- [x] 22. rclone - Khai
-- [ ] 23. wttr.in - Matei
-- [ ] 24. mosh - Yuchen
-- [ ] 25. jq and htmlq - Matei
-- [ ] 26. tldr - Francisco/Matei
+- [ ] 21. Eye candy: caca library. timg. ascii libraries. - Paco then cbonsai, pipes.sh, sl, cmatrix, neofetch, btop, asciiquarium - Paco/Yuchen/Matei
+- [ ] 22. wttr.in - Matei
+- [ ] 23. mosh - Yuchen
+- [ ] 24. jq and htmlq - Matei
+- [ ] 25. tldr - Francisco/Matei
 
 # Other mentions: curl ifconfig.me; curl wtfismyip.com/text
 # Alternatives to 0x0.st is transfer.sh, bashupload.com
