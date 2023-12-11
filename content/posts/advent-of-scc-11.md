@@ -29,7 +29,7 @@ https://0x0.st/H3wa.png
 ```
 
 
-[`0x0.st`](https://0x0.st) does not allow past file sizes of 512MiB as well as some executables and some files described on the site. As some good advice if you don't feel comfortable sharing the photos with the whole world you can encrypt them in some way, such as with `gpg`. But I personally like the way [bugswriter](https://www.bugswriter.com/) does it: `zip` up a few files and `zipcloak` them; zipping files together has the benefit of allowing one to have one url for one file, and by zipping it is at least compressing the file size a little bit. `ziploak` encrypts them, so they're not easily viewable:
+[`0x0.st`](https://0x0.st) does not allow past file sizes of 512MiB as well as some executables and some files described on the site. As some good advice if you don't feel comfortable sharing the photos with the whole world you can encrypt them in some way, such as with `gpg`. But I personally like the way [bugswriter](https://www.bugswriter.com/) does it: `zip` up a few files and `zipcloak` them; zipping files together has the benefit of allowing one to have one url for one file, and by zipping it is at least compressing the file size a little bit. `zipcloak` encrypts them, so they're not easily viewable:
 
 ```bash
 # Example: taking gifs, zipping them, and using zipcloak
