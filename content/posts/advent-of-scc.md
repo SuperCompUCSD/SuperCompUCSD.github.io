@@ -18,7 +18,7 @@ draft: true
 - [x] 8. ncdu/diskonaut/Dust - Paco/Khai/Francisco
 - [x] 9. lstopo - Khai
 - [x] 10. lazygit - Matei
-- [ ] 11. 0x0.st Null Pointer, (magic warmhole - suggestion from Khai) - Francisco
+- [x] 11. 0x0.st Null Pointer, (magic warmhole - suggestion from Khai) - Francisco
 - [x] 12. rclone - Khai
 - [ ] 13. rr - Yuchen
 - [ ] 14. figlet - Austin
