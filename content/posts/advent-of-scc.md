@@ -21,8 +21,8 @@ draft: true
 - [x] 10. [lazygit](/posts/advent-of-scc-10) - Matei
 - [x] 11. [0x0.st Null Pointer](/posts/advent-of-scc-11) - Francisco
 - [x] 12. [rclone](/posts/advent-of-scc-12) - Khai
-- [ ] 13. [rr](/posts/advent-of-scc-13) - Yuchen
-- [ ] 14. [figlet](/posts/advent-of-scc-14) - Austin
+- [x] 13. [zoxide](/posts/advent-of-scc-13) - Rito
+- [ ] 14. [rr](/posts/advent-of-scc-14) - Yuchen
 - [ ] 15. [setxcbmap](/posts/advent-of-scc-15) - Austin
 - [x] 16. [tesseract-ocr](/posts/advent-of-scc-16) - Franciso
 - [x] 17. [taskset](/posts/advent-of-scc-17) - Khai
