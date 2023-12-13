@@ -15,7 +15,7 @@ Tired of manually having to type out paths to `cd` to a directory? Or worse yet,
 Zoxide is an excellent program that creates an alias `z` in your shell, that locally keeps a database of all the directories you visit, and then lets you automatically jump to the most common directory that matches closest to its argument. For example, to jump to the folder `Documents/college/fall_2023/cse_101`, I might just type `z 101`, and it'll take me straight there!
 
 Here's an example of how quickly it's possible to move around using it:
-[![asciicast](https://asciinema.org/a/NdY5vBf0EKEzVjevbSDYApYP0.svg)](https://asciinema.org/a/NdY5vBf0EKEzVjevbSDYApYP0)
+<script src="https://asciinema.org/a/NdY5vBf0EKEzVjevbSDYApYP0.js" id="asciicast-NdY5vBf0EKEzVjevbSDYApYP0" async></script>
 
 To get started, head over to the [Zoxide Github page](https://github.com/ajeetdsouza/zoxide) and run the script corresponding to your shell (all major, and quite a few minor shells are supported). In particular, on bash, first
 
