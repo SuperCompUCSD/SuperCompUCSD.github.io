@@ -2,7 +2,7 @@
 title: "Advent of the SuperComputing Club: Day 15"
 date: 2023-12-15
 author: ["Austin"]
-publishDate: 2023-15-28T08:00:00Z
+publishDate: 2023-15-15T08:00:00Z
 draft: true 
 ---
 

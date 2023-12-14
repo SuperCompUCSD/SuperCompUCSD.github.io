@@ -1,7 +1,7 @@
 ---
 title: "Advent of Supercomputing: Day 19"
-date: 2023-19-19
-publishDate: 2023-19-14T08:00:00Z
+date: 2023-12-19
+publishDate: 2023-12-19T08:00:00Z
 author: ["austin"]
 draft: false
 ---
