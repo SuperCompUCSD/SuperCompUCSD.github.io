@@ -10,11 +10,14 @@
     {{ end }}
 
     {{ if (isset .Params "authors" )}}
-    {{ range .Params.authors }}
-      {{ $author := index $authData . }}
-      {{ partial "author.html" (dict "context" $cxt "author" $author) }}
+      {{ range .Params.authors }}
+        {{ $author := index $authData . }}
+        {{ partial "author.html" (dict "context" $cxt "author" $author) }}
+      {{ end }}
     {{ end }}
-    {{ end }}
+    <div>
+      <h1 class="author-date">{{ dateFormat "January 2, 2006" $cxt.Date }}</h1>   
+    </div>
 
   {{ else }}
     <div class="summary-date">{{ dateFormat "Jan 2, 2006" .Date }}</div>
