@@ -47,4 +47,5 @@ $ sudo sysctl kernel.perf_event_paranoid # check default level so you may reset 
 $ sudo sysctl kernel.perf_event_paranoid=1
 ```
 
-[Time to use your newfound power to debug your homework!](https://asciinema.org/a/rPeAhBiloZdjskrcmADZmDLRl)
+## Time to use your newfound power to debug your homework!
+<script src="https://asciinema.org/a/rPeAhBiloZdjskrcmADZmDLRl.js" id="asciicast-rPeAhBiloZdjskrcmADZmDLRl" async></script>
