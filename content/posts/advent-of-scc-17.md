@@ -1,53 +1,61 @@
 ---
-title: "Advent of Supercomputing: Day 23"
-date: 2023-12-23
-author: ["paco"]
-publishDate: 2023-12-23T08:00:00Z
-draft: true 
+title: "Advent of Supercomputing: Day 17"
+date: 2023-12-17
+publishDate: 2023-12-17T08:00:00Z
+author: ["khai"]
+draft: false
 ---
 
+# `taskset`
 
-# tesseract-ocr
+`taskset` allows for you the user to query and set the CPU affinity of a given process -- and by extention what cpu or set of cpus on your system a process can run on. With this, there are 3 primary ways to use `taskset` to either act as a wrapper command to set the CPU affinity of a child process, to query the CPU affinity of a given process or to modify the cpu affinity of an already running process.
 
-Tesseract is an open source ocr (optical character recognition) engine. 
-Besides being a powerfull library it also makes for a fun tool. It takes an *image* and interprets the *text/characters* found in it. Some options are changing to read from stdin or a file, as well as choosing to output to stdout or into some file .pdf, txt, etc.
+## Querying
+```
+$ taskset -p [pid]
+```
+This will return is the bitwise encoding for the cpus the kernel will move the process to given load or the cpu scheduler.
+```
+$ taskset -p 81996
+pid 81996's current affinity mask: ffff
+```
+For example, given that the system I'm running on has 16 hardware threads. Expansing `ffff` out into its bitwise representation of `1111111111111111` where the leading bit corresponds to hardware thread id 15 and the least signifigant bit corresponds to hardware thread 0.
 
-Take for example the image `example.png`:
-
-<div style="text-align:center" >
-    <img src="/post-media/tesseract-example.png" alt="example-usage-from-wiki" width="400"/>
-</div>
-
-```bash
-$ tesseract-ocr example.png - -l eng
-
-The (quick) [brown] {fox} jumps!
-Over the $43,456.78 <lazy> #90 dog
-& duck/goose, as 12.5% of E-mail
-from aspammer@website.com is spam.
-Der ,schnelle” braune Fuchs springt
-iiber den faulen Hund. Le renard brun
-«rapide» saute par-dessus le chien
-paresseux. La volpe marrone rapida
-salta sopra il cane pigro. El zorro
-marrén rapido salta sobre el perro
-perezoso. A raposa marrom ripida
-salta sobre o cdo preguigoso.
+## Setting
+```
+$ taskset -pc [cpu-list] [pid]
+```
+So if given the same process we change its cpu affinity to only hardware threads 0 and 15 with
+```
+$ taskset -pc 0,15 81996
+pid 81996's current affinity list: 0
+pid 81996's new affinity list: 0,15
+```
+the bitwise encoding should be `8001` or `1000000000000001`
+```
+$ taskset -p 81996
+pid 81996's current affinity mask: 8001
+```
+to confirm that we did indeed set the cpu id we can look at our htop output
+```
+ PID△ CPU USER       PRI  NI  VIRT   RES   SHR S  CPU% MEM%   TIME+  Command
+81996  15 khaiv       20   0 33.6G  155M 96132 S   0.0  1.0  1:23.14 /opt/discord/Discord
 ```
 
-I'm sure others can bring better purpose to `tesseract-ocr` than I can. My daily use of it comes when a professor posts their notes/lectures as an image. Here is a small script that allows me to select an area of my screen and brings it to my clipboard for easy copy and pasting:
-```bash
-filetmp=$(mktemp -t wayshot-XXXX.png)
-wayshot -s "$(slurp)" 
-mv [0-9]*-wayshot.png $filetmp
-tesseract-ocr $filetmp stdout -l eng | wl-copy
-rm $filetmp
-# Yes this script is not great, but gets the job done
+
+## Dispatching
+```
+$ taskset --cpu-list [cpu-list] [command]
+```
+to use `taskset` to set the cpu affinity of a child process we use the above command. To confirm let use use
+```
+$ taskset --cpu-list 6 vkcube
+```
+in `htop` we find this is indeed true.
+
+```
+ PID△   CPU USER       PRI  NI  VIRT   RES   SHR S  CPU% MEM%   TIME+  Command
+ 161449   6 khaiv       20   0  621M   99M 74520 S   2.6  0.6  0:04.39 vkcube
 ```
 
-Though this script makes use of `wayshot` for screenshots, `wl-copy` for the clipboard, and `slurp` for screen area selection. If you're using X you can probably do this in one line by using `scrot` and piping into `tesseract-ocr` and you don't have to go through the hoops of making this a script/function.
 
-
-You can find the package in most linux distribution's repos. Make sure to download the language you are looking for as well as the program and the language data often come separately. If you want to learn more then check out their [docs](https://github.com/tesseract-ocr/tessdoc#usage). Read the manpage too.
-
-You can thank Hewlett-Packard Enterprise and now Google for this. Unrelated, but check out the current [Top500](https://top500.org/lists/top500/list/2023/11/) list, HPE cray supercomputers hold the top 2 positions.
