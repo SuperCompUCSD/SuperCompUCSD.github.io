@@ -1,7 +1,21 @@
 <div class="summary">
   {{ if .Site.Params.showAuthorOnPosts }}
-    {{ $author := index .Site.Data.author .Params.author }}
-    {{ partial "author.html" (dict "context" . "author" $author) }}
+
+    {{ $authData := .Site.Data.author }}
+    {{ $cxt := . }}
+
+    {{ if (isset .Params "author" )}}
+      {{ $author := index $authData .Params.author }}
+      {{ partial "author.html" (dict "context" $cxt "author" $author) }}
+    {{ end }}
+
+    {{ if (isset .Params "authors" )}}
+    {{ range .Params.authors }}
+      {{ $author := index $authData . }}
+      {{ partial "author.html" (dict "context" $cxt "author" $author) }}
+    {{ end }}
+    {{ end }}
+
   {{ else }}
     <div class="summary-date">{{ dateFormat "Jan 2, 2006" .Date }}</div>
   {{ end }}

@@ -5,12 +5,17 @@
     {{ if .Site.Params.showAuthorOnPosts }}
       {{ $authData := .Site.Data.author }}
       {{ $cxt := . }}
-      {{ $author := index .Site.Data.author .Params.author }}
-      {{ partial "author.html" (dict "context" . "author" $author) }}
 
+      {{ if (isset .Params "author" )}}
+        {{ $author := index $authData .Params.author }}
+        {{ partial "author.html" (dict "context" $cxt "author" $author) }}
+      {{ end }}
+
+      {{ if (isset .Params "authors" )}}
       {{ range .Params.authors }}
         {{ $author := index $authData . }}
         {{ partial "author.html" (dict "context" $cxt "author" $author) }}
+      {{ end }}
       {{ end }}
 
     {{ end }}
