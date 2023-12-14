@@ -23,11 +23,11 @@ draft: true
 - [x] 12. [rclone](/posts/advent-of-scc-12) - Khai
 - [x] 13. [zoxide](/posts/advent-of-scc-13) - Rito
 - [x] 14. [rr](/posts/advent-of-scc-14) - Yuchen
-- [ ] 15. [setxcbmap](/posts/advent-of-scc-15) - Austin
+- [x] 15. [setxcbmap](/posts/advent-of-scc-15) - Austin
 - [x] 16. [tesseract-ocr](/posts/advent-of-scc-16) - Franciso
 - [x] 17. [taskset](/posts/advent-of-scc-17) - Khai
 - [ ] 18. [gitignore template](/posts/advent-of-scc-18) - Matei
-- [ ] 19. [pushd popd](/posts/advent-of-scc-19) - Austin
+- [x] 19. [pushd popd](/posts/advent-of-scc-19) - Austin
 - [x] 20. [mktemp/tmpfs](/posts/advent-of-scc-20) - Khai
 - [ ] 21. [Eye candy: caca library. timg. ascii libraries. - Paco then cbonsai, pipes.sh, sl, cmatrix, neofetch, btop, asciiquarium](/posts/advent-of-scc-21) - Paco/Yuchen/Matei
 - [ ] 22. [wttr.in](/posts/advent-of-scc-22) - Matei
