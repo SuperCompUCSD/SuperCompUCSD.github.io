@@ -2,7 +2,7 @@
 title: "Advent of Supercomputing: Day 19"
 date: 2023-19-19
 publishDate: 2023-19-14T08:00:00Z
-author: ["Austin Garcia"]
+author: ["austin"]
 draft: false
 ---
 
