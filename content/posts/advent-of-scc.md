@@ -1,7 +1,7 @@
 ---
 title: "Advent of Supercomputing: Index"
 date: 2023-12-25
-author: ["paco"]
+author: ["org"]
 publishDate: 2023-12-25T08:00:00Z
 draft: true 
 ---
