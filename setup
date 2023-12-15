@@ -1,2 +1,8 @@
 #usr/bin/bash
-hugo serve -F --buildDrafts
+
+if [[ "$1" == "-l" ]]
+then
+  hugo serve
+else
+  hugo serve -F --buildDrafts
+fi
