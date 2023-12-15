@@ -1,0 +1,13 @@
+  <div>
+  <h3 class="author-date">{{ dateFormat "January 2, 2006" .context.Date }}</h3>
+{{ $cxt := .context }}
+{{ $authData := .authData }}
+{{ if .ena }}
+    {{ if gt (len .authors) 0 }}
+      {{ range .authors }}
+        {{ $author := index $authData . }}
+        {{ partial "author.html" (dict "context" $cxt "author" $author) }}
+      {{ end }}
+    {{ end }}
+{{ end }}
+</div>

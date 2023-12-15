@@ -1,27 +1,20 @@
 <div class="summary">
   <h2 class="summary-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+  
   {{ if .Site.Params.showAuthorOnPosts }}
-
     {{ $authData := .Site.Data.author }}
     {{ $cxt := . }}
-    <div>
-      <h1 class="author-date">{{ dateFormat "January 2, 2006" $cxt.Date }} - </h1>   
+    {{ $authors := slice }}
+    {{ $ena :=  .Site.Params.showAuthorOnPosts }}
 
     {{ if (isset .Params "author" )}}
-      {{ $author := index $authData .Params.author }}
-      {{ partial "author.html" (dict "context" $cxt "author" $author) }}
+      {{ $authors = $authors | append .Params.author }}
     {{ end }}
-
     {{ if (isset .Params "authors" )}}
-      {{ range .Params.authors }}
-        {{ $author := index $authData . }}
-        {{ partial "author.html" (dict "context" $cxt "author" $author) }}
-      {{ end }}
+      {{ $authors = $authors | append .Params.authors }}
     {{ end }}
-
-    </div>
-  {{ else }}
-    <div class="summary-date">{{ dateFormat "Jan 2, 2006" .Date }}</div>
+    {{ partial "authors.html" (dict "context" $cxt "authors" $authors "authData" $authData "ena" $ena) }} 
   {{ end }}
+
   <p class="summary-description">{{ .Params.description }}</p>
 </div>
