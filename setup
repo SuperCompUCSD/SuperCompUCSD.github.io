@@ -1,2 +1,2 @@
-#/usr/bin/bash
-hugo serve --buildDrafts
+#usr/bin/bash
+hugo serve -F --buildDrafts
