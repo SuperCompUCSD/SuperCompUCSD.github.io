@@ -8,4 +8,4 @@ menu:
     weight: 2
 ---
 
-This blog contains announcements for the club, as well as interesting technical papers, project, and more. Stay tuned!
+This blog contains announcements for the club, as well as interesting technical papers, project, and more.
