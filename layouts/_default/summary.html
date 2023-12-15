@@ -1,8 +1,11 @@
 <div class="summary">
+  <h2 class="summary-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
   {{ if .Site.Params.showAuthorOnPosts }}
 
     {{ $authData := .Site.Data.author }}
     {{ $cxt := . }}
+    <div>
+      <h1 class="author-date">{{ dateFormat "January 2, 2006" $cxt.Date }} - </h1>   
 
     {{ if (isset .Params "author" )}}
       {{ $author := index $authData .Params.author }}
@@ -15,13 +18,10 @@
         {{ partial "author.html" (dict "context" $cxt "author" $author) }}
       {{ end }}
     {{ end }}
-    <div>
-      <h1 class="author-date">{{ dateFormat "January 2, 2006" $cxt.Date }}</h1>   
-    </div>
 
+    </div>
   {{ else }}
     <div class="summary-date">{{ dateFormat "Jan 2, 2006" .Date }}</div>
   {{ end }}
-  <h2 class="summary-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
   <p class="summary-description">{{ .Params.description }}</p>
 </div>

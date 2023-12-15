@@ -2,9 +2,16 @@
 
 {{ define "main" }}
   <div class="blog">
+    <div class="intro">
+      <h1>{{ .Title }}{{ if .Params.dot }}<span class="dot">.</span>{{ end }}{{ if .Params.question }}<span class="dot">?</span>{{ end }}{{ if .Params.bang }}<span class="dot">!</span>{{ end }}</h1>
+      {{ if .Params.image }}
+      <img src="{{ .Params.image | relURL }}" />
+      {{ end }}
     {{ if .Site.Params.showAuthorOnPosts }}
+      <div>
       {{ $authData := .Site.Data.author }}
       {{ $cxt := . }}
+        <h3 class="author-date">{{ dateFormat "January 2, 2006" $cxt.Date}} - </h3>
 
       {{ if (isset .Params "author" )}}
         {{ $author := index $authData .Params.author }}
@@ -17,16 +24,9 @@
         {{ partial "author.html" (dict "context" $cxt "author" $author) }}
       {{ end }}
       {{ end }}
-      <div>
-        <h1 class="author-date">{{ dateFormat "January 2, 2006" $cxt.Date}}</h1>
-      </div>
 
+      </div>
     {{ end }}
-    <div class="intro">
-      <h1>{{ .Title }}{{ if .Params.dot }}<span class="dot">.</span>{{ end }}{{ if .Params.question }}<span class="dot">?</span>{{ end }}{{ if .Params.bang }}<span class="dot">!</span>{{ end }}</h1>
-      {{ if .Params.image }}
-      <img src="{{ .Params.image | relURL }}" />
-      {{ end }}
     </div>
     <div class="content">
       {{ .Content }}
