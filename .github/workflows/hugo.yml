@@ -11,7 +11,7 @@ on:
 
   # daily publish for scheduled posts 8:01UCT or 0:01 PST
   schedule:
-  - cron: '1 8 * * *'
+    - cron: '1 8 * * *'
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
