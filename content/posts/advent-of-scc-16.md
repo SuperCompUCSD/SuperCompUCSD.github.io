@@ -3,7 +3,7 @@ title: "Advent of Supercomputing: Day 16"
 date: 2023-12-16
 author: ["paco"]
 publishDate: 2023-12-16T08:00:00Z
-draft: true 
+draft: false 
 ---
 
 
