@@ -29,7 +29,7 @@ draft: true
 - [x] 18. [gitignore template](/posts/advent-of-scc-18) - Matei
 - [x] 19. [pushd popd](/posts/advent-of-scc-19) - Austin
 - [x] 20. [mktemp/tmpfs](/posts/advent-of-scc-20) - Khai
-- [ ] 21. [Eye candy: caca library. timg. ascii libraries. - Paco then cbonsai, pipes.sh, sl, cmatrix, neofetch, btop, asciiquarium](/posts/advent-of-scc-21) - Paco/Yuchen/Matei
+- [ ] 21. [Eye candy: figlet, caca library. timg. ascii libraries. - Paco then cbonsai, pipes.sh, sl, cmatrix, neofetch, btop, asciiquarium](/posts/advent-of-scc-21) - Paco/Yuchen/Matei
 - [ ] 22. [wttr.in](/posts/advent-of-scc-22) - Matei
 - [ ] 23. [mosh](/posts/advent-of-scc-23) - Yuchen
 - [ ] 24. [jq and htmlq](/posts/advent-of-scc-24) - Matei
