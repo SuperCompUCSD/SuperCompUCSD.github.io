@@ -19,7 +19,7 @@ draft: true
 - [x] 8. [ncdu/diskonaut/Dust](/posts/advent-of-scc-8) - Paco/Khai/Francisco
 - [x] 9. [lstopo](/posts/advent-of-scc-9) - Khai
 - [x] 10. [lazygit](/posts/advent-of-scc-10) - Matei
-- [x] 11. [0x0.st Null Pointer](/posts/advent-of-scc-11) - Francisco
+- [x] 11. [0x0.st Null Pointer & File Sharing](/posts/advent-of-scc-11) - Francisco
 - [x] 12. [rclone](/posts/advent-of-scc-12) - Khai
 - [x] 13. [zoxide](/posts/advent-of-scc-13) - Rito
 - [x] 14. [rr](/posts/advent-of-scc-14) - Yuchen
