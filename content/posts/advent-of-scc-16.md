@@ -15,7 +15,7 @@ Besides being a powerfull library it also makes for a fun tool. It takes an *ima
 Take for example the image `example.png`:
 
 <div style="text-align:center" >
-    <img src="/post-media/tesseract-example.png" alt="example-usage-from-wiki" width="400"/>
+    <img src="/post-media/advent-2023-media/tesseract-example.png" alt="example-usage-from-wiki" width="400"/>
 </div>
 
 ```bash
@@ -45,9 +45,10 @@ rm $filetmp
 # Yes this script is not great, but gets the job done
 ```
 
+
 Though this script makes use of `wayshot` for screenshots, `wl-copy` for the clipboard, and `slurp` for screen area selection. If you're using X you can probably do this in one line by using `scrot` and piping into `tesseract-ocr` and you don't have to go through the hoops of making this a script/function.
 
 
 You can find the package in most linux distribution's repos. Make sure to download the language you are looking for as well as the program and the language data often come separately. If you want to learn more then check out their [docs](https://github.com/tesseract-ocr/tessdoc#usage). Read the manpage too.
 
-You can thank Hewlett-Packard Enterprise and now Google for this. Unrelated, but check out the current [Top500](https://top500.org/lists/top500/list/2023/11/) list, HPE cray supercomputers hold the top 2 positions.
+You can thank Hewlett-Packard Enterprise and now Google for this.

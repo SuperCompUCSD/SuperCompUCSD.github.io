@@ -17,7 +17,7 @@ the basics of displaying both data and functions begins with the `plot` command 
 $ gnuplot
 gnuplot> plot sin(x)
 ```
-![sinx](/post-media/advent_2023_3/sinx.jpg)
+![sinx](/post-media/advent-2023-media/day-3/sinx.jpg)
 
 note that we can also chain multiple functions together using commas (this also carries over to any dataset we use as input)
 
@@ -25,7 +25,7 @@ note that we can also chain multiple functions together using commas (this also 
 $ gnuplot
 gnuplot> plot [][-2:2] sin(x), x, x-(x**3)/6 
 ```
-![multi-plot](/post-media/advent_2023_3/sinx-multi.jpg)
+![multi-plot](/post-media/advent-2023-media/day-3/sinx-multi.jpg)
 in this example note that `[][-2:2]` simply means let the range of the y-axis to be on the interval `[-2,2]` and automatically determine the range for the x-axis
 
 ## Working with data
@@ -90,7 +90,7 @@ gnuplot> plot [][0:2000] "data.dat" using 1:2 title "Gflops/node" with linespoin
                          "data.dat" using 1:3 title "Theoretical Peak" with lines 
 ```
 
-![gflop](/post-media/advent_2023_3/gflop.jpg)
+![gflop](/post-media/advent-2023-media/day-3/gflop.jpg)
 Yes, this is some of the data generated for the reproducability paper for SCC23. note though that each series is inputted into plot in the format `[series data] [fields] [title] [display format]` note though that the order for each field specifying display parameters of the data does not matter outside of the actual series data itself which must always precede all such parameters. Within the interactive session if you want to save the sequence of commands and any other hidden parameters set by the interactive session call `save gflop.gp` in the interactive session to save it and should look something like.
 ```gnuplot
 #!/usr/bin/gnuplot -persist
@@ -280,7 +280,7 @@ the file you saved from the interactive session can then be used to call to just
 ```
 $ gnuplot --persist gflop.gp
 ```
-![persist](/post-media/advent_2023_3/persist.jpg)
+![persist](/post-media/advent-2023-media/day-3/persist.jpg)
 note that this looks slightly different due to some scaling parameters not being exported
 
 however for a script that displays the basic data of the saved scripted we simply need
@@ -299,13 +299,13 @@ In this case we run `gnuplot gflop.gp` ommitting the `--persist` flag since we'l
 below I will list some examples of some more advanced gnuplot.
 
 ### [4d Heat map data](https://gnuplot.sourceforge.net/demo_6.0/heatmap_4D.html) 
-![4d heat](/post-media/advent_2023_3/4d_heat.jpg)
+![4d heat](/post-media/advent-2023-media/day-3/4d_heat.jpg)
 
 ### [Specular Highlighting](https://gnuplot.sourceforge.net/demo_6.0/pm3d_lighting.html)
-![spec-light](/post-media/advent_2023_3/spec_lighting.jpg)
+![spec-light](/post-media/advent-2023-media/day-3/spec_lighting.jpg)
 
 ### [violin plots](https://gnuplot.sourceforge.net/demo_5.4/violinplot.html)
-![violin](/post-media/advent_2023_3/violin.jpg)
+![violin](/post-media/advent-2023-media/day-3/violin.jpg)
 
 ### [3d projections on 2d](https://gnuplot.sourceforge.net/demo_5.4/projection.html)
-![projection](/post-media/advent_2023_3/projection.jpg)
+![projection](/post-media/advent-2023-media/day-3/projection.jpg)

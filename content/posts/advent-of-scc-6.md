@@ -69,7 +69,7 @@ def inner_product(f, g):
 plot(gram_schmidt([x^i for i in range(1, 10)], inner_product))
 ```
 
-![Plot of first 10 Legendre Polynomials](/post-media/advent-6-legendre.png)
+![Plot of first 10 Legendre Polynomials](/post-media/advent-2023-media/advent-6-legendre.png)
 
 As one last example, in a problem from my Math 184 homework, I needed to find the coefficient of $x^5$ of the power series of $\frac{\sqrt{1 - \alpha x}}{(1-x)^4}$. Perhaps other tools could have done it without the symbolic $\alpha$, and it's not immediately obvious how to do it with Sage.... but here's the trick:
 ```py

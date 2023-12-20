@@ -18,7 +18,13 @@ This will open a checkerboarded window where you can interact and test input. A 
 
 It also reads the placement of the mouse on the screen whenever it is moved, making it for a useful way to read location of the mouse through where monitors are placed relative to each other, though `xrandr` or `wlr-randr` is probably more suitable for that.
 
-dwl/dwm has the option to add a keybindings but one must edit the source code. A lot of the keys are reffered to as `XKB_KEY_<KEY-HERE>`. Some of these are straightforward, like `XKB_KEY_a`  for lowercase *a* or `XKB_KEY_A` for upper case *A*. But some were trickier like the \^ symbol:
+**How it looks like**:
+
+![wev-example](/post-media/advent-2023-media/wev.gif)
+
+
+
+Now dwl/dwm (a window manager) has the option to add a keybindings but one must edit the source code. A lot of the keys are reffered to as `XKB_KEY_<KEY-HERE>`. Some of these are straightforward, like `XKB_KEY_a`  for lowercase *a* or `XKB_KEY_A` for upper case *A*. But some were trickier like the \^ symbol:
 
 ```bash
 wev
@@ -27,4 +33,4 @@ wev
                       sym: asciicircum  (94), utf8: ''
 ```
 
-From this I can see the key is *asciicircum*, and I edited my own config to have `XKB_asciicircum` do whatever I wished it to do. Overall, it's just a good tool to keep in mind.
+With wev I was able to see the key I wanted was *asciicircum*, and I edited my own config to have `XKB_asciicircum` do whatever I wished it to do. Overall, it's just a good tool to keep in mind.

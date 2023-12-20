@@ -20,7 +20,7 @@ That being said, I'm sure you already might have a couple of questions:
 - How do I even remember all these aliases?
 - What the hell is even `git push --force-with-lease`?
 
-While [there exists an ansewr for the second
+While [there exists an answer for the second
 question](https://git-scm.com/docs/git-push#Documentation/git-push.txt---no-force-with-lease),
 the first one is an issue as old as time. After all, a lot of people always
 talk about the difficulty of handling Git as a whole, and frankly, sometimes I

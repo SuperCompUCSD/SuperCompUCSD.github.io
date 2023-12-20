@@ -40,7 +40,7 @@ Super simple, and super cool. However, there's enough boilerplate in Git ignore
 files for common projects that you'll find that even GitHub lets you initialize
 a project with one:
 
-![A screencap of GitHub's repo creation screen, showing the "Add .gitignore" feature.](/post-media/advent-19-github.png)
+![A screencap of GitHub's repo creation screen, showing the "Add .gitignore" feature.](/post-media/advent-2023-media/advent-19-github.png)
 
 Surely, there is a quick way to do that locally as well, right?
 

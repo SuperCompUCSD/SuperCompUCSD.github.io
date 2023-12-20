@@ -66,13 +66,28 @@ Archive:  H3wQ.zip
 
 [0x0.st](https://0x0.st) also used to offer URL-Shortening, but it has since been disabled. Check with one of its mirrors though.
 
+[bashupload.com](https://bashupload.com/how_to_upload_file_to_server), an alternative site that allows for larger file size at the cost of only one download. Boasts a 50G max, you can upload by choosing the file (allowing one to upload from a mobile phone actually), and has pretty good articles on different ways to use it (gpg encryption, uploading from mobile, etc): [site](https://bashupload.com/how_to_upload_file_to_server). Another upside is that it allows you to set the name it will be found as, and that's pretty darn good.
+
+``` bash
+# upload
+curl https://bashupload.com/ -T /var/file.txt
+
+# upload
+curl https://bashupload.com/<UPLOAD_NAME> --data-binary @/var/<CURRENT_FILE_NAME>
+
+
+# download
+wget https://bashupload.com/<UPLOAD_NAME>
+```
 
 Another alternative to this file sharing site is [*`transfer.sh`*](https://transfer.sh), which offers most of the same features as 0x0.st. It offers a max upload of 10GB for the cost of only storing a default of 14 days. There are some more options that it might be worth checking out over `0x0.st`, such as setting max downloads or making it easier for normal people to upload with their examples.
 
+
 The site [tmpfiles.org](https://tmpfiles.org) has a maximum file size of 100Mb and only an hour, but allows you to upload from their site gui or with `curl`, and [imgdb.net](imgdb.net) boasts to be a "*resilient Image Archive*". One this site one can view all images posted, but as a downside there's no direct way to upload with curl. I would still recommend [0x0.st](https://0x0.st) and [transfer.sh](https://transfer.sh) over both of these. These two also have their code so you can mirror them as well, which you should totally do:
 
-[Null Pointer (Mia's gitea)](https://git.0x0.st/mia/0x0) and [transfer.sh github](https://github.com/dutchcoders/transfer.sh/).
+[Null Pointer (Mia's gitea)](https://git.0x0.st/mia/0x0), [bashupload.com](https://bashupload.com/how_to_upload_file_to_server), [transfer.sh github](https://github.com/dutchcoders/transfer.sh/).
 In any of these cases making a script will make your life easier.
+
 
 ### magic-wormhole
 
