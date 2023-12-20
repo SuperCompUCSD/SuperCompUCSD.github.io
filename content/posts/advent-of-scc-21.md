@@ -91,7 +91,7 @@ Use the following commands to adjust your environment:
 [myuser@login02 ~]$ 
 ```
 
-Huh... would you look at that. Now there's supposed to be replacement to figlet called `toilet` made by the same guys who made the cacalib, a library for outputting images/video through ascii. It offers pretty much similar outputs but with colors. Both really haven't seen much development for a long time though.
+Huh... would you look at that. You can find more figlet fonts [here](https://github.com/xero/figlet-fonts). Then just move then to `/usr/share/figlet` (or wherever they are stored). Now there's supposed to be replacement to figlet called `toilet` made by the same guys who made the cacalib, a library for outputting images/video through ascii. It offers pretty much similar outputs but with colors. Both really haven't seen much development for a long time though.
 
 
 # Purely Aesthetic
