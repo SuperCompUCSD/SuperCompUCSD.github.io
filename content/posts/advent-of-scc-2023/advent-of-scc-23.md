@@ -106,6 +106,8 @@ _Who says you need to use a GUI to access the interwebs?_
 
 <img src="/post-media/advent-2023-media/day-23/timing.png" alt="The Sun God timing under w3m" style="height: max(1000px, 100vh);"/>
 
+Ta-da! 🎉
+
 # But is it just a fluke?
 
 I tried to open the Sun God website with my phone's browser instead.
