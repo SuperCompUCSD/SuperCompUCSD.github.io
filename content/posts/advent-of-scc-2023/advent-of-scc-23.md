@@ -53,7 +53,7 @@ _infuriating_.  So when I discovered Mosh, I knew that it's the thing that I hav
 
 # Mosh
 
-Mosh, or **Mo**bile **sh**ell, is, according it its [website](https://mosh.org/):
+Mosh, or **Mo**bile **sh**ell, is, according its [website](https://mosh.org/):
 
 > Remote terminal application that allows roaming, supports intermittent connectivity, and provides
 > intelligent local echo and line editing of user keystrokes. \
@@ -128,6 +128,6 @@ But at least it reconnects as soon as it's back up.
 
 # But how does it work?
 
-Check out the "How Mosh works" section on its [website](https://mosh.org/#techinfo)!  I can't hope
+Check out the ["How Mosh works" section on its website](https://mosh.org/#techinfo)!  I can't hope
 to explain all of it here.  It has a really good explanation, and if you want the juicy details
 there's a paper and everything.
