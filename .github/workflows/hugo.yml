@@ -77,8 +77,13 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
+
+  # update netlify
+  netlify:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: update netlify
-        shell: bash
         id: netlify
         run:
           curl -d '{}' "https://api.netlify.com/build_hooks/${{ secrets.buildhook }}"
