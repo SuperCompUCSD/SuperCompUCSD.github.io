@@ -66,7 +66,7 @@ over TCP) approach of just piping the two character streams over the network and
 terminal to figure out what it should look like.  This allows it to use UDP instead of TCP to work
 under terrible networking environments and to send as little data as possible, since it doesn't need
 to send all the terminal history when it is no longer visible.
-gg
+
 This allows it to do a lot more cool tricks, too!  Since UDP doesn't work based on connections, your
 SSH session doesn't drop even when you roam between different connections.  This became really
 useful to me as I often connect to my servers when going around campus, connecting and disconnecting
