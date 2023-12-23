@@ -30,8 +30,8 @@ draft: true
 - [x] 19. [pushd popd](/posts/advent-of-scc-19) - Austin
 - [x] 20. [mktemp/tmpfs](/posts/advent-of-scc-20) - Khai
 - [x] 21. [Eye candy: figlet, timg, etc. - Paco then cbonsai, pipes.sh,cmatrix, neofetch, btop, asciiquarium](/posts/advent-of-scc-21) - Paco/Yuchen/Matei
-- [ ] 22. [wttr.in](/posts/advent-of-scc-22) - Matei
-- [ ] 23. [mosh](/posts/advent-of-scc-23) - Yuchen
+- [x] 22. [wttr.in](/posts/advent-of-scc-22) - Matei
+- [x] 23. [mosh](/posts/advent-of-scc-23) - Yuchen
 - [ ] 24. [jq and htmlq](/posts/advent-of-scc-24) - Matei
 - [ ] 25. [tldr](/posts/advent-of-scc-25) - Francisco/Matei
 
