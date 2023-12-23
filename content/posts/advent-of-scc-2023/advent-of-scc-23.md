@@ -9,14 +9,14 @@ draft: false
 # "Hmm, this music is kinda meh, I wonder what comes next?"
 
 Surrounded by the crowd under the stage of the RIMAC lawn, I reached inside my pocket and unlocked
-my phone.  I knew by gut feeling that this was probably now going to work, but I tried it anyways.
+my phone.  I knew by gut feeling that this was probably now going to work, but I tried it anyway.
 Firefox, Google, ...
 
 ...
 
 <img src="/post-media/advent-2023-media/day-23/timed-out.png" alt="The connection has timed out" style="height: max(1000px, 100vh);"/>
 
-_Welp, I knew it._  Aside from not having WiFi in the Arena, the data speed also sucks.  _Hmm, I
+_Welp, I knew it._ Aside from not having Wi-Fi in the Arena, the data speed also sucks.  _Hmm, I
 wonder how the packet loss situation is looking?_  I open Termux, my Linux command line on Android,
 and ping the Sun God website:
 
@@ -44,7 +44,7 @@ halfway across the globe, and that comes with the problem of having an atrocious
 (RTT) of 150 ms.  This means that I can't even see my typos until 150 ms in the future, after I
 frantically delete and retype, only to find out that I missed a single character in the middle and
 have to arrow over to fix it (and then proceed to arrow over one more character than I need.
-Urgh!!)
+Ugh!!)
 
 That's not all.  An even worse problem is that somewhere along the entire route to China and back
 something often gets wonky and all my packets get lost for minutes at a time.  This means that I
@@ -65,7 +65,9 @@ In simple terms, it synchronizes the state of the terminal instead of taking the
 over TCP) approach of just piping the two character streams over the network and allowing your local
 terminal to figure out what it should look like.  This allows it to use UDP instead of TCP to work
 under terrible networking environments and to send as little data as possible, since it doesn't need
-to send all the terminal history when it is no longer visible.
+to send all the terminal history when it is no longer visible.  It works with the worst network
+connections, once even allowing one of its users to
+[escape from a trapped elevator](https://mosh.org/elevator.txt).
 
 This allows it to do a lot more cool tricks, too!  Since UDP doesn't work based on connections, your
 SSH session doesn't drop even when you roam between different connections.  This became really
@@ -81,14 +83,14 @@ them instantaneously, as if there is zero latency between me and the server!  It
 the predicted portion and will retract them if the server reports an inconsistency, but it's seldom
 wrong.
 
-...So...
+So...
 
 ```
 $ mosh scc-evans
 y5jing@evans:~$
 ```
 
-_Aha!_
+_I'm in!_
 
 But how exactly does being able to SSH under rough connections help me at the Sun God Festival?
 
@@ -108,7 +110,7 @@ _Who says you need to use a GUI to access the interwebs?_
 
 Ta-da! 🎉
 
-# But is it just a fluke?
+# But was it just a fluke?
 
 I tried to open the Sun God website with my phone's browser instead.
 
@@ -120,7 +122,7 @@ I tried to open the Sun God website with my phone's browser instead.
 
 _I love Mosh!_
 
-(Of course, Mosh can't handle completely broken connections either:)
+(Of course, Mosh isn't magic and can't handle completely broken networks either:)
 
 <img src="/post-media/advent-2023-media/day-23/lost-contact.png" alt="Mosh lost contact" style="height: max(1000px, 100vh);"/>
 
@@ -129,5 +131,5 @@ But at least it reconnects as soon as it's back up.
 # But how does it work?
 
 Check out the ["How Mosh works" section on its website](https://mosh.org/#techinfo)!  I can't hope
-to explain all of it here.  It has a really good explanation, and if you want the juicy details
+to explain all of it here.  It has an in-depth explanation, and if you want the juicy details
 there's a paper and everything.
