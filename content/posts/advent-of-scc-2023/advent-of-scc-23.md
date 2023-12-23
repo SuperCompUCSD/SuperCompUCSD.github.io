@@ -126,6 +126,6 @@ But at least it reconnects as soon as it's back up.
 
 # But how does it work?
 
-Check out the "How Mosh works" section on its [website](https://mosh.org/)!  I can't hope to explain
-all of it here.  It has a really good explanation, and if you want the juicy details there's a paper
-and everything.
+Check out the "How Mosh works" section on its [website](https://mosh.org/#techinfo)!  I can't hope
+to explain all of it here.  It has a really good explanation, and if you want the juicy details
+there's a paper and everything.
