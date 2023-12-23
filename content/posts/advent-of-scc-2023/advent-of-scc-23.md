@@ -29,15 +29,14 @@ never seen that before.  But terrible internet can't stop me!  _It's Mosh time!!
 
 My time with Mosh goes way back.
 
-I have a backup server across the globe in China that I
-self-hosted with a RPi 3B+ that I bought the final year of high school (my rationale for that is
-that even under the impossible situation of the entire United States being suddenly erased, my
-entire data collection would still be intact.  _Don't ask me why I care about my data when I myself
-is in even deeper trouble!  We don't worry about minor non-technical details here._).  I let my
-laptop do the backups automatically during the night and all is well.  Except I am my own sysadmin,
-so I needed to do some maintenance work every so often once I get an email about another
-vulnerability being disclosed in OpenSSH and that I have to update my server _now_ to avoid it being
-compromised.
+I have a backup server across the globe that I self-hosted with a RPi 3B+ that I bought the final
+year of high school.  (My rationale for taking offsite backup to the extreme is that even if the
+entire Americas is suddenly erased somehow, my entire data collection would still be intact.  _Don't
+ask me why I care about my data when I myself is in even deeper trouble!  We don't worry about minor
+non-technical details here._)  I let my laptop do the backups automatically during the night and all
+is well.  Except I am my own sysadmin, so I needed to do some maintenance work every so often once
+I get an email about another vulnerability being disclosed in OpenSSH and that I have to update my
+server _now_ to avoid it being compromised.
 
 I usually don't mind putting in a couple quick commands, except that my little RPi happy runs
 halfway across the globe, and that comes with the problem of having an atrocious round-trip time
@@ -46,9 +45,9 @@ frantically delete and retype, only to find out that I missed a single character
 have to arrow over to fix it (and then proceed to arrow over one more character than I need.
 Ugh!!)
 
-That's not all.  An even worse problem is that somewhere along the entire route to China and back
-something often gets wonky and all my packets get lost for minutes at a time.  This means that I
-could never tell if my connection just dropped, or that I just needed to wait a bit.  It was
+That's not all.  An even worse problem is that somewhere along the entire route around the globe and
+back something often gets wonky and all my packets get lost for minutes at a time.  This means
+that I could never tell if my connection just dropped, or that I just needed to wait a bit.  It was
 _infuriating_.  So when I discovered Mosh, I knew that it's the thing that I have always wanted.
 
 # Mosh
