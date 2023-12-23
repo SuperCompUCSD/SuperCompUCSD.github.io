@@ -94,7 +94,7 @@ But how exactly does being able to SSH under rough connections help me at the Su
 
 # w3m
 
-_Who needs GUI to use the interwebs?  Noobs._
+_Who says you need to use a GUI to access the interwebs?_
 
 `$ apt show w3m`
 
@@ -112,7 +112,7 @@ I tried to open the Sun God website with my phone's browser instead.
 
 <img src="/post-media/advent-2023-media/day-23/lineup.png" alt="The Sun God lineup page is missing" style="height: max(1000px, 100vh);"/>
 
-<img src="/post-media/advent-2023-media/day-23/lineup.png" alt="The Sun God lineup page is working with w3m" style="height: max(1000px, 100vh);"/>
+<img src="/post-media/advent-2023-media/day-23/lineup-working.png" alt="The Sun God lineup page is working with w3m" style="height: max(1000px, 100vh);"/>
 
 ...Yeah, I don't think so.
 
