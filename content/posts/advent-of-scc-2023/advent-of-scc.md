@@ -32,8 +32,8 @@ draft: true
 - [x] 21. [Eye candy: figlet, timg, etc. - Paco then cbonsai, pipes.sh,cmatrix, neofetch, btop, asciiquarium](/posts/advent-of-scc-21) - Paco/Yuchen/Matei
 - [x] 22. [wttr.in](/posts/advent-of-scc-22) - Matei
 - [x] 23. [mosh](/posts/advent-of-scc-23) - Yuchen
-- [ ] 24. [jq and htmlq](/posts/advent-of-scc-24) - Matei
-- [ ] 25. [tldr](/posts/advent-of-scc-25) - Francisco/Matei
+- [x] 24. [jq and htmlq](/posts/advent-of-scc-24) - Matei
+- [x] 25. [tldr](/posts/advent-of-scc-25) - Francisco/Matei
 
 # Other mentions: curl ifconfig.me; curl wtfismyip.com/text
 # Alternatives to 0x0.st is transfer.sh, bashupload.com
