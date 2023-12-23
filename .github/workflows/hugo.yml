@@ -81,6 +81,7 @@ jobs:
   # update netlify
   netlify:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'schedule' }}
     needs: build
     steps:
       - name: update netlify
