@@ -2,7 +2,7 @@
 title: "Advent of Supercomputing: Day 25"
 date: 2023-12-25
 publishDate: 2023-12-25T08:00:00Z
-author: ["matei"]
+author: ["matei", "paco"]
 draft: false
 ---
 
@@ -97,12 +97,33 @@ If you ever feel like you want to explore, or just want to see what the limits
 of your own commands are, chances are that `tldr` will show you something new.
 And fast, too!
 
-Because the faster you move, the more you can do. Or, even better, the quicker
-you can take a minute and enjoy the world as it is, the happier you'll be.
-
-So, without further ado, for one final TL;DR moment:
-
-**TL;DR:** `tldr` can show you cool stuff with `tldr --list` and you can learn a
+As a tip `tldr` can show you cool stuff with `tldr --list` and you can learn a
 ton of stuff, just like these blog posts.
 
+### Clients and other Options
+
+(This section was written by Paco btw)
+
+But... Matei, `tldr --list` doesn't work on my system. And when I saw someone use `tldr` the other day I was surprised that their client just output text&mdash; it's not like this on my system.
+
+That is because different systems offer a different default `tldr` client. On Void Linux the default is written in Go, which offers fuzzy searching and interactions. It's very nice (except when the command turns my output invisible, so I have to enter `reset`), and I would recommend it over the plain output of pages of other clients. The Go client also gives [benchmarks](https://github.com/isacikgoz/tldr/wiki/Benchmarks) for the Go, Bash, Rust, C++, and Node clients btw.
+
+![gif to go client screenplay was supposed to display :(. Just go to the repo linked instead: https://github.com/isacikgoz/tldr](https://raw.github.com/isacikgoz/tldr/master/img/screenplay.gif)
+
+Digging into the parent, the `tldr-pages` repo, I see there are a lot of [clients](https://github.com/tldr-pages/tldr/wiki/tldr-pages-clients) written for `tldr-pages`, and... wait a minute... DuckDuckGo is on here? Apparently typing "tldr \<command\>" into the search engine will get your corresponding `tldr-pages` output on the right. What the duck, I didn't know that.
+
+![Search "tldr man" on DuckDuckGo](/post-media/advent-2023-media/advent-25-duckduckgo-tldr.png)
+
+There's more good stuff that I hadn't expected to find, so read the wiki if you're interested in perhaps creating your own entries or other: [wiki](https://github.com/tldr-pages/tldr/wiki)
+
+
+Now as another mention the command `cheat` is a similar alternative to `tldr`, and we talked about `cheat` and `tldr` in our [terminal guide](/posts/austins-terminal-guide#tldr). And if you want more options the `tldr` git repo also has a mentions of few more alternatives of its own: devhints, `eg`, etc. Check out their [list](https://github.com/tldr-pages/tldr#similar-projects).
+
+
+### Merry Christmas
+
+The faster you move, the more you can do. Or, even better, the quicker
+you can take a minute and enjoy the world as it is, the happier you'll be.
+
 **Have a wonderful Christmas and winter holiday!**
+

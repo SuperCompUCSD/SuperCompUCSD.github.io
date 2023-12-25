@@ -287,7 +287,9 @@ who # List logged-in users
 ```sh
 w # Detailed listing of logged-in users
 ```
-##### neofetch <font style="color:989898">(not installed by default)</font>
+##### neofetch 
+<font style="color:989898">(not installed by default)</font>
+
 <font color="grey">A command-line system information tool that displays system information alongside an image, generally
 
  your OS logo.</font>
@@ -343,7 +345,9 @@ type <command> # Example: type type
 which <command> # Example: `which ls`
 ```
 
-##### tldr <font style="color:989898">(not installed by default)</font>
+##### tldr 
+<font style="color:989898">(not installed by default)</font>
+
 <font style="color:grey"> This stands for "Too long: didn't read". This provides a super short version of the info, man, and help pages. This has to be installed separately on most systems.</font> 
 ```sh
 tldr <command> # Example: tldr tldr
@@ -371,7 +375,9 @@ tldr
     tldr -u
 ```
 
-#### cheat <font style="color:989898">(not installed by default)</font>
+#### cheat 
+<font style="color:989898">(not installed by default)</font>
+
 <font style="color:grey">Provides a cheat sheet for using the command</font>
 ```sh
 cheat <command> # Example: cheat cheat
