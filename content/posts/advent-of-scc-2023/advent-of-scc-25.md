@@ -122,8 +122,12 @@ Now as another mention the command `cheat` is a similar alternative to `tldr`, a
 
 ### Merry Christmas
 
+
 The faster you move, the more you can do. Or, even better, the quicker
 you can take a minute and enjoy the world as it is, the happier you'll be.
 
 **Have a wonderful Christmas and winter holiday!**
 
+[`snowmachine`](https://github.com/sontek/snowmachine):<br>
+(Can be installed with pip)
+<script src="https://asciinema.org/a/KttcxbfphX7RtR1TzEb8gywgs.js" id="asciicast-KttcxbfphX7RtR1TzEb8gywgs" async></script>
