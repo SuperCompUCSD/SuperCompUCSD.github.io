@@ -6,7 +6,7 @@ author: ["matei"]
 draft: false
 ---
 
-# What `thefuck`?
+# What `thefrick`?
 
 Have you ever had one of those moments when you've coding on your computer way too late?
 
@@ -40,7 +40,8 @@ Ah, crap. I meant the hidden files! Hold up, let me tell the computer that I'm p
 
 ```sh
 storm_firefox1 on Storm Prism   on ☁️   
->>> fuck
+>>> alias frick="fuck"
+>>> frick
 ls -lah [enter/↑/↓/ctrl+c]
 ```
 
@@ -55,11 +56,11 @@ storm_firefox1 on Storm Prism ./.emacs.d on 🌱 master on ☁️
 error: pathspec 'setup-org' did not match any file(s) known to git
 ```
 
-Fuck!
+Frick!
 
 ```sh
 storm_firefox1 on Storm Prism ./.emacs.d on 🌱 master on ☁️   
-✗>>> fuck
+✗>>> frick
 git checkout -b setup-org [enter/↑/↓/ctrl+c]
 Switched to a new branch 'setup-org'
 ```
