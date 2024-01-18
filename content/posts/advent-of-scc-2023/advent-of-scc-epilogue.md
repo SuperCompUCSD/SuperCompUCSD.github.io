@@ -18,7 +18,7 @@ draft: false
 2. [xev/wev](/posts/advent-of-scc-2023/advent-of-scc-2)
 3. [gnuplot](/posts/advent-of-scc-2023/advent-of-scc-3)
 4. [Ab-av1 / ffmpeg](/posts/advent-of-scc-2023/advent-of-scc-4)
-5. [thefuck](/posts/advent-of-scc-2023/advent-of-scc-5)
+5. [thefrick](/posts/advent-of-scc-2023/advent-of-scc-5)
 6. [sagemath](/posts/advent-of-scc-2023/advent-of-scc-6)
 7. [mdbook](/posts/advent-of-scc-2023/advent-of-scc-7)
 8. [ncdu/diskonaut/Dust](/posts/advent-of-scc-2023/advent-of-scc-8)
