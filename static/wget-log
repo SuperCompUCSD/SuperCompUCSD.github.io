@@ -1,0 +1,12 @@
+--2024-01-23 15:31:18--  https://cdn.discordapp.com/attachments/799159793343529002/1199357543177261136/supercomputing__1__720.png?ex=65c23fc1
+Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+Resolving cdn.discordapp.com (cdn.discordapp.com)... 162.159.134.233, 162.159.130.233, 162.159.129.233, ...
+Connecting to cdn.discordapp.com (cdn.discordapp.com)|162.159.134.233|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 336674 (329K) [image/png]
+Saving to: ‘supercomputing__1__720.png?ex=65c23fc1’
+
+              supercomputing   0%[                                             ]       0  --.-KB/s               supercomputing__1__720.png?e 100%[============================================>] 328.78K  --.-KB/s    in 0.03s   
+
+2024-01-23 15:31:19 (9.45 MB/s) - ‘supercomputing__1__720.png?ex=65c23fc1’ saved [336674/336674]
+
