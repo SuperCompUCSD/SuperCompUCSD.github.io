@@ -3,9 +3,6 @@ title: IEEE Supercomputing
 author: org
 description: We are Supercomputing @ UCSD!
 ---
-Come meet us in our winter GBM
-
-![wi-gbm](supercomputin-wi-2023-gbm.png)
 
 We are a sub-community of the Institute of Electrical and Electronics Engineers (IEEE) UC San Diego student branch, dedicated to high-performance computing specifically. 
 
