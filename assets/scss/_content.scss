@@ -35,6 +35,20 @@ ul {
   }
 }
 
+.images {
+  display: flex;
+  justify-items: center;
+
+  img {
+    object-fit: cover;
+    max-height: 50%;
+    max-width: 50%;
+    border-radius: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
 .content {
   font-size: 20px;
   p {

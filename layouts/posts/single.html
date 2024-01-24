@@ -6,6 +6,12 @@
       <h1>{{ .Title }}{{ if .Params.dot }}<span class="dot">.</span>{{ end }}{{ if .Params.question }}<span class="dot">?</span>{{ end }}{{ if .Params.bang }}<span class="dot">!</span>{{ end }}</h1>
       {{ if .Params.image }}
       <img src="{{ .Params.image | relURL }}" />
+      {{ else if .Params.images }}
+      <div class="images">
+        {{ range .Params.images }}
+        <img src="{{ . | relURL }}" />
+        {{ end }}
+      </div>
       {{ end }}
     </div>
 

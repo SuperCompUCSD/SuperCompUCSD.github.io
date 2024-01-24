@@ -1,6 +1,6 @@
 ---
 title: 'Who are we'
-image: images/team-official.jpg
+images: ["images/team-official.jpg", "images/sdsc.png"]
 url: "about"
 author: org
 question: true
@@ -30,3 +30,5 @@ past 35 years it has maintained its position as a leader in data-intensive compu
 computer infrastructure. SDSC provides resources, hardware and services to many organizations
 in UCSD, in other UC campuses and beyond using its massive community clusters, such as Voyager
 and Expanse.
+
+We're located in **SDSC Room 404 and 413** just about any time! Come on by and hang out with us!
