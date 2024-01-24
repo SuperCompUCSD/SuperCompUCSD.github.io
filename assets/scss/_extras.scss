@@ -19,8 +19,20 @@
 }
 
 .intro-content {
-    padding-right: 30px;
+    @media (min-width: 768px) {
+      padding-right: 30px;
+    }
 }
+
+.btn-content {
+  display: flex;
+  justify-content: center;
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+    padding-right: 30px;
+  }
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -49,8 +61,6 @@ h2 {
   font-size: 20px;
   font-weight: 600;
   line-height: normal;
-  margin-right: 20px;
-  margin-top: 10px;
   min-height: 70px;
   max-width: 200px;
   outline: none;
@@ -63,6 +73,7 @@ h2 {
   touch-action: manipulation;
   width: 100%;
   will-change: transform;
+  margin-bottom: 16px;
 }
 
 .intro-btn:disabled {
