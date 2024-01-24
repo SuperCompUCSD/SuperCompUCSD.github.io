@@ -12,13 +12,15 @@ menu:
 
 ## 1. Raspberry Pi Cluster 
 **Description:**
-The project will provide an opportunity to sharpen basic hardware and software skill. Topics covered will include Linux, compilers, parallel programming, and performance tuning applications.
+We will be setting up a Raspberry Pi "supercomputing" cluster with industry standard software practices and try running some parallel applications with it.
+
+The project will provide an opportunity to sharpen basic hardware and software skills. Topics covered will include Linux, compilers, parallel programming, and performance tuning applications.
 
 No prior experience is required!
 
 **Learning Goals:**
-- Build a Raspberry Pi Cluster to run popular HPC benchmarks/applications.
-- Compete against international teams in the Single Board Cluster competition.
+- Build a Raspberry Pi Cluster to run popular HPC benchmarks/applications and distributed ray tracing. 
+- Compete against international teams in SBCC 2024.
 
 **Mentors:** Paco, Matei, Yuchen
 
