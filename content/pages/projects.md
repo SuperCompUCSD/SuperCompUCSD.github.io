@@ -52,6 +52,6 @@ Only requirements are some IP stack knowledge along with familiarity with the co
 
 Meetings will be at SDSC Fridays from 2-4pm
 
-**Mentors:** Khai Vu
+**Mentors:** Khai Vu, Matei
 
 **Time Requirements**: 4-5 hours/week
