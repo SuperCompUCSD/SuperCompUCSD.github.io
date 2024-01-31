@@ -18,6 +18,8 @@ The project will provide an opportunity to sharpen basic hardware and software s
 
 No prior experience is required!
 
+Meetings will be at SDSC Saturdays from 1-3pm
+
 **Learning Goals:**
 - Build a Raspberry Pi Cluster to run popular HPC benchmarks/applications and distributed ray tracing. 
 - Compete against international teams in SBCC 2024.
@@ -34,6 +36,8 @@ This project will work on programming a Xilinx FPGA to implement a network inter
 
 Some Verilog and C experience required along with some familiarity with the linux kernel is prefered but not required.
 
+Meetings will be at SDSC Fridays from 10am-12pm
+
 **Mentors:** Khai Vu, Kyle Smith
 
 **Time Requirements:** 4-5 hours/week (very likely more)
@@ -45,6 +49,8 @@ Some Verilog and C experience required along with some familiarity with the linu
 This project will be more infrastructure related for the club and will primarily involve learning how to configure switches for various fabrics be it ethernet or infiniband along with configuring the application interfaces such as MPI
 
 Only requirements are some IP stack knowledge along with familiarity with the commandline
+
+Meetings will be at SDSC Fridays from 2-4pm
 
 **Mentors:** Khai Vu
 
