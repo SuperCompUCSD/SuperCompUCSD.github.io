@@ -4,7 +4,9 @@
 <div class="intro">
   <h1>{{ .Title }}{{ if .Params.dot }}<span class="dot">.</span>{{ end }}{{ if .Params.question }}<span class="dot">?</span>{{ end }}{{ if .Params.bang }}<span class="dot">!</span>{{ end }}</h1>
   {{ if .Params.image }}
-  <img src="{{ .Params.image | relURL }}" />
+  <div class="image-box">
+    <img src="{{ .Params.image | relURL }}" class="rounded-image" />
+  </div>
   {{ else if .Params.images }}
   <div class="images">
     {{ range .Params.images }}
