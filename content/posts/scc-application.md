@@ -14,6 +14,7 @@ Of the released information for this year the applications and benchmarks are:
 - [MLPerf Datacenter Inference](https://mlcommons.org/benchmarks/inference-datacenter/)
 - [NAMD](https://www.ks.uiuc.edu/Research/namd/)
 - [ICON](https://icon-model.org/)
+
 with more info to be release on the [supercomputing site](https://sc24.supercomputing.org/students/student-cluster-competition/)
 
 
