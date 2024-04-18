@@ -92,6 +92,9 @@ Monday 8am the competition began. They corrected our misconception that we could
 
 ### Final Score Breakdown
 
+**Our team won 3rd overall and 1st among U.S. teams!**
+
+
 Item                        | unweighted score | weighted score
 :---------------------------|-----------------:|------------:
 Poster                   5% | 76          /100 |  3.800
