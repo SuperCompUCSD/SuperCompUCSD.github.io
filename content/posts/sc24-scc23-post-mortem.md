@@ -1,7 +1,7 @@
 ---
 title: "SCC23 Postmortem & Supercomputing 2024 info"
 date: 2024-04-10
-author: ["khai", "paco", "zixian"]
+author: ["Khai", "Paco", "Zixian"]
 draft: false
 ---
 ## SC24 info
