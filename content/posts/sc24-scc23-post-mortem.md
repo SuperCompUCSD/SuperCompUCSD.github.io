@@ -1,7 +1,7 @@
 ---
 title: "SCC23 Postmortem & Supercomputing 2024 info"
 date: 2024-04-10
-author: ["khai", "paco"]
+author: ["khai", "paco", "zixian"]
 draft: false
 ---
 ## SC24 info
@@ -58,6 +58,7 @@ The tuning of HPL were put onto Austin Garcia and Triston Babers. Since AMD alre
 
 
 < ZIXIAN WRITE  A PARAGRAPH ON MLPERF HERE >
+Our SCC23 Team, led by Zixian Wang, solved industrial and community-wise challenges to be able to run MLPerf Inference Benchmark on AMD GPUs. Backend support for AMD ROCM did not exist and no single submission uses AMD GPUs on MLPerf Inference Benchmark. Zixian and Khai figured out the appropriate libraries and versions that successfully enabled inferencing model through AMD GPUs. We collaborated with MLCommons, founder of MLPerf Benchmark, for inclusion of PyTorch, ONNX Runtime and MIGraphX for AMD ROCM in their CM Automation pipeline to run MLPerf Benchmark. We deployed optimal batch size, multi-gpu inferencing and quantization. **Our SCC23 Team WON MLPerf Inference Benchmark** [link](https://www.studentclustercompetition.us/2023/index.html) and Zixian received a "significant MLPerf Community contribution" award for his effort. 
 
 MPAS-A was handled by Francisco Gutierrez. The application is relatively well documentented, deep, and has seen some development in porting over the GPUs recently, but unfortunately mainly through portland group's toolset (now NVIDIA's toolset after acquisition and integration). Building up the dependencies, especially the Parallel IO (PIO), gave some issues due to not linking MPI properly, which may also have been due to our custom version of Open-MPI 4.1.X with UCC and UCX to support RDMA on our hardware. Ultimately the (PIO) was built via Spack, which was a pleasant package manager to learn since it is also used in some HPC centers including Expanse.
 
