@@ -1,7 +1,7 @@
 ---
 title: "SCC23 Postmortem & Supercomputing 2024 info"
 date: 2024-04-10
-author: ["Khai", "Paco", "Zixian"]
+author: ["khai", "paco", "zixian"]
 draft: false
 ---
 ## SC24 info
@@ -16,7 +16,7 @@ Formal announcements aside, Let's cover UCSD's experience at SCC23.
 
 ## Preparing
 At the advent of the competition these were the specifications of the competition we were given.
-- All software and hardware we used must be publically available at the start of the competition.
+- All software and hardware we used must be publicly available at the start of the competition.
 - 4 kW limit on a 3 node cluster
 - Benchmarks are: HPL, HPCG, and MLPERF inference and the optional OSU and Stream benchmarks
 - Applications are: MPAS-A, 3DMHD, and Reproducibility (a numerical method to reduce the computation intensity of Cholesky Decomposition)
