@@ -3,7 +3,10 @@ title: "SCC23 Postmortem & Supercomputing 2024 info"
 date: 2024-04-10
 author: ["khai", "paco", "zixian"]
 draft: false
+math: true
 ---
+
+
 ## SC24 info
 As of the publication of this post the application for UCSD's 2024 team has opened [here](https://na.eventscloud.com/scc24). For those applying the deadline is April 21 and notifications will be sent out the following week on the 29th. Extra dates are listed on the application page.
 
@@ -79,15 +82,35 @@ The night before we had to ship out the cluster the travel team put the system b
 
 ## Competing
 
-We arrived Saturday afternoon into the hotel, just in time to meet the Tsinghua and the Boston ($BU^3$) teams in the lobby. In the afternoon we began to set up our cluster of which you can see pictures in various places linked in the end of the article. And that late night, by speaking with the staff the PDUs going to be used could not accurately measure per node power, which meant that if any teams broke the 2K power limit they could get away with it. Because of some confusion with someone who wasn't directly responsible for the rules misinformation spread that we could achieve the same configuration of SCC22. That is, one big GPU filled node. 
+We arrived Saturday afternoon into the hotel, just in time to meet the Tsinghua and the Boston BU<sup>3</sup> teams in the lobby. In the afternoon we began to set up our cluster of which you can see pictures in various places linked in the end of the article. And that late night, by speaking with the staff the PDUs going to be used could not accurately measure per node power, which meant that if any teams broke the 2K power limit they could get away with it. Because of some confusion with someone who wasn't directly responsible for the rules misinformation spread that we could achieve the same configuration of SCC22. That is, one big GPU filled node. 
 
-By the next day, Saturday, news about the power measuring had spread and we opened up our machine again, pulled out our GPUs, and fit 8 of our MI210s into CAT. Our alternates, Triston and Jeremy, were busy completing HPL and Repro runs on the system as their last contributions before the commencments. Unfortunately during setting our booth our RPI's micro SD card had been bent, so we needed to reinstall the OS and set up our Grafana display. With no working KVM or a display our alternates and UCSD Student Volunteers went to target for a keyboard, and we borrowed a monitor from (we may remember incorrectly) the Peking team. Our on hand HDMI adapter for the RPI was so terrible it would turn off every couple seconds, complicating the installation. Though we had already set up the RPI once and had notes for the IPMI+Prometheus+Grafana we could still fall back on following instructions from home team member and supercomputing member Matei Gardus. Though to save time and effort the final set up required local forwarding the ip while ssh'd to the pi, which meant it was not directly viewable and did not ultimately provide the monitoring we had hoped for.
+
+By the next day, Saturday, news about the power measuring had spread and we opened up our machine again, pulled out our GPUs, and fit 8 of our MI210s into CAT. Our alternates, Triston and Jeremy, were busy completing HPL and Repro runs on the system as their last contributions before the commencments. Unfortunately during setting our booth our RPI's micro SD card had been bent, so we needed to reinstall the OS and set up our Grafana display. With no working KVM or a display our alternates and UCSD Student Volunteers went to target for a keyboard, and we borrowed a monitor from (we may remember incorrectly) the Peking team. Our on hand HDMI adapter for the RPI was so terrible it would turn off every couple seconds, complicating the installation. Though we had already set up the RPI once and had notes for the IPMI+Prometheus+Grafana we could still fall back on following instructions from home team member and supercomputing member Matei Gardus. Though to save time and effort the final set up required local forwarding the ip while ssh'd to the pi, which meant it was not directly viewable and did not ultimately provide the monitoring we had hoped for. 
+
+That night our alternates and those without shifts in the morning worked hard to provide any last minute aid they can provide. Teams around us, especially with H100s, tested the power limit all night, with blaring alarms every few minutes that kept us awake breaking our eardrums and our minds after hours of these incessant sirens.
 
 ![](/post-media/scc23-postmortem/opening-nodes-scc23.jpg)
 
-Monday 8am the competition began. They corrected our misconception that we could divide our system's GPUs. *Uh-Oh*. So we once again opened up the systems and scrambled to bring GPUs to a configuration that would fit the competition requirements. This is what would now be our final configuration previously shown in the "Final Config" diagram. 
 
+Monday began, but it was not yet time for the competition. Being at the booth floor for 2 days before setting up the change was drastic. There were booths everywhere. They corrected our misconception that we could divide our system's GPUs. *Uh-Oh*. So we, the competition team in the booth, once again opened up the systems and scrambled to bring GPUs to a configuration that would fit the competition requirements. This is what would now be our final configuration previously shown in the "Final Config" diagram.
 
+But even after racking and connecting our cluster the network configuration no longer worked. Even the previously day we had broken our uplink working with the organizers network configuration. But today we were once again bottlenecked by having our lead Khai Vu as our most networking experienced guru. So we just sat there, trying to make sure we knew our benchmarks and trying to figure a connection, and waited. He had planned to take a later shift in the day. We messaged, we called, we did everything we could to figure out how to get to him. Now, before continuing, it is my belief (Francisco), that it shouldn't even be possible for a hotelier to be able to barge into someone's private room under the request of someone claiming to know him, but believe us we are grateful they let Bryan enter Khai's personal room with a hotel worker and woke him up. He came an hour later, wet hair and sat down to chug through some of the switch management for an hour. 
+
+Less than an hour later it was past 8am we could no longer receive any external aid. As we began to get access to our cluster we began running what we could for HPL, HPCG, and MLPerf. These ended with mixed results, with most of them not reflecting the results we had on the same cluster the previous weeks. We also had good instructions for STREAM and OSU benchmarks, with some quick instructions by our home team, like James Choi. Very easy to parse and run, especially when some of the parameters were previously optimized. By the time benchmarks were nearly over we received a clarification that we are allowed to go overpower during the benchmarking section, just not during applications.
+
+When 5pm we collected in front of our booths to reveal the mystery app. It was a CTF. Capture the Flag... Uh oh.... We could receive points for social engineering by the form of scanning QR Codes. We could be docked points by having vulnerabilties in our system and earn points if we found any ourselves in anything, like a strange executable or permissions on the file server they provided for submissions. More points could be earned via packet analysis by some pcap files that would be a mix of standard practice ones but also *our own packets*. And we had to facilitate their grading we had to compile a report of all we had done. 
+
+The problem was, we were not really cyber security people. We had received no real training and most of us were far stronger on hardware and general computational programs. Most of the teams began to realize this was true for themselves as well...
+
+*Speaking from my perspective (Francisco)*: 
+
+*Meanwhile, the information for our applications like 3DMHD and MPAS-A was up. Though we had not done much to change our code, each of us had run them plenty of times, and we were relatively familiar with the documentation and the programs. Gloria had tested the parameters for so long she felt comfortable handling the 3 test cases given to her. And I, having seen the depth and various parts of MPAS-A, had expected to be asked to run some of the data prepping programs, the `init_atmosphere` core, and was afraid of some curveball. **Nope**. I took the two tickets that had been given to me, gasped in relief, and cashed in my 2 free drinks. That night Gloria and I began running our apps. We would be finished a little past midday the next day.*
+
+For Tuesday we spent it all trying to understand the mystery app and do our part. We also took some shifts to explore around the booths. All afternoon Khai and Kyle were desperately trying to finish up the Reproduction Application Report. In conjunction with the University of Kansas they made good progress, and humorously found that the theoretical limits discussed in the paper were not so easily reached on our cluster because our hardware. Meanwhile our unfamiliarity with CTF led different teams to began colluding against the organizer. We spoke about working together, just at least to at least take this opportunity to learn.
+
+On our last day Kyle and Khai had been working on the paper all night, and unfortunately had gone over power for around 12 seconds recorded, which happened with an unexpected spike a few hours after midnight. The Zurich team announced good overnight progress in their mystery app, but that they were no longer willing to work with other teams. So that idea was disbanded. Austin took the lead in finding weak information in the sample packets given to us, finding some bare text emails and some other vulnerable packets. We advanced on other fronts, but not very much. In the end we turned in what we had, which was relatively complete, and finished.
+
+The next day, upon giving us the results, we saw we had placed 3rd overall. While there had been a lot of mishaps other teams had many as well. We also received 2 special awards. One because Francisco found BU<sup>3</sup>'s missing cluster, and another co-winning MLPerf because of Zixian's efforts in porting MLPerf to AMD's MI210's. Overall, pretty fun.
 
 
 ### Final Score Breakdown
@@ -105,8 +128,10 @@ Reproducibility         16% | 88          /100 | 14.080
 Systems and Mystery App 31% | 82.842      /100 | 25.681
 Total                  100% |                  | 79.514 / 100
 
-## Takeaways
+## Takeaways and Thanks
 
-## Thanks
+From SCC we learned that familiarizing yourself with the capabilities of your hardware is very important. And some of the best teams had this because they had a lot of time with their cluster, even beating teams that had focused on the overall beefyness of their hardware but had had little time with it. *start early, start often*. Get your stuff early. Enjoy the booths. Talking to booth presenters is a great way to network. They have a lot of merch but also engineers who can talk about their servers and hardware. That's not an opportunity accessible to everyone. And I don't how many times I saw Gloria return to the Microsoft booth for their robot arm barista. Come to the event with resume's, contacts, qr codes, link trees, vCards/MeCards, anything that can get your name out. It will be useful for the job fair as well. Double check your submissions and have someone else check as well. MPAS-A had been completed more than a day early, but had not submitted a correct file. And have fun. It's not everyday one gets to enjoy the Supercomputing Conference.
+
+We'd like to extend thanks to the awesome contributions of the entirety of [SDSC](https://www.sdsc.edu/) and [CSE](https://cse.ucsd.edu/) at UCSD. Specifically the efforts of our mentors Mary P. Thomas, Martin Kandes, Mahidhar Tatineni, and Bryan Chin.
 
 More pictures can be found via [Jeremy Tow's gallery](https://lychee.jeremyztow.com/gallery#lJbOq1zOLN7nrtH_z7_tTmW_) and the Students+SCC section on the [official SC23 site](https://scphoto.passgallery.com/-sc23/gallery).

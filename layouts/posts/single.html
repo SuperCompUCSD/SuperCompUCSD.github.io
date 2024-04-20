@@ -1,6 +1,12 @@
+
 {{ define "body_classes" }}page-blog-single{{ end }}
 
+
+
 {{ define "main" }}
+  {{ if or .Params.math .Site.Params.math }}
+    {{ partial "math.html" . }}
+  {{ end }}
   <div class="blog">
     <div class="intro">
       <h1>{{ .Title }}{{ if .Params.dot }}<span class="dot">.</span>{{ end }}{{ if .Params.question }}<span class="dot">?</span>{{ end }}{{ if .Params.bang }}<span class="dot">!</span>{{ end }}</h1>
