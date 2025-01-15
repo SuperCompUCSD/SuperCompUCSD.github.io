@@ -12,9 +12,6 @@ menu:
 **Description:**
 The project aims to set up and run the NASA NAS Parallel Benchmarks on our club nodes. We will focus on setting up MPI on the club nodes, downloading and compiling the benchmarks, and doing minor math (linear algebra) optimizations. This is a simple project, and beginners are welcome. Email amehrotra@ucsd.edu if you’re interested.
 
-**Learning Goals:**
-- Learning parallel computing.
-
 **Mentors:** Aarush Mehrotra
 
 **Time Requirement:** 1.5 hours per week
@@ -45,7 +42,7 @@ This project aims to go through the process of setting up the Linux From Scratch
 
 ----
 
-## 4. RISC-V Architecture
+## 4. RISC-V Cluster
 
 **Description:** We will be building a low cost cluster from 16 CH32V003 Microcrontrollers. These microcontrollers use the RISC-V architecture. The goal will be to mimic what Bitluni did in his video here: https://youtu.be/6QRKpd28NEE?si=4e_hz9dqpPGfudkB. No experience is required. Email iwebster@ucsd.edu or DM @jahovajenkins or @b1_bomber on discord if you’re interested.
 
