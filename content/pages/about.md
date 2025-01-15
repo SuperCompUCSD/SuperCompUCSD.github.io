@@ -14,9 +14,7 @@ Supercomputing @ UCSD was founded in 2019 as a group of a few students looking t
 in [SCC](https://studentclustercompetition.us/),
 the Student Cluster Competition, a competition where students from around the world compete
 to build the most efficient supercomputer. Since then, we have been competing each year and
-slowly but surely building our repertoire of knowledge and experience in HPC. This year,
-however, we've become interested in sharing our knowledge with fellow students at UCSD
-and empowering them to join this exciting field.
+slowly but surely building our repertoire of knowledge and experience in HPC.
 
 Thanks to our competition experience, we've found multiple fields of interest that have
 potential project opportunities, which made us realize that we could be a resource for

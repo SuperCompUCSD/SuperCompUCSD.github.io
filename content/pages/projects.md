@@ -8,50 +8,48 @@ menu:
     name: "Projects"
     weight: 3
 ---
-### [Sign up](https://forms.gle/Ma2EvbWRo3Yth7Lu9) for at least one of our projects below to get involved! 
-
-## 1. Raspberry Pi Cluster 
+## 1. NPB
 **Description:**
-We will be setting up a Raspberry Pi "supercomputing" cluster with industry standard software practices and try running some parallel applications with it.
-
-The project will provide an opportunity to sharpen basic hardware and software skills. Topics covered will include Linux, compilers, parallel programming, and performance tuning applications.
-
-No prior experience is required!
-
-Meetings will be at SDSC Saturdays from 1-3pm
+The project aims to set up and run the NASA NAS Parallel Benchmarks on our club nodes. We will focus on setting up MPI on the club nodes, downloading and compiling the benchmarks, and doing minor math (linear algebra) optimizations. This is a simple project, and beginners are welcome. Email amehrotra@ucsd.edu if you’re interested.
 
 **Learning Goals:**
-- Build a Raspberry Pi Cluster to run popular HPC benchmarks/applications and distributed ray tracing. 
-- Compete against international teams in SBCC 2024.
+- Learning parallel computing.
 
-**Mentors:** Paco, Matei, Yuchen
+**Mentors:** Aarush Mehrotra
 
-**Time Requirement:** 1-3 hours/week
+**Time Requirement:** 1.5 hours per week
 
 ----
 
 ## 2. FPGA Network Interface Card
-**Description**
-This project will work on programming a Xilinx FPGA to implement a network interface card in verilog alongside the linux kernel driver. If time provides We will work on adding RDMA interoperability with the soft nic.
+**Description:**
+This project will work on programming a Xilinx FPGA to write some basic accelerators or a processor. Certain classes like ECE111 and CSE141L have these in only simulation, so this is an opportunity to physically test them. If pushed far enough, we may work on writing a linux kernel driver or HLS applications. Anyone is welcome to deviate or write their own HDL for fun.
 
-Some Verilog and C experience required along with some familiarity with the linux kernel is prefered but not required.
+**Meetings:** Fridays from 11AM-1PM at SDSC floor 4
 
-Meetings will be at SDSC Fridays from 10am-12pm
+**Mentors:** Paco Gutierrez
 
-**Mentors:** Khai Vu, Kyle Smith
-
-**Time Requirements:** 4-5 hours/week (very likely more)
+**Time Requirements:** 3-5 hours/week
 
 ----
 
-## 3. Switch interconnect Config
-**Description**
-This project will be more infrastructure related for the club and will primarily involve learning how to configure switches for various fabrics be it ethernet or infiniband along with configuring the application interfaces such as MPI
+## 3. Linux From Scratch
+**Description:**
+This project aims to go through the process of setting up the Linux From Scratch project. This project will help you understand the internals of Linux and hopefully allow people on the edge of making the switch to Linux to learn how to use it better. Message Luiz on Discord at @avvyxx if you're interested!
 
-Only requirements are some IP stack knowledge along with familiarity with the commandline
+**Meetings:** Will send out a when2meet after the GBM
 
-Meetings will be at SDSC Fridays from 2-4pm
+**Mentors:** Luiz Gurrola
 
-**Mentors:** Khai Vu, Matei
+**Time Requirements**: 2-3 hours/week
 
-**Time Requirements**: 4-5 hours/week
+----
+
+## 4. RISC-V Architecture
+
+**Description:** We will be building a low cost cluster from 16 CH32V003 Microcrontrollers. These microcontrollers use the RISC-V architecture. The goal will be to mimic what Bitluni did in his video here: https://youtu.be/6QRKpd28NEE?si=4e_hz9dqpPGfudkB. No experience is required. Email iwebster@ucsd.edu or DM @jahovajenkins or @b1_bomber on discord if you’re interested.
+
+**Meetings:** Will be coordinated between members.
+
+**Time Requirements:** 2-3 hours/week
+
