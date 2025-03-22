@@ -1,9 +1,8 @@
 baseURL = "/"
 languageCode = "en-us"
-theme = "hugo-winston-theme"
+theme = "hugo-modern-winston-theme"
 themesDir = "themes"
 title = "Supercomputing @ UCSD"
-paginate = 9
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsUseClasses = true
@@ -12,8 +11,11 @@ pygmentsUseClasses = true
   [module.hugoVersion]
     extended = true
 
+[pagination]
+  pagerSize = 9
+
 [params]
-  google_analytics_id = ""
+  #google_analytics_id = ""
   twitter_handle = "@SuperCompUCSD"
   showAuthorOnHomepage = false
   showAuthorOnPosts = true

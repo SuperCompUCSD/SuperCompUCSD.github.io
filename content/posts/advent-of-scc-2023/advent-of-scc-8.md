@@ -1,7 +1,7 @@
 ---
 title: "Advent of Supercomputing: Day 8"
 date: 2023-12-08
-publishDate: 2023-12-8:00:00Z
+publishDate: "2023-12-21T8:00:00Z"
 authors: ["paco", "khai"]
 draft: false
 ---
