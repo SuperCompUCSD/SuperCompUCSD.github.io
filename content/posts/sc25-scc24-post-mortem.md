@@ -10,12 +10,12 @@ math: true
 
 ## SC25 info
 
-As of the publication of this post the application for UCSD’s 2025 team has opened here. For those applying the deadline is April 7th and notifications will be sent out the following week. More details are listed on the application page.
+As of the publication of this post the application for UCSD’s 2025 team has opened. For those applying the deadline is April 7th and status updates will be sent out the following week. More details are listed on the application page.
 
 ![](/images/SC25Logo.svg)
 
 
-On top of applying as a competitor for the student cluster competition, the Supercomputing convergence hosts two opportunities for students to volunteer and attend the convergence that being the roles of [Student Volunteer](https://sc24.supercomputing.org/students/student-volunteers/) and [Scinet Volunteer](https://sc24.supercomputing.org/scinet/). **Note** that the time commitment for student volunteers is the week of the conference and for SCInet volunteers being two weeks the week of the conference and the week preceding the conference. For those applying if you're from UCSD and are accepted as volunteers for either program please reach out to Mary Thomas, so we have sufficient lead time to allocate travel funding support.
+On top of participating as a team in the student cluster competition, the Supercomputing convergence offers opportunities for students to attend the convergence as a [Student Volunteer](https://sc24.supercomputing.org/students/student-volunteers/) and [Scinet Volunteer](https://sc24.supercomputing.org/scinet/). **Note** that the time commitment for student volunteers is the week of the conference and for SCInet volunteers being two weeks the week of the conference and the week preceding the conference. For those applying if you're from UCSD and are accepted as volunteers for either program please reach out to Mary Thomas, so we have sufficient lead time to allocate travel funding support.
 
 # Student Cluster Competition 2024 postmortem
 
@@ -25,13 +25,15 @@ On top of applying as a competitor for the student cluster competition, the Supe
 - Benchmarks are: HPL, MLPERF inference, and a mystery benchmark revealed at the start of benchmarking
 - Applications are: NAMD, ICON, Reproducibility (data flow lifecycle analysis tool DataLife), and a mystery application revealed at the start of application tasks
 
+### Competitors and Results
+
 ### System Specifications 
 
 Our final system, <u>Ocean Vista</u>:
 
 ![](/post-media/scc24-postmortem/cluster-architecture.svg)
 
-This is very similar to our system from [last year](../sc24-scc23-post-mortem). 3 nodes, 2 GPU node, 1 CPU node with Liqid IO cards. But the biggest different is how heterogenous our cluster was. Why don't we list some of these out:
+Our system for 2024 is very similar to our system from [scc23](../sc24-scc23-post-mortem), consister of 3 nodes: 2 GPU node, 1 CPU node with Liqid IO cards. However, this year our cluster is distringuished by it's heterogenous nature. Let's look at parts and vendors list: 
 
 | Parts | Vendor |
 | --- | --- |
@@ -46,13 +48,13 @@ This is very similar to our system from [last year](../sc24-scc23-post-mortem). 
 | 4x MI210s | AMD |
 | 4x Infinity Fabric Links (2 used) | AMD |
 
-Let's look at it again, but mark the hardware with the source of vendor:
+Here is the graph matching the hardware with the source of vendor:
 
 ![image](/post-media/scc24-postmortem/sponsor-diagram.svg)
 
 *how did we get here*? It was not easy. We had a lot of help. A ***lot*** of help.
 
-Besides lending the team hardware, we also had generous financial donations from Micas Networks and Intel. As well as the mentoring and help from everyone accross the board, including SDSC, UCSD, and the CSE department.
+Besides lending the team hardware, we received generous financial donations from Micas Networks and Intel, as well as the mentoring and help from faculty and staff from SDSC, UCSD, and the CSE department.
 
 ### Preparing for Benchmarks and Applications
 
@@ -64,11 +66,11 @@ Besides lending the team hardware, we also had generous financial donations from
 
 - datacenter access
 
-The earliest hardware we got was the [32 Port 400Gb Switch](https://micasnetworks.com/product/m2-w6920-32qc2x/) from Micas Networks. The SCC23 Team had met them at SC23. Micas Networks was a really strong supporter for us. They were willing lend their hardware sinc e May. This support pushed our team to really reach the 400Gb bandwidth we wanted.
+The earliest hardware we got was the [32 Port 400Gb Switch](https://micasnetworks.com/product/m2-w6920-32qc2x/) from Micas Networks. Our relations started with Team SCC23. Since then, Micas Networks has been one of our essential supporters. They generously lent us their hardware since May, and this support pushed our team to really reach the 400Gb bandwidth we wanted.
 
-Over the summer we communicated with our primary system vendor for hardware. But late July we really couldn't get the cluster we had been speccing out with them. The big system vendor told us that there was just not enough support for it. So we would need to take up with other avenues to build our system. So obviously this upsetting, especially since we had prior commitment from them, we were already late into the cycle, had the hardware proposal due in around 2 months, and only had an idea of what we wanted. 
+Over the summer we were told by our primary system vendor that the hardware we've been speccing out was unattainable due to a lack of support. This upsetting news came in late July and quickly became a source of stress since the hardware proposal was due in 2 months. We were late into the cycle, with only an idea of what we needed, and no physical means of compute.  
 
-The meetings from then forward were about talking about with SDSC mentors, contacts, suppliers, etcetera. This was a long process, and it would mean that we would not have a system. We spoke with local vendors about systems. Our own sponsors looked at their contacts. And the sponsor network really grew. It was a lot of emails, calls, and meetings just to get one promise of a component at a time.
+The meetings from then forward consisted of scouting out alternative possibilities with SDSC mentors, contacts, suppliers, etcetra.  This was a long process, and it would mean that we would not have a system. We spoke with local vendors about systems. Our own sponsors looked at their contacts. And the sponsor network really grew. It was a lot of emails, calls, and meetings just to get one promise of a component at a time.
 
 The first system integrator was Applied Data Systems, who even went through the effort of driving a node up to SDSC. This was the first machine we started to work on, "*Percy*" (though early on we dubbed it Ryan after the sponsor). This node, however, would not be able to accomodate MI210 GPUs due to the slots of the FHFL 2PCIe width slots. Then Aeon Computing provided us with the second system that could fit 4 pairs of MI210s.
 
