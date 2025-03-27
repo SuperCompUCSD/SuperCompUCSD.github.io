@@ -42,11 +42,5 @@ This project aims to go through the process of setting up the Linux From Scratch
 
 ----
 
-## 4. RISC-V Cluster
 
-**Description:** We will be building a low cost cluster from 16 CH32V003 Microcrontrollers. These microcontrollers use the RISC-V architecture. The goal will be to mimic what Bitluni did in his video here: https://youtu.be/6QRKpd28NEE?si=4e_hz9dqpPGfudkB. No experience is required. Email iwebster@ucsd.edu or DM @jahovajenkins or @b1_bomber on discord if you’re interested.
-
-**Meetings:** Will be coordinated between members.
-
-**Time Requirements:** 2-3 hours/week
 
