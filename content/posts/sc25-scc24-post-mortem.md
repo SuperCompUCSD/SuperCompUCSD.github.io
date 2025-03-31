@@ -87,9 +87,9 @@ The second system came from Aeon Computing. This machine came a couple weeks lat
 
 At the same time we were trying to retrieve necessary peripherals. Because even with our systems starting to be put together, we really couldn't call ourselves an HPC cluster. Support from AMD came from a promise of Infinity Fabric Links and 4xMI210s, half of how many we needed. And Micas Networks had arranged us with 3 400Gb NICS from their Broadcom contacts and their labs. They would send these shortly after. But even with NICs and a switch we would be unable to use their speeds without a proper 400Gb cable. The only exception to the peripherals were our LIQID IO Accelerators, which we installed into the ADS system.
 
-We also reached out to a couple of other institutions/companies that were recommended to us in some form. MiTAC/TYAN, HPE, possible Asus, the National Research Platform, EVOTEK, Lambda Labs, SuperMicro, and a more that we have lost track of. Understandably, most of them would be unable to help out on such a short notice, or perhaps saw it too difficult to aid us. This is all during an AI boom, after all.
+We also reached out to a couple of other institutions/companies that were recommended to us in some form. MiTAC/TYAN, HPE, possible Asus, the National Research Platform, EVOTEK, Lambda Labs, SuperMicro, and a more that we have lost track of. Understandably, most of them would be unable to help out on such a short notice, or perhaps saw it too difficult to aid us. This was all during an AI boom, after all.
 
-Are you keeping track? We have a 2 nodes, a 400Gb switch, no promise of a third machine, AMD will support us but it's not clear when or how we'll get hardware, we still need 4xMI210s, still re-speccing out a new system, getting 400Gb NICs soon, still need some kind of cable that supports this speed, don't forget about our LIQID Honey Badger cards, and most of the team is still transitioning to these machines while they test on the previous cluster resources we'vehad.
+Are you keeping track? We have 2 nodes, a 400Gb switch, no promise of a third machine, AMD will support us but it's not clear when or how we'll get hardware, we still need 4xMI210s, still re-speccing out a new system, getting 400Gb NICs soon, still need some kind of cable that supports this speed, don't forget about our LIQID Honey Badger cards, and most of the team is still transitioning to these machines while they test on the previous cluster resources we've had.
 
 In the next month, Michael Woodacre from HPE was able to provide us with a generous 4xMI210s. The turnaround was very quick, and they arrived a few days later. During our installation we realized that the power cables packaged with the system were VHPWR and not the EPS 12V standard that the MI210s need, so we couldn't even use these. And despite now having 400Gb NICs and a 400Gb switch, we needed to configure it. 
 
@@ -100,7 +100,7 @@ I want you to realize that during this whole time our teams are working on build
 Now, acknowledging our issues, SDSC has accomodated the team with Express Shipping, and will allow us to ship Monday morning to arrive on Friday/Saturday of our competition. And we have a load of hardware/software support problems.
 
 
-We've finally got all hardware of our final cluster but: the AMD GPU BIOS from HPE are different BIOS versions and are set to read only, even with their free firmware tools. We've installed the NICs and set up the Switch, but the copper cables are not working, even after going to the bios and correcting the relevant BIOS tools. And we do not have our cluster up working.
+We've finally got all hardware of our final cluster, but the AMD GPU BIOS from HPE are different BIOS versions and are set to read only, even with their free firmware tools. We've installed the NICs and set up the Switch, but the copper cables are not working, even after going to the bios and correcting the relevant BIOS tools. And we do not have our cluster up working.
 
 <!-- Broadcom Drivers -->
 
@@ -225,13 +225,15 @@ For the rest of Sunday, including the dreaded graveyard shift, it was organized 
     </video>
 </div>
 
-Monday morning, the day of the competition, it seemed something broke once again. This was not great, as we had good runs in our benchmarks the previous night. Through thick and thin, we managed to prioritize our runs and got HPL and MLPerf runs and a partial targets of our mystery benchmark, NPB.When the benchmarking period had finished, they revelead the applications. The Mystery Application was an ML one, *Find the Cat*. Teams would work to build the best cat recognition model out of a series of images and would find images to test against one another.
+Monday morning, the day of the competition, it seemed something broke once again. This was not great, as we had good runs in our benchmarks the previous night. Through thick and thin, we managed to prioritize our runs and got HPL and MLPerf runs and a partial targets of our mystery benchmark, NPB. When the benchmarking period had finished, they revealed the applications. The Mystery Application was an ML one, *Find the Cat*. Teams would work to build the best cat recognition model out of a series of images and would find images to test against one another.
 
 At some point during the competition our network had a vulnerability. We were exposing all of our prometheus's node-exporter data. Now, while at first the firewall didn't show anything off, this was because the default port for node-exporter was the same as a Rocky Linux default node manager. So, while `firewall-cmd` didn't say the name of the port associated with that service, it was the same as `node-exporter`. So we disabled, and we were dandy.
 
 There was also a period where late into the night we accidentally began running two jobs at once. Luckily, we were able to stop our jobs before the power was *recorded* 👀. You can see what was recorded in the following image.
 
 ![](/post-media/scc24-postmortem/graph-grafana.png)
+
+#Aarush will talk about ICON here. 
 
 Overall, it was a very fun experience. All of it was. During our disassembly of our cluster most of these pieces had to go back to their respective vendor. So we had to seperate and ship the parts from here.
 
