@@ -233,15 +233,34 @@ There was also a period where late into the night we accidentally began running 
 
 ![](/post-media/scc24-postmortem/graph-grafana.png)
 
+### Mystery Benchmark 
+When the judges revealed a “mystery benchmark” on the first day of the competition, it turned out to be the NASA NAS Parallel Benchmark. Veterans of the HPC field might instantly recognize this HPC classic, known for measuring parallel performance on everything from small home labs to giant distributed clusters. At first, our team felt a surge of confidence. After all, we had just spent months working on the ICON weather model (see more below), fine-tuning compiler flags and dependencies on our heterogeneous cluster. It appeared that many of the same optimizations and compiler flags would work here as well. 
+
+> We discovered early on that you don’t just optimize code; you optimize collaboration. Reusing ICON's optimization flags saved us precious minutes of testing and logging. 
+
+In our eagerness to squeeze out extra performance, we used a set of vectorization and optimization flags that had worked in one of our prior ICON build configurations. Unfortunately, NAS Parallel Benchmarks didn’t fully support one of these flags. While the code compiled and ran faster, it also produced invalid results. We initially missed the subtle error logs, since the error only presented itself on certain kernels, and only at large problem sizes, leading us to incorrectly believe we had a valid solution.
+
+In a cruel stroke of luck, we realized our mistake too late. We scrambled to remove the offending flag and recompile, but by then, we only had time to complete a partial run before the window for submission closed. It was a tough blow, leaving a sense of frustration about not hitting our true performance potential.
+
+> "There was a lingering sense of loss and frustration at catching a simple mistake too late, and not being able to show our true potential” <br> &emsp;&emsp; &ndash; Aarush
+
+Our frustration grew when, a few hours later, we realized that we could have scored better partial performance by updating our run script in order of problem size (completing multiple small problems first) instead of a default kernel-based sort (going from small to large problems on each kernel). In limited time, the problem size-based sort would likely have allowed us to have more complete submissions, but the stress of the moment prevented us from realizing this in time. 
+
+There's a very important lesson to take from the mystery benchmark: **You can’t sacrifice correctness for speed.** There’s no benchmark for something that doesn’t run properly. Optimizing code is often a balancing act, and one tweak too many and you risk losing the stability you fought so hard to gain. And unfortunately, we were just on the wrong side of that balance at the competition. In the future, we'll be more thorough with our post-run verifications so that we can catch a failed or invalidated run before it's too late. HPC doesn’t reward giving up, it rewards staying calm and iterating one more time. These lessons, hard as they are, make us stronger and the lessons will bear fruit in future competitions. 
+
+
+
 ### ICON 
 One of the applications that we had to run was ICON, which stands for Icosahedral Nonhydrostatic. This is a complex weather modelling application that is part of Germany's DWD weather monitoring service, part of NOAA's (a US weather agency) ensemble model that predicts global weather, and a tool used by amateur hurricane trackers. Although a GPU port exists, ICON is typically compiled for CPU runs and its data-heavy nature means that it streses a system's IO. 
 
-Throughout the summer and fall, it was a massive struggle for our team to compile ICON, since documentation was limited to a few custom architectures and the complex nature of the program meant that a lot of testing and debugging was required to find the right set of compile parameters for our architecture. The complex compile process required iterating through build scripts and making sure all of the required dependencies were able to talk to each other. The changing nature of our cluster in certain weeks meant that there were occassionally changinges to our linker flags and other variables. Having Spack set up made a huge difference in this effort. Spack allowed us to more easily manage the dependencies, installations, and making sure that everything was using a supported version. 
+#### Strategy
+Throughout the summer and fall, it was a massive struggle for our team to compile ICON, since documentation was limited to a few custom architectures and the complex nature of the program meant that a lot of testing and debugging was required to find the right set of compile parameters for our architecture. The complex compile process required iterating through build scripts and making sure all of the required dependencies were able to talk to each other. The changing nature of our cluster in certain weeks meant that there were occasionally changinges to our linker flags and other variables. Having Spack set up made a huge difference in this effort. Spack allowed us to more easily manage the dependencies, installations, and making sure that everything was using a supported version. 
 
 ICON required relentless debugging and iteration. Being transparent with teammates about problems, deadlines, and resource usage kept us aligned under pressure. Having the support of our home team and mentors was helpful at this stage, providing multiple perspectives and ensuring someone was always trying something new to make the best of a difficult situation. 
 
 After many trials, we settled on a CPU-only run for ICON, which freed up the GPUs for other applications. This ensured that we would be able to give our other applications, which had been more successful in our testing, more resources and time to run, while trying our best with ICON even though we knew it would be a struggle. 
 
+#### Competition Runs
 During the competition, the task we were given for ICON turned out to be really interesting: With a time limit of 3 hours, measured with timestamp logging in our output submission file. Within these 3 hours, we had to configure the start and end dates of the ICON simulation for a set of given input files and values. This tested our knowledge of how fast ICON could run on our system, with the parameters we chose. Set a simluation too short, and we waste precious minutes that could have allowed a longer simulation. Set a simulation too long, and the entire run is invalid, wasting 3+ hours. 
 
 The 3 hour limit given to us included any set up and initialization tasks. After the run, we had to process the output results and develop a visualization using a tool of our choice. We made slight modifications to a previously built testing script from the fall, and used Python to visualize the output. 
@@ -256,7 +275,8 @@ The 3 hour limit given to us included any set up and initialization tasks. After
 
 > In real life, this corresponds to a workflow you might see in a research lab or as part of an HPC task. When you request an interactive node or assign a time limit to your slurm content submission, which is commonly seen for billing and tracking purposes, you have to know how long your run will take. Taken inversely, this means you have to know how much processing can be done by your application in a fixed period of time, including any set up and clean up tasks. 
 
-We started simple, with a conservative run that finished in slightly more than 2 hours. This was a pleasant surprise. We had limited information, so our predicted range was quite large. Seeing it come in at the lower bound of our predicted time, we knew we had room to maximize our potential. Further runs brought us closer to the max potential, but highlighted certain areas for optimization. Our final run was probably the most optimized it could have been given the challenges we had faced from the start. As the run timer got closer and closer to finish, we waited and watched with baited breath: Had we become overconfident, and set up a run that would exceed 3 hours? 2:45 became 2:50 became 2:55... 
+#### Taming the 3-Hour Limit
+We started simple, with a conservative run that finished in slightly more than 2 hours. This was a pleasant surprise. With limited information, we predicted a wide completion window, yet were relieved when it landed near the lower bound. We knew we had room to maximize our potential. Further runs brought us closer to the max potential, but highlighted certain areas for optimization. Our final run was probably the most optimized it could have been given the challenges we had faced from the start. As the run timer got closer and closer to finish, we waited and watched with baited breath: Had we become overconfident, and set up a run that would exceed 3 hours? 2:45 became 2:50 became 2:55... 
 
 > Had we become overconfident, and set up a run that would exceed 3 hours?
 
@@ -268,7 +288,7 @@ But in a scene straight out of an action movie, like a bomb deactivated with sec
 
 > Although ICON had been hard and full of challenges, at the end, knowing that our final run maximized our time constraint provided a small measure of solace. 
 
-Our ICON score had a lot of room for improvement. With a relative score of only 30 out of 100, we lost 10.5 total points here.  ICON might have been one of the hardest tasks we were given. It wasn’t easy, but in the end, juggling dependencies, compiler flags, and last-minute surprises made for a deep learning experience that will help inform our approach to challenging applications and benchmarks in the future, allowing us to continue to have strong overall performances at future competitions.
+Our ICON score had a lot of room for improvement. With a relative score of only 30 out of 100, we lost 10.5 total points here.  ICON might have been one of the hardest tasks we were given. It wasn’t easy, but in the end, juggling dependencies, compiler flags, and last-minute surprises made for a deep learning experience that will help inform our approach to challenging applications and benchmarks in the future, allowing us to continue to have strong overall performances at future competitions. We'll look into refining our build pipelines, and considering a different approach to team priorities in the future. 
 
 ICON showed us that HPC is about more than raw computational power. It's about optimizing software to match hardware constraints while balancing team needs, and this is a lesson we will keep with us. 
 
