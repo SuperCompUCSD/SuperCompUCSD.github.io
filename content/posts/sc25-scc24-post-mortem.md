@@ -10,7 +10,7 @@ math: true
 
 ## SC25 info
 
-As of the publication of this post the application for UCSD’s 2025 team has opened. For those applying the deadline is April 7th and status updates will be sent out the following week. More details are listed on the application page.
+As of the publication of this post [the application](https://na.eventscloud.com/scc25) for UCSD’s 2025 team has opened. For those applying the deadline is April 20th and status updates will be sent out the following week. More details are listed on the application page.
 
 ![](/images/SC25Logo.svg)
 
@@ -25,6 +25,7 @@ TLDR:
 - 4.5 kW limit for entire cluster, 2 kW limit per node
 - Benchmarks are: HPL, MLPERF inference, and a mystery benchmark revealed at the start of the benchmarking period.
 - Applications are: NAMD, ICON, Reproducibility (data flow lifecycle analysis tool DataLife), and a mystery application revealed at the start of application period
+- - Icosahedral Nonhydrostatic, or ICON, is a complex weather modeling application that is part of Germany's DWD weather monitoring service, part of NOAA's (a US weather agency) ensemble model that predicts global weather, and a tool used by amateur hurricane trackers. Although a GPU port exists, ICON is typically compiled for CPU runs and its data-heavy nature means that it streses a system's IO. 
 - You must try to achiece the best scores for benchmarks, applications, systems, and certain other areas.
 - Benchmarking period 8am-5pm. Application period is the next 48 hours. No external help.
 
@@ -72,6 +73,19 @@ During the summer we had weekly meetings to sync up on our progress. Throughout 
 
 Our goals were to familiarize with the benchmarks and applications, as well as practice our HPC skills. There were also certain stages of the competition application we would have to submit every couple of weeks: final team submission, final poster, and a final architecture. And while we were working, we were also speccing out what we wanted from our cluster with our hardware vendor(s).
 
+#### NAMD
+We spent summer understanding how NAMD and molecular dyanmics in general worked, by running simulations from the user guide and following online tutorials. We also tested a variety of NAMD builds; NAMD as a software was built to work with the Charm++ message-passing parallel language, and Charm++ setup was dependent on the underlying network layer setup we wanted to use (`netlrts`, Infiniband, MPI). A really important thing to note about NAMD was that the developers had just released version 3.0, which introduced a new "GPU-resident" mode. NAMD's GPU-resident mode offloaded all calculations including integration calculations to the GPU, making simulations much faster compared to the CPU and the weaker GPU-offload mode available. However, GPU-resident mode could only run on a single node. We realized that these variations would be key to maximizing performance on our cluster.  
+
+In the fall, we focused on running the publicly available NAMD benchmarks and toggling the different command line parameters and configuaration parameters to maximize performance on the AMD server available to us. We also had invaluable mentor support; Andy Goetz helped us understand how MD works, and Julio Maia, a researcher at AMD who was one of the NAMD developers, gave us crucial advice on different types of NAMD simulations and worked with us to resolve issues in NAMD's source code due to incompatibility with AMD hardware.  
+
+When we finally had access to our cluster the week before shipping it out (more on that later), there were a new slew of problems. For some reason NAMD would not work with the `netlrts` installation of Charm++; even though the nodes were able to connect to each other via `ssh` protocol, Charm++ was not able to establish that connection. We switched over to the MPI version, but were unable to get MPI working until right before shipping the cluster.   
+
+#### ICON
+Throughout the summer and fall, it was a massive struggle for our team to compile ICON, since documentation was limited to a few custom architectures and the complex nature of the program meant that a lot of testing and debugging was required to find the right set of compile parameters for our architecture. The complex compile process required iterating through build scripts and making sure all of the required dependencies were able to talk to each other. The changing nature of our cluster in certain weeks meant that there were occasionally changinges to our linker flags and other variables. Having Spack set up made a huge difference in this effort. Spack allowed us to more easily manage the dependencies, installations, and making sure that everything was using a supported version. 
+
+ICON required relentless debugging and iteration. Being transparent with teammates about problems, deadlines, and resource usage kept us aligned under pressure. Having the support of our home team and mentors was helpful at this stage, providing multiple perspectives and ensuring someone was always trying something new to make the best of a difficult situation. 
+
+After many trials, we settled on a CPU-only run for ICON, which freed up the GPUs for other applications. This ensured that we would be able to give our other applications, which had been more successful in our testing, more resources and time to run, while trying our best with ICON even though we knew it would be a struggle. 
 
 ### Sourcing Hardware
 
@@ -203,6 +217,8 @@ We ship the cluster at 6am.
 
 ## Competing
 
+### Overview 
+
 ![](/post-media/scc24-postmortem/team-eating.jpg)
 
 A picture of the team eating in the arriving airport.
@@ -225,7 +241,7 @@ For the rest of Sunday, including the dreaded graveyard shift, it was organized 
     </video>
 </div>
 
-Monday morning, the day of the competition, it seemed something broke once again. This was not great, as we had good runs in our benchmarks the previous night. Through thick and thin, we managed to prioritize our runs and got HPL and MLPerf runs and a partial targets of our mystery benchmark, NPB. When the benchmarking period had finished, they revealed the applications. The Mystery Application was an ML one, *Find the Cat*. Teams would work to build the best cat recognition model out of a series of images and would find images to test against one another.
+Monday morning, the day of the competition, it seemed something broke once again. This was not great, as we had good runs in our benchmarks the previous night. Additionally, the competition structure was such that we could not verify our benchmark runs for HPL, MLPerf, and the mystery benchmark separately; they all had to be run consecutively. We thus spent a lot of our time fixing the HPL and MLPerf runs, and managed to get HPL and MLPerf runs and a partial targets of our mystery benchmark with less than 2 minutes to spare. When the benchmarking period had finished, they revealed the applications. The Mystery Application was an ML one, *Find My Cat*. Teams would work to build the best cat recognition model out of a series of images and would find images to test against one another.
 
 At some point during the competition our network had a vulnerability. We were exposing all of our prometheus's node-exporter data. Now, while at first the firewall didn't show anything off, this was because the default port for node-exporter was the same as a Rocky Linux default node manager. So, while `firewall-cmd` didn't say the name of the port associated with that service, it was the same as `node-exporter`. So we disabled, and we were dandy.
 
@@ -234,33 +250,28 @@ There was also a period where late into the night we accidentally began running 
 ![](/post-media/scc24-postmortem/graph-grafana.png)
 
 ### Mystery Benchmark 
-When the judges revealed a “mystery benchmark” on the first day of the competition, it turned out to be the NASA NAS Parallel Benchmark. Veterans of the HPC field might instantly recognize this HPC classic, known for measuring parallel performance on everything from small home labs to giant distributed clusters. At first, our team felt a surge of confidence. After all, we had just spent months working on the ICON weather model (see more below), fine-tuning compiler flags and dependencies on our heterogeneous cluster. It appeared that many of the same optimizations and compiler flags would work here as well. 
+When the judges revealed a “mystery benchmark” on the first day of the competition, it turned out to be NASA's NAS Parallel Benchmarks, a classic benchmark for measuring parallel performance. The tasks was to run the `CG` and `MG` kernels of the benchmark for problem sizes `B`, `C`, `D` and `E`. We initially felt confident; setting up and running the benchmarks seemed easy enough, many of the optimizations and compiler flags from ICON looked like they would work here as well. 
 
 > We discovered early on that you don’t just optimize code; you optimize collaboration. Reusing ICON's optimization flags saved us precious minutes of testing and logging. 
 
-In our eagerness to squeeze out extra performance, we used a set of vectorization and optimization flags that had worked in one of our prior ICON build configurations. Unfortunately, NAS Parallel Benchmarks didn’t fully support one of these flags. While the code compiled and ran faster, it also produced invalid results. We initially missed the subtle error logs, since the error only presented itself on certain kernels, and only at large problem sizes, leading us to incorrectly believe we had a valid solution.
-
-In a cruel stroke of luck, we realized our mistake too late. We scrambled to remove the offending flag and recompile, but by then, we only had time to complete a partial run before the window for submission closed. It was a tough blow, leaving a sense of frustration about not hitting our true performance potential.
+In our eagerness to squeeze out extra performance, we used a set of vectorization and optimization flags that had worked in one of our prior ICON build configurations. Unfortunately, one of the fast math flags, specifically the `-avx2` flag, led to exploding calculations at large problem sizes. We did not catch this mistake initally, as the smaller problem sizes completed correctly. By the time we did catch it, we only had time to complete a partial run before the window for submission closed.
 
 > "There was a lingering sense of loss and frustration at catching a simple mistake too late, and not being able to show our true potential” <br> &emsp;&emsp; &ndash; Aarush
 
-Our frustration grew when, a few hours later, we realized that we could have scored better partial performance by updating our run script in order of problem size (completing multiple small problems first) instead of a default kernel-based sort (going from small to large problems on each kernel). In limited time, the problem size-based sort would likely have allowed us to have more complete submissions, but the stress of the moment prevented us from realizing this in time. 
+Our frustration grew when, a few hours later, we realized that we could have scored better partial performance by organizing our run script to complete multiple small problems first instead of going from small to large problems on each kernel. In limited time, the problem size-based sort would likely have allowed us to have more complete submissions, but the stress of the moment prevented us from realizing this in time. 
 
-There's a very important lesson to take from the mystery benchmark: **You can’t sacrifice correctness for speed.** There’s no benchmark for something that doesn’t run properly. Optimizing code is often a balancing act, and one tweak too many and you risk losing the stability you fought so hard to gain. And unfortunately, we were just on the wrong side of that balance at the competition. In the future, we'll be more thorough with our post-run verifications so that we can catch a failed or invalidated run before it's too late. HPC doesn’t reward giving up, it rewards staying calm and iterating one more time. These lessons, hard as they are, make us stronger and the lessons will bear fruit in future competitions. 
+There's a very important lesson to take from the mystery benchmark: **You can’t sacrifice correctness for speed.** Optimizing code is often a balancing act, and one tweak too many and you risk losing the stability you fought so hard to gain. And unfortunately, we were just on the wrong side of that balance at the competition. In the future, we'll be more thorough with our post-run verifications so that we can catch a failed or invalidated run before it's too late. 
 
+### NAMD 
 
+The NAMD tasks were fun; they were designed to emulate real scientific research done with the software, and a significant part of the tasks involved scientific analysis. The tasks tested a wide range of our knowledge: there were two physical chemistry simulations, two replica exchange simulations (one of which could only be run using the CPU mode), and a benchmarking challenge that allowed us to change any and every parameter we wanted in order to get the fastest complete benchmark run. These tasks were very different from what we (or any of the teams, really) had prepared for, which fostered a lot of communication within teams to troubleshoot and get simulations working. 
+
+From early on, it was clear that we would not be able to finish all the tasks in the given time, as many of the simulations took **hours** to run. Additionally, our hardware put us at a disadvantage compared to other teams (for example, one of the replica exchange simulations would have taken more than 12 hours to complete for us, compared to 6-8 hours on other clusters). There was a lot of difficult decision-making involved, and incomplete results were submitted for most of the tasks. 
+
+> I think that overall, we did the best we could have given the situation, and our results reflected that. The experience was challenging but fun, and I feel like I walked away with a better understanding of molecular dynamics research. I also felt a strong sense of community among the teams in regards to NAMD; not one of the five tasks were easy to complete, and while troubleshooting I talked to multiple other teams who were very willing to discuss issues and come up with a solution together. 
+> <br> &emsp;&emsp; &ndash; Gauri
 
 ### ICON 
-One of the applications that we had to run was ICON, which stands for Icosahedral Nonhydrostatic. This is a complex weather modelling application that is part of Germany's DWD weather monitoring service, part of NOAA's (a US weather agency) ensemble model that predicts global weather, and a tool used by amateur hurricane trackers. Although a GPU port exists, ICON is typically compiled for CPU runs and its data-heavy nature means that it streses a system's IO. 
-
-#### Strategy
-Throughout the summer and fall, it was a massive struggle for our team to compile ICON, since documentation was limited to a few custom architectures and the complex nature of the program meant that a lot of testing and debugging was required to find the right set of compile parameters for our architecture. The complex compile process required iterating through build scripts and making sure all of the required dependencies were able to talk to each other. The changing nature of our cluster in certain weeks meant that there were occasionally changinges to our linker flags and other variables. Having Spack set up made a huge difference in this effort. Spack allowed us to more easily manage the dependencies, installations, and making sure that everything was using a supported version. 
-
-ICON required relentless debugging and iteration. Being transparent with teammates about problems, deadlines, and resource usage kept us aligned under pressure. Having the support of our home team and mentors was helpful at this stage, providing multiple perspectives and ensuring someone was always trying something new to make the best of a difficult situation. 
-
-After many trials, we settled on a CPU-only run for ICON, which freed up the GPUs for other applications. This ensured that we would be able to give our other applications, which had been more successful in our testing, more resources and time to run, while trying our best with ICON even though we knew it would be a struggle. 
-
-#### Competition Runs
 During the competition, the task we were given for ICON turned out to be really interesting: With a time limit of 3 hours, measured with timestamp logging in our output submission file. Within these 3 hours, we had to configure the start and end dates of the ICON simulation for a set of given input files and values. This tested our knowledge of how fast ICON could run on our system, with the parameters we chose. Set a simluation too short, and we waste precious minutes that could have allowed a longer simulation. Set a simulation too long, and the entire run is invalid, wasting 3+ hours. 
 
 The 3 hour limit given to us included any set up and initialization tasks. After the run, we had to process the output results and develop a visualization using a tool of our choice. We made slight modifications to a previously built testing script from the fall, and used Python to visualize the output. 
