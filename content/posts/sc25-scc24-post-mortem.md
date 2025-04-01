@@ -2,7 +2,7 @@
 title: "SCC24 Postmortem & Supercomputing 2025 info"
 date: 2025-04-01
 author: ["paco", "aarush", "gauri", "ceci", "org"]
-description: 'Description of SCC24 and upcoming 2025'
+description: "Retelling of SCC24's trials and tribulations. Announcement of SCC 2025"
 math: true
 ---
 
