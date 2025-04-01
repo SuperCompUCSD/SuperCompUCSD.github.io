@@ -3,7 +3,6 @@ title: "SCC24 Postmortem & Supercomputing 2025 info"
 date: 2025-03-04
 author: ["paco", "org", "aarush"]
 description: 'Description of SCC24 and upcoming 2025'
-draft: true
 math: true
 ---
 
@@ -115,16 +114,14 @@ I want you to realize that during this whole time our teams are working on build
 Now, acknowledging our issues, SDSC has accomodated the team with Express Shipping, and will allow us to ship Monday morning to arrive on Friday/Saturday of our competition. And we have a load of hardware/software support problems.
 
 
-We've finally got all hardware of our final cluster, but the AMD GPU BIOS from HPE are different BIOS versions and are set to read only, even with their free firmware tools. We've installed the NICs and set up the Switch, but the copper cables are not working, even after going to the bios and correcting the relevant BIOS tools. And we do not have our cluster up working.
-
-<!-- Broadcom Drivers -->
+We've finally got all hardware of our final cluster, but the AMD GPU BIOS from HPE are different BIOS versions and are set to read only, even with their free firmware tools. We've installed the NICs and set up the Switch and followed the instructions online for a manual Broadcom Driver install, but the copper cables are not working, even after going to the bios and correcting the relevant BIOS tools. And we do not have our cluster up working.
 
 
 ## Dawn of the Final Week
 
 The flight to Atlanta is Friday, the 15th of November. The date this details is Friday, 8th of November. The express shipping driver has arrived early and he has parked his truck on the loading dock. 3 days until shipping.
 
-The final GPUs and Infinity Fabric Links from AMD show shipping status SD yesterday. They've been shipped directly from Taiwan to us. They *smell* new. Of metal and that slight burnt smell leftover from manufacturing. We integrate these GPUs and their Infinity Fabric Links into the final node and they just work with our benchmarks. It's almost magical.
+The final GPUs and Infinity Fabric Links from AMD show shipping status as of in SD yesterday. They've been shipped directly from Taiwan to us. They *smell* new. Of metal and that slight burnt smell leftover from manufacturing. We integrate these GPUs and their Infinity Fabric Links into the final node and they just work with our benchmarks. It's almost magical.
 
 We are spending all day at SDSC working. The network is still not setup and the switch is still having some issues. But luckily, Kent Tsui, a Micas Network Engineer, is in San Diego and is willing to help us. At the same time, Wyatt from Liqid also comes to get an idea of our work, show off of the hardware LIQID is working on, and treats the whole team to a meal. So midday Kent comes over and helps us directly in the datacenter. Since we had already went through all of the intiail debugging, he is quickly able to pin the issue down to be due to copper cables, which had not been tested with the networking equipment before. He explains that optical cables expect some sort of port training, a communication between the switch and the NICs to operate on the same speeds and standards. Turning this feature of the NICs off in the BIOS was all we needed. We then just ran some testing:
 
@@ -169,7 +166,7 @@ Going back to our GPU situation, the AMD BIOS on our first GPU system is still d
 
 It's still Saturday, and the whole team is trying to run their tests. We believe the main compute part of the cluster is complete. There's still a little more setup to go, and Sunday will be grueling. So the app/benchmarking team takes a rest while our sysadmins continue throughout to keep setting up monitoring, debugging speeds, firewalls, and anything leftover. By the time this is done, it's already Sunday midday. 
 
-> I remember coming up to our club space and trying to work on more issues at my desk. But every couple of seconds I would lose consciousness only to jolt awake at the sense of my head falling. After this had happened too many times that I had lost my sense of time, I decided to go to sleep. But I was awoken an hour and a half an hour by the team for help. I didn't sleep again until after the cluster had been shipped.
+> I remember coming up to our club space and trying to work on more issues at my desk. I wanted to use every minute. But every couple of seconds I would lose consciousness, only to awake at the sense of my head falling. After this had happened too many times that I had lost my sense of time, I decided to go to sleep. But I was awoken an hour and a half an hour by the team for help. I didn't sleep again until after the cluster had been shipped.
 > <br> &emsp;&emsp; &ndash; Francisco, aka Paco
 
 Setting up the firewall and installation of docker breaks our MPI instance on Sunday. So we finally figure out it's trying to route MPI processes through an incorrect port and Bryan Chin realized specifying the port or configuring the default solves this issue. When we finally have it working, it's already midnight. We have to begin tearing down the cluster.
@@ -279,8 +276,7 @@ The 3 hour limit given to us included any set up and initialization tasks. After
 
 <div align="center">
     <div style="display: flex; gap: 10px;">
-        <img src="/post-media/scc24-postmortem/final_zonal_wind.png" style="max-width: 45%;">
-        <img src="/post-media/scc24-postmortem/final_zonal_wind.png" style="max-width: 45%;">
+        <img src="/post-media/scc24-postmortem/final-zonal-wind.png" style="max-width: 45%;">
     </div>
     <i>The final zonal wind visualized after our run.</i>
 </div>
@@ -317,7 +313,9 @@ Overall, it was a very fun experience. All of it was. During our disassembly of 
 **Our team won 4th overall!**
 
 This makes it the best placement from the US teams for a third year in a row.
-And this year best placement among US+European teams.
+And this year's best placement amongst US+European teams. 
+
+While a majority of teams use an Nvidia based stack, our team has used the AMD ROCm, a rarity as H100 GPUs going ever so prevelant amongst the competitors in the last years.
 
 
 <center>
@@ -339,4 +337,4 @@ Total                  100% |                  | 57.137 / 100
 
 ## Takeaways and Thanks
 
-We'd like to extend thanks to the awesome contributions of the entirety of [SDSC](https://www.sdsc.edu/) and [CSE](https://cse.ucsd.edu/) at UCSD. Specifically the efforts of our mentors Mary P. Thomas, Martin Kandes, Mahidhar Tatineni, and Bryan Chin.
+We'd like to extend thanks to the awesome contributions of the entirety of [SDSC](https://www.sdsc.edu/) and [CSE](https://cse.ucsd.edu/) at UCSD. Specifically the efforts of our mentors Mary P. Thomas, Martin Kandes, Mahidhar Tatineni, and Bryan Chin. The efforts of our company sponsors as HPE, Pivotal Optics, Aeon Computing, Applied Data Systems, International Computer Concepts, Gigabyte, LIQID, Broadcom, and Micas Networks and AMD. The UCSD Supercomputing Club would never have grown and accomplished as much without your help, and we are grateful for all of it.
