@@ -25,13 +25,14 @@ TLDR:
 - 4.5 kW limit for entire cluster, 2 kW limit per node
 - Benchmarks are: HPL, MLPERF inference, and a mystery benchmark revealed at the start of the benchmarking period.
 - Applications are: NAMD, ICON, Reproducibility (data flow lifecycle analysis tool DataLife), and a mystery application revealed at the start of application period
-- - Icosahedral Nonhydrostatic, or ICON, is a complex weather modeling application that is part of Germany's DWD weather monitoring service, part of NOAA's (a US weather agency) ensemble model that predicts global weather, and a tool used by amateur hurricane trackers. Although a GPU port exists, ICON is typically compiled for CPU runs and its data-heavy nature means that it streses a system's IO. 
+    - NAMD is a parallelized molecular dynamics simulation software for large biomecular systems.  
+    - Icosahedral Nonhydrostatic, or ICON, is a complex weather modeling application that is part of Germany's DWD weather monitoring service, part of NOAA's (a US weather agency) ensemble model that predicts global weather, and a tool used by amateur hurricane trackers. Although a GPU port exists, ICON is typically compiled for CPU runs and its data-heavy nature means that it streses a system's IO. 
 - You must try to achiece the best scores for benchmarks, applications, systems, and certain other areas.
 - Benchmarking period 8am-5pm. Application period is the next 48 hours. No external help.
 
 You can read for further details on the [SCC SC24 page](https://sc24.supercomputing.org/students/student-cluster-competition/). Team introductions are on the [page as well](https://sc24.supercomputing.org/2024/09/teams-compete-in-the-ultimate-hpc-challenge-at-sc24/). If you are interested in the history of the program, you may also see the official [Student Cluster Competition site](https://www.studentclustercompetition.us/).
 
-### System Specifications 
+## System Specifications 
 
 A diagram of our final system, <u>Ocean Vista</u>:
 
@@ -65,7 +66,7 @@ Here is the diagram matching the hardware with the source of vendor:
 
 Besides lending the team hardware, we received generous financial donations from Micas Networks and Intel, as well as the mentoring and help from our company sponsors and the faculty and staff from SDSC, UCSD, and the CSE department.
 
-### Preparing for Benchmarks and Applications
+## Preparing for Benchmarks and Applications
 
 Early on, we divided out work into teams with a few overlapping responsibilities. In this division of teams we also included students from our *home team*, another number of students who helped prepare and worked on the tasks with the *travel team* but ultimately stayed at our institution during the conference. 
 
@@ -73,21 +74,21 @@ During the summer we had weekly meetings to sync up on our progress. Throughout 
 
 Our goals were to familiarize with the benchmarks and applications, as well as practice our HPC skills. There were also certain stages of the competition application we would have to submit every couple of weeks: final team submission, final poster, and a final architecture. And while we were working, we were also speccing out what we wanted from our cluster with our hardware vendor(s).
 
-#### NAMD
+### NAMD
 We spent summer understanding how NAMD and molecular dyanmics in general worked, by running simulations from the user guide and following online tutorials. We also tested a variety of NAMD builds; NAMD as a software was built to work with the Charm++ message-passing parallel language, and Charm++ setup was dependent on the underlying network layer setup we wanted to use (`netlrts`, Infiniband, MPI). A really important thing to note about NAMD was that the developers had just released version 3.0, which introduced a new "GPU-resident" mode. NAMD's GPU-resident mode offloaded all calculations including integration calculations to the GPU, making simulations much faster compared to the CPU and the weaker GPU-offload mode available. However, GPU-resident mode could only run on a single node. We realized that these variations would be key to maximizing performance on our cluster.  
 
 In the fall, we focused on running the publicly available NAMD benchmarks and toggling the different command line parameters and configuaration parameters to maximize performance on the AMD server available to us. We also had invaluable mentor support; Andy Goetz helped us understand how MD works, and Julio Maia, a researcher at AMD who was one of the NAMD developers, gave us crucial advice on different types of NAMD simulations and worked with us to resolve issues in NAMD's source code due to incompatibility with AMD hardware.  
 
 When we finally had access to our cluster the week before shipping it out (more on that later), there were a new slew of problems. For some reason NAMD would not work with the `netlrts` installation of Charm++; even though the nodes were able to connect to each other via `ssh` protocol, Charm++ was not able to establish that connection. We switched over to the MPI version, but were unable to get MPI working until right before shipping the cluster.   
 
-#### ICON
+### ICON
 Throughout the summer and fall, it was a massive struggle for our team to compile ICON, since documentation was limited to a few custom architectures and the complex nature of the program meant that a lot of testing and debugging was required to find the right set of compile parameters for our architecture. The complex compile process required iterating through build scripts and making sure all of the required dependencies were able to talk to each other. The changing nature of our cluster in certain weeks meant that there were occasionally changinges to our linker flags and other variables. Having Spack set up made a huge difference in this effort. Spack allowed us to more easily manage the dependencies, installations, and making sure that everything was using a supported version. 
 
 ICON required relentless debugging and iteration. Being transparent with teammates about problems, deadlines, and resource usage kept us aligned under pressure. Having the support of our home team and mentors was helpful at this stage, providing multiple perspectives and ensuring someone was always trying something new to make the best of a difficult situation. 
 
 After many trials, we settled on a CPU-only run for ICON, which freed up the GPUs for other applications. This ensured that we would be able to give our other applications, which had been more successful in our testing, more resources and time to run, while trying our best with ICON even though we knew it would be a struggle. 
 
-### Sourcing Hardware
+## Sourcing Hardware (a major challenge)
 
 The earliest hardware we got was the [32 Port 400Gb Switch](https://micasnetworks.com/product/m2-w6920-32qc2x/) from Micas Networks. Our relationship with the company started with the SCC23 team at last years conference. For this competition year, Micas Networks was one of our essential supporters. They generously lent us their hardware since May, and this support pushed our team to really reach the 400Gb bandwidth speeds despite having a small cluster.
 
@@ -119,7 +120,7 @@ We've finally got all hardware of our final cluster, but the AMD GPU BIOS from H
 <!-- Broadcom Drivers -->
 
 
-### Dawn of the Final Week
+## Dawn of the Final Week
 
 The flight to Atlanta is Friday, the 15th of November. The date this details is Friday, 8th of November. The express shipping driver has arrived early and he has parked his truck on the loading dock. 3 days until shipping.
 
@@ -334,10 +335,6 @@ Scavenger Hunt           5% | 94          /100 |  4.700
 Total                  100% |                  | 57.137 / 100
 
 </center>
-
-### Conference Experience
-
-
 
 
 ## Takeaways and Thanks
