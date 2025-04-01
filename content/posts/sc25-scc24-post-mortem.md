@@ -185,7 +185,7 @@ Setting up the firewall and installation of docker breaks our MPI instance on Su
 
 <div align="center">
     <video style="width: 100%;" controls>
-        <source src="/post-media/scc24-postmortem/shipment-timelapse.mov" type="video/mp4">
+        <source src="https://files.scc.sdsc.edu/shipment-timelapse.mov" type="video/mp4">
     </video>
 </div>
 
@@ -225,7 +225,7 @@ When we arrived we were really anxious to start our setup. Even going beyond wha
 
 <div align="center">
     <video style="width: 100%;" controls>
-        <source src="/post-media/scc24-postmortem/SCC-Setup.mp4" type="video/mp4">
+        <source src="https://files.scc.sdsc.edu/SCC-Setup.mp4" type="video/mp4">
     </video>
     <i> And here's a stitched up timelapse of us putting the cluster together. The video scenes are not stiched together right, so you'll see parts of our disassembly interleaved. </i>
 </div>
@@ -235,7 +235,7 @@ For the rest of Sunday, including the dreaded graveyard shift, it was organized 
 
 <div align="center">
     <video style="width: 100%;" controls>
-        <source src="/post-media/scc24-postmortem/final-night.mov" type="video/mp4">
+        <source src="https://files.scc.sdsc.edu/final-night.mp4" type="video/mp4">
     </video>
 </div>
 
@@ -303,9 +303,9 @@ ICON showed us that HPC is about more than raw computational power. It's about o
 
 Overall, it was a very fun experience. All of it was. During our disassembly of our cluster most of these pieces had to go back to their respective vendor. So we had to seperate and ship the parts from here.
 
-![](/post-media/scc24-postmortem/whole-team.png)
+![](https://files.scc.sdsc.edu/whole-team.png)
 
-![](/post-media/scc24-postmortem/team.jpg)
+![](https://files.scc.sdsc.edu/team.jpg)
 
 ### Final Score Breakdown
 
