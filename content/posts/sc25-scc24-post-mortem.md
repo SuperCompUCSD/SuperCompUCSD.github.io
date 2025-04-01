@@ -1,7 +1,7 @@
 ---
 title: "SCC24 Postmortem & Supercomputing 2025 info"
-date: 2025-03-04
-author: ["paco", "org", "aarush"]
+date: 2025-04-01
+author: ["paco", "aarush", "gauri", "ceci", "org"]
 description: 'Description of SCC24 and upcoming 2025'
 math: true
 ---
@@ -315,7 +315,7 @@ Overall, it was a very fun experience. All of it was. During our disassembly of 
 This makes it the best placement from the US teams for a third year in a row.
 And this year's best placement amongst US+European teams. 
 
-While a majority of teams use an Nvidia based stack, our team has used the AMD ROCm, a rarity as H100 GPUs going ever so prevelant amongst the competitors in the last years.
+While a majority of teams use an Nvidia based stack, our team has used the AMD ROCm, a rarity as H100 GPUs going ever so prevelant amongst the competitors in the last years. While last year our team was able to be the first in the world to have MLPerf to run on AMD GPUs, this year we were the first in the world to get multi-node MLPerf working on AMD GPUs.
 
 
 <center>
