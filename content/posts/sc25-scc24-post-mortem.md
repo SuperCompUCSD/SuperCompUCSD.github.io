@@ -87,6 +87,15 @@ ICON required relentless debugging and iteration. Being transparent with teammat
 
 After many trials, we settled on a CPU-only run for ICON, which freed up the GPUs for other applications. This ensured that we would be able to give our other applications, which had been more successful in our testing, more resources and time to run, while trying our best with ICON even though we knew it would be a struggle. 
 
+### HPL
+Over the summer, we focused on understanding how HPL (High-Performance Linpack) works and how different configurations affect performance. HPL is a benchmark designed to measure the floating-point computing power of a system, particularly for ranking in the Top500 list. We started by running small-scale HPL tests using default configurations and gradually explored tuning parameters such as block size (NB), process grid dimensions (P and Q), and memory allocation strategies to maximize performance.
+
+A key aspect of our preparation was experimenting with different deployment methods. We compared running HPL natively on the system versus using containerized solutions such as Singularity, Spack, and Docker. Each method had trade-offs—while Spack provided a convenient way to build optimized versions of HPL and its dependencies, Singularity allowed us to maintain performance consistency across different environments, and Docker offered ease of reproducibility. Understanding these differences was crucial for determining the best approach for our cluster.
+
+In the fall, we focused on optimizing HPL for the AMD server available to us. We tested different BLAS (Basic Linear Algebra Subprograms) libraries. Throughout this process, we had support from researchers who had experience benchmarking HPC systems, which helped us fine-tune our approach.
+
+When we finally gained access to our cluster the week before shipping, we faced new challenges. Setting up MPI correctly was critical for HPL to scale across multiple nodes, and we had to troubleshoot issues with network communication. Docker provided a reliable way to deploy HPL across the cluster, but we also tested Spack to see if we could further optimize the software stack. In the end, after resolving MPI configuration issues and finalizing the optimal HPL parameters, we were able to get strong performance numbers just in time before shipping.
+
 ## Sourcing Hardware (a major challenge)
 
 The earliest hardware we got was the [32 Port 400Gb Switch](https://micasnetworks.com/product/m2-w6920-32qc2x/) from Micas Networks. Our relationship with the company started with the SCC23 team at last years conference. For this competition year, Micas Networks was one of our essential supporters. They generously lent us their hardware since May, and this support pushed our team to really reach the 400Gb bandwidth speeds despite having a small cluster.
@@ -298,6 +307,13 @@ But in a scene straight out of an action movie, like a bomb deactivated with sec
 Our ICON score had a lot of room for improvement. With a relative score of only 30 out of 100, we lost 10.5 total points here.  ICON might have been one of the hardest tasks we were given. It wasn’t easy, but in the end, juggling dependencies, compiler flags, and last-minute surprises made for a deep learning experience that will help inform our approach to challenging applications and benchmarks in the future, allowing us to continue to have strong overall performances at future competitions. We'll look into refining our build pipelines, and considering a different approach to team priorities in the future. 
 
 ICON showed us that HPC is about more than raw computational power. It's about optimizing software to match hardware constraints while balancing team needs, and this is a lesson we will keep with us. 
+
+### HPL
+Unlike simply running a preconfigured test, the competition required us to fine-tune parameters on the fly to maximize our system’s performance while staying within power constraints. We experimented with different block sizes, process grid layouts, and compiler optimizations to achieve the best possible FLOPS score.
+
+A major challenge we faced was power consumption. When running HPL with Docker, we noticed significant power spikes, causing our cluster to exceed the competition’s power limits. This issue was unexpected and difficult to manage in real-time, as the power draw fluctuated unpredictably depending on how HPL was scheduled across the CPUs and GPUs. We had to quickly adjust our approach, switching configurations and scaling down workloads to prevent the excession of power limits. These power-related struggles put us at a disadvantage compared to other teams who had more stable power-efficient setups.
+
+Given the time constraints, we had to make tough decisions about which configurations to attempt and which to abandon. Despite these difficulties, we managed to complete and submit our results with no major system crashes. Our preparation, while not directly aligned with some of the specific competition constraints, gave us the adaptability needed to troubleshoot and optimize under pressure. The judges acknowledged our understanding of performance tuning and HPC optimization in our team interview, reinforcing that we had a strong grasp of the problem space. Ultimately, we did the best we could under the given circumstances, and our submitted results reflected the effort we put into overcoming the power and performance challenges.
 
 ### Conclusion
 
