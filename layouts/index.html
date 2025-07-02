@@ -11,6 +11,40 @@
     <div class="container">
       <div class="intro-content">
         {{ .Content }}
+        <h2>Sponsors</h2>
+        <div class="sponsors">
+          <img class="sponsor" src="/images/sponsors/sdsc.png" />
+          <img class="sponsor" src="/images/sponsors/ucsd.png" />
+          <img class="sponsor" src="/images/sponsors/IEEE.png" />
+          <img class="sponsor" src="/images/sponsors/AMD.png" />
+          <img class="sponsor" src="/images/sponsors/liqid.png" />
+          <img class="sponsor" src="/images/sponsors/ads.png" />
+          <img class="sponsor" src="/images/sponsors/intel.png" />
+          <img class="sponsor" src="/images/sponsors/micas.svg" />
+          <img class="sponsor" src="/images/sponsors/aeon.png" />
+          <img class="sponsor" src="/images/sponsors/icc-usa.png" />
+          <img class="sponsor" src="/images/sponsors/dell.png" />
+          <img class="sponsor" src="/images/sponsors/hpe.png" />
+          <img class="sponsor" src="/images/sponsors/gigabyte.png" />
+          <img class="sponsor" src="/images/sponsors/broadcom.svg" />
+          <img class="sponsor" src="/images/sponsors/pivotal-optics.png" />
+          <!-- 
+            past sponsors
+            <img class="sponsor" src="/images/sponsors/cloudbank.png" />
+            <img class="sponsor" src="/images/sponsors/nvidia.png" />
+            <img class="sponsor" src="/images/sponsors/microsoft.png" />
+            <img class="sponsor" src="/images/sponsors/ddn.jpg" />
+            <img class="sponsor" src="/images/sponsors/supermicro.png" />
+            <img class="sponsor" src="/images/sponsors/graid.png" />
+            <img class="sponsor" src="/images/sponsors/liqid.svg" /> 
+          -->
+        </div>
+        <h2>Contact Us!</h2>
+        <p>
+          All UCSD students are welcome to join us at our workshops and projects with real applications! To contact
+          us, check out or discord or email us. In addition, We’re located in SDSC Room 404 and 413 just about any 
+          time. Feel free to stop by!
+        </p>
         <div class="btn-content">
           <!--
           <button class="intro-btn" onclick="window.location.href = 'https://forms.gle/AT2LRzvXk8MfrLKn6';"> 
@@ -20,41 +54,16 @@
           <button class="intro-btn" onclick="window.location.href = 'https://discord.gg/TA7Kmunpsm';"> 
             Join Discord 
           </button>
+          <button class="intro-btn" onclick="window.location.href = 'mailto:ucsdsupercomputing@gmail.com';">
+            Email Us
+          </button>
         </div>
       </div>
-      <img class="intro-img" src="/images/supercomp.jpeg" />
     </div>
-    
   </div>
 
-  <h2>Sponsors</h2>
-  <div class="sponsors">
-    <img class="sponsor" src="/images/sponsors/sdsc.png" />
-    <img class="sponsor" src="/images/sponsors/ucsd.png" />
-    <img class="sponsor" src="/images/sponsors/IEEE.png" />
-    <img class="sponsor" src="/images/sponsors/AMD.png" />
-    <img class="sponsor" src="/images/sponsors/liqid.png" />
-    <img class="sponsor" src="/images/sponsors/ads.png" />
-    <img class="sponsor" src="/images/sponsors/intel.png" />
-    <img class="sponsor" src="/images/sponsors/micas.svg" />
-    <img class="sponsor" src="/images/sponsors/aeon.png" />
-    <img class="sponsor" src="/images/sponsors/icc-usa.png" />
-    <img class="sponsor" src="/images/sponsors/dell.png" />
-    <img class="sponsor" src="/images/sponsors/hpe.png" />
-    <img class="sponsor" src="/images/sponsors/gigabyte.png" />
-    <img class="sponsor" src="/images/sponsors/broadcom.svg" />
-    <img class="sponsor" src="/images/sponsors/pivotal-optics.png" />
-    <!-- 
-      past sponsors
-      <img class="sponsor" src="/images/sponsors/cloudbank.png" />
-      <img class="sponsor" src="/images/sponsors/nvidia.png" />
-      <img class="sponsor" src="/images/sponsors/microsoft.png" />
-      <img class="sponsor" src="/images/sponsors/ddn.jpg" />
-      <img class="sponsor" src="/images/sponsors/supermicro.png" />
-      <img class="sponsor" src="/images/sponsors/graid.png" />
-      <img class="sponsor" src="/images/sponsors/liqid.svg" /> 
-    -->
-  </div>
+
+
 
   {{ if .Site.Params.showPostsOnHomepage }}
   {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") }}

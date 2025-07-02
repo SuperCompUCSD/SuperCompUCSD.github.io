@@ -1,0 +1,11 @@
+{{ if .Get "link"}}<a href="{{ .Get "link" }}" class="section-link" >{{ end }}
+    <section class='{{ .Get "position" | default "left" }} {{ if .Get "link" }}link{{ end }}'>
+        {{ if .Get "image" }}
+        <img src="{{ .Get "image" }}">
+        {{ end }}
+        <div class="section-content">
+            <h3>{{ .Get "title" | default ""}}</h3>
+            <p>{{ .Inner | markdownify }}</p>
+        </div>
+    </section>
+{{ if .Get "link"}}</a>{{ end }}
