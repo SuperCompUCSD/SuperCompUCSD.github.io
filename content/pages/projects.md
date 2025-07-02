@@ -6,7 +6,7 @@ question: false
 menu:
   main:
     name: "Projects"
-    weight: 3
+    weight: 4
 ---
 
 ## 1. FPGA Network Interface Card

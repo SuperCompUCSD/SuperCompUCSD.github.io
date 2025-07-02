@@ -7,7 +7,7 @@ question: true
 menu:
   main:
     name: "About"
-    weight: 4
+    weight: 5
 ---
 
 Supercomputing @ UCSD was founded in 2019 as a group of a few students looking to participate
