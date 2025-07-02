@@ -10,9 +10,9 @@ menu:
     name: "SCC"
     weight: 2
 ---
-
+<!-- 
 {{< video source="/images/scc-timelapse.mp4" >}}
-*Pictured: Members of the 2024 SCC Team setting up their cluster in Altanta, Georgia in preparation for the Student Cluster Competition. They would go on to be the highest-ranking team in North America.*
+*Pictured: Members of the 2024 SCC Team setting up their cluster in Altanta, Georgia in preparation for the Student Cluster Competition. They would go on to be the highest-ranking team in North America.* -->
 
 ## The UCSD/SDSC Team
 
