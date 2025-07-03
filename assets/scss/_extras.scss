@@ -126,3 +126,19 @@ section.link:hover {
 a.section-link:hover {
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column !important;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .section-content {
+    width: 100%;
+  }
+}
