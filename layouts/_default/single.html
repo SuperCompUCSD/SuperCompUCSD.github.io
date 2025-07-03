@@ -1,8 +1,10 @@
-{{ define "body_classes" }}page-default-single{{ end }}
-
-{{ define "main" }}
+{{ define "body_classes" }}page-default-single{{ end }} {{ define "main" }}
 <div class="intro">
-  <h1>{{ .Title }}{{ if .Params.dot }}<span class="dot">.</span>{{ end }}{{ if .Params.question }}<span class="dot">?</span>{{ end }}{{ if .Params.bang }}<span class="dot">!</span>{{ end }}</h1>
+  <h1>
+    {{ .Title }}{{ if .Params.dot }}<span class="dot">.</span>{{ end }}{{ if
+    .Params.question }}<span class="dot">?</span>{{ end }}{{ if .Params.bang
+    }}<span class="dot">!</span>{{ end }}
+  </h1>
   {{ if .Params.image }}
   <div class="image-box">
     <img src="{{ .Params.image | relURL }}" class="rounded-image" />
@@ -16,7 +18,6 @@
   {{ end }}
 </div>
 
-<div class="content">
-  {{ .Content }}
-</div>
-{{ end }}
+<div class="content">{{ .Content }}</div>
+
+{{ if .Params.sponsors }} {{ partial "sponsors.html" . }} {{ end }} {{ end }}
