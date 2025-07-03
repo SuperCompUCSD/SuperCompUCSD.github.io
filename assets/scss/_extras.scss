@@ -97,20 +97,20 @@ section {
   justify-content: center;
   display: flex;
   flex-direction: row;
-  padding: 20px;
+  padding: 1.25rem;
   border-radius: 10px;
   align-items: stretch;
 
   img {
-    width: 350px;
+    width: 30%;
     height: 100%;
-    border-radius: 16px;
+    border-radius: 1rem;
     object-fit: contain;
+    margin: 1rem;
   }
 
   .section-content{
     flex: 1; 
-    margin: 0px 20px 0px 20px;
     min-width: 50%;
   }
 }
