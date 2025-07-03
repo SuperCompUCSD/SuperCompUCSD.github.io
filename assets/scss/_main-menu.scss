@@ -11,6 +11,7 @@
     justify-content: flex-start;
     > li {
       margin-right: 30px;
+      white-space: nowrap;
       > a {
         display: inline-block;
         text-decoration: none;

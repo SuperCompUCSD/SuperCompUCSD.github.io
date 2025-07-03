@@ -6,7 +6,7 @@ author: org
 question: true
 menu:
   main:
-    name: "About"
+    name: "About Us"
     weight: 5
 ---
 

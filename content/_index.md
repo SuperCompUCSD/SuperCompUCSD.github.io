@@ -4,12 +4,12 @@ author: org
 description: We are Supercomputing @ UCSD!
 ---
 
-## About Us
-
 We are a student-run organization dedicated to High Performance Computing! We are supported by the San Diego Supercomputer Center (SDSC), the CSE, and ECE departments. We are a sub-community of the Institute of Electrical and Electronics Engineers (IEEE) branch at UC San Diego. We participate in two annual international competitions and organize projects that teach skills such as hardware design, simulations, and system administration. If you’re interested in any of the following projects or competitions, check out our website and message us on discord or email. Links below!
 
-**[>> Check out IEEE at UC San Diego!](https://ieeeucsd.org/)**
 
+**[>> Want to learn more about IEEE Supercomputing?](/about)**
+
+**[>> Check out IEEE at UC San Diego!](https://ieeeucsd.org/)**
 
 ## Our Programs
 

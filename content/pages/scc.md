@@ -10,9 +10,6 @@ menu:
     name: "SCC"
     weight: 2
 ---
-<!-- 
-{{< video source="/images/scc-timelapse.mp4" >}}
-*Pictured: Members of the 2024 SCC Team setting up their cluster in Altanta, Georgia in preparation for the Student Cluster Competition. They would go on to be the highest-ranking team in North America.* -->
 
 ## The UCSD/SDSC Team
 
@@ -32,8 +29,18 @@ This year, the competition has changed the system power limit from 4.5kW to 10kW
 
 {{< /section >}}
 
+![UCSD Team Timeline](/images/scc-page-timeline.png)
+
 ## Meet this year's sponsors!
 <div class="sponsors">
   {{< sponsor image="ucsd.png" >}}
   {{< sponsor image="sdsc.png" >}}
 </div>
+
+## Student Involvement
+
+Registration for the team is typically open around March-April. Decisions are released in the weeks following the application deadline.
+
+![Team Involvement Timeline](/images/scc-involvement-timeline.png)
+
+if you’re interested in joining, and have questions about the competition, please contact our officers over discord, or @ ucsdsupercomputing@gmail.com. If you have further questions about this program, please contact Mary Thomas (mpthomas@ucsd.edu). 

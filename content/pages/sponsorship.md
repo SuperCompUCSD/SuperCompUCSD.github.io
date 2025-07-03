@@ -17,13 +17,13 @@ menu:
 
 ## Why sponsor us?
 
-Talent Pipeline: Previous team members have been hired at organizations such as Apple, AMD, and SDSC. Hands-on experience with HPC and real computer science has enabled them to excel in technical positions across startups, academia, and research labs.
+**Talent Pipeline:** Previous team members have been hired at organizations such as Apple, AMD, and SDSC. Hands-on experience with HPC and real computer science has enabled them to excel in technical positions across startups, academia, and research labs.
 
-Hardware & Software Testing: In the past, we have worked with companies to test their new products as part of our competition cluster, and have pushed the boundaries of application and benchmark performance. Through our efforts at SCC, we will be able to showcase the power of your product.
+**Hardware & Software Testing:** In the past, we have worked with companies to test their new products as part of our competition cluster, and have pushed the boundaries of application and benchmark performance. Through our efforts at SCC, we will be able to showcase the power of your product.
 
-Brand Visibility: SDSC can provide prominent e-signage, pre/post publicity in collateral, social media outreach, mentions in assorted media, photo-ops, and more.
+**Brand Visibility:** SDSC can provide prominent e-signage, pre/post publicity in collateral, social media outreach, mentions in assorted media, photo-ops, and more.
 
-Community Engagement: We welcome our Sponsor technical personnel to work with students on practical training and projects.
+**Community Engagement:** We welcome our Sponsor technical personnel to work with students on practical training and projects.
 
 ## How to get involved
 
