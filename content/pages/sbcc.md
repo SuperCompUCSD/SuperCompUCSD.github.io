@@ -1,7 +1,7 @@
 ---
-title: 'Single-Board Cluster Competition'
+title: "Single-Board Cluster Competition"
 url: "sbcc"
-image: "images/sbcc.png"
+images: ["images/sbcc25-team2.jpg", "images/sbcc25-team1.jpg"]
 author: org
 question: false
 menu:
@@ -9,8 +9,6 @@ menu:
     name: "SBCC"
     weight: 3
 ---
-
-
 
 The Single-Board Cluster Competition (SBCC) is a competition hosted by our very own Super Computing Club!
 During SBCC, teams from all around the world compete using single-board computers and other similarly simple
