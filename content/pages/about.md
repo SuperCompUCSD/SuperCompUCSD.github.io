@@ -30,3 +30,7 @@ in UCSD, in other UC campuses and beyond using its massive community clusters, s
 and Expanse.
 
 We're located in **SDSC Room 404 and 413** just about any time! Come on by and hang out with us!
+
+## Our Board
+
+{{< cards >}}

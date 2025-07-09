@@ -127,6 +127,40 @@ a.section-link:hover {
     text-decoration: none;
 }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.officer-card {
+  border-width: 2px;
+  border-color: gray;
+  border-style: solid;
+  width: 20%;
+  margin: 1em;
+  padding: 0.5em;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    margin: 0px;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+
+  h4 {
+    margin-bottom: 0px;
+  }
+
+  p {
+    font-style: italic;
+  }
+}
+
 @media (max-width: 768px) {
   section {
     flex-direction: column !important;
@@ -140,5 +174,9 @@ a.section-link:hover {
 
   .section-content {
     width: 100%;
+  }
+
+  .officer-card {
+    width: 100% !important;
   }
 }

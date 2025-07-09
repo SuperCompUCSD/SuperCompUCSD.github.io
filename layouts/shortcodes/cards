@@ -1,0 +1,9 @@
+<div class="cards">
+  {{ range .Site.Data.board }}
+    <div class="officer-card">
+      <img src="{{ .image }}">
+      <h4>{{ .name }}</h4>
+      <p>{{ .position }}</p>
+    </div>
+  {{ end }}
+</div>

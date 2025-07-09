@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Ian Webster",
+        "position": "President",
+        "image": "/images/board/ian.png"
+    },
+    {
+        "name": "Luiz Gurrola",
+        "position": "System Administrator",
+        "image": "/images/board/placeholder.png"
+    },
+    {
+        "name": "Yixuan Li",
+        "position": "System Administrator",
+        "image": "/images/board/yxli.png"
+    },
+    {
+        "name": "Srujam Dave",
+        "position": "Marketing Officer",
+        "image": "/images/board/srujam.png"
+    },
+    {
+        "name": "Cicilia Li",
+        "position": "Logistical Officer",
+        "image": "/images/board/cecilia.png"
+    },
+    {
+        "name": "Guari Renjith",
+        "position": "IEEE Liason",
+        "image": "/images/board/placeholder.png"
+    },
+    {
+        "name": "Aarush Mehrotra",
+        "position": "SDSC Liason",
+        "image": "/images/board/aarush.png"
+    },
+    {
+        "name": "Ferrari Guan",
+        "position": "SBCC Coordinator",
+        "image": "/images/board/ferarri.png"
+    },
+    {
+        "name": "Young Park",
+        "position": "General Officer",
+        "image": "/images/board/young.png"
+    }
+]
