@@ -35,6 +35,13 @@ This year, the competition has changed the system power limit from 4.5kW to 10kW
 <div class="sponsors">
   {{< sponsor image="ucsd.png" >}}
   {{< sponsor image="sdsc.png" >}}
+  {{< sponsor image="AMD.png" >}}
+</div>
+
+<div class="sponsors">
+  {{< sponsor image="ads.png" >}}
+  {{< sponsor image="gigabyte.png" >}}
+  {{< sponsor image="icc-usa.png" >}}
 </div>
 
 ## Student Involvement
