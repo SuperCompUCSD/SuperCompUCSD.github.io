@@ -3,7 +3,6 @@ title: "Sponsorship"
 url: "sponsorship"
 author: org
 question: false
-sponsors: true
 menu:
   main:
     name: "Sponsorship"
@@ -45,3 +44,7 @@ ucsdsupercomputing@gmail.com
 </iframe>
 
 ---
+
+## Our sponsors
+
+{{< sponsors >}}

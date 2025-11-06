@@ -29,3 +29,7 @@ The club organizes multiple projects during the winter and spring quarter. Start
 involving everything from FPGA programming to Linux from Scratch!
 
 {{< /section >}}
+
+## Meet this year's sponsors!
+
+{{< sponsors >}}
