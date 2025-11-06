@@ -6,34 +6,30 @@
   <h1>{{ .Title }}{{ if .Site.Params.addBang }}{{ end }}</h1>
   <div class="container">
     <div class="intro-content">
-      {{ .Content }} 
-      <h2>Contact Us!</h2>
-      <p>
-        All UCSD students are welcome to join us at our workshops and projects
-        with real applications! To contact us, check out or discord or email us.
-        In addition, We’re located in SDSC Room 404 and 413 just about any time.
-        Feel free to stop by!
-      </p>
-      <div class="btn-content">
-        <!--
-          <button class="intro-btn" onclick="window.location.href = 'https://forms.gle/AT2LRzvXk8MfrLKn6';"> 
-            Get Involved 
-          </button>
-          -->
-        <button
-          class="intro-btn"
-          onclick="window.location.href = 'https://discord.gg/TA7Kmunpsm';"
-        >
-          Join Discord
-        </button>
-        <button
-          class="intro-btn"
-          onclick="window.location.href = 'mailto:ucsdsupercomputing@gmail.com';"
-        >
-          Email Us
-        </button>
-      </div>
     </div>
+  </div>
+</div>
+
+<div class="content">
+  {{ .Content }} 
+  <div class="btn-content">
+    <!--
+      <button class="intro-btn" onclick="window.location.href = 'https://forms.gle/AT2LRzvXk8MfrLKn6';"> 
+        Get Involved 
+      </button>
+      -->
+    <button
+      class="intro-btn"
+      onclick="window.location.href = 'https://discord.gg/TA7Kmunpsm';"
+    >
+      Join Discord
+    </button>
+    <button
+      class="intro-btn"
+      onclick="window.location.href = 'mailto:ucsdsupercomputing@gmail.com';"
+    >
+      Email Us
+    </button>
   </div>
 </div>
 

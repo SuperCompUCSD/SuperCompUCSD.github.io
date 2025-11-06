@@ -1,17 +1,7 @@
 <div class="sponsors">
-  <img class="sponsor" src="/images/current-sponsors/AMD.svg" />
-  <img class="sponsor" src="/images/current-sponsors/Applied DataSystems.svg" />
-  <img class="sponsor" src="/images/current-sponsors/CIQ.svg" />
-  <img class="sponsor" src="/images/current-sponsors/CSE_dept.svg" />
-  <img class="sponsor" src="/images/current-sponsors/gigabyte.svg" />
-  <img class="sponsor" src="/images/current-sponsors/hewlett_packard.svg" />
-  <img class="sponsor" src="/images/current-sponsors/icc.svg" />
-  <img class="sponsor" src="/images/current-sponsors/NetApp.svg" />
-  <img class="sponsor" src="/images/current-sponsors/neuvys.svg" />
-  <img class="sponsor" src="/images/current-sponsors/pillsbury.svg" />
-  <img class="sponsor" src="/images/current-sponsors/SDSC.svg" />
-  <img class="sponsor" src="/images/current-sponsors/ucsd-seal.svg" />
-  <img class="sponsor" src="/images/current-sponsors/WHPC.svg" />
+  {{ range .Site.Data.sponsors }}
+    <a class="sponsor" href="{{ .link }}"><img src="/images/current-sponsors/{{ .image }}" /></a>
+  {{ end }}
   <!-- 
             past sponsors
 

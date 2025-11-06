@@ -1,0 +1,67 @@
+[
+    {
+        "name": "AMD",
+        "image": "AMD.svg",
+        "link": "https://AMD.com"
+    },
+    {
+        "name": "Applied Data Systems",
+        "image": "Applied DataSystems.svg",
+        "link": "https://applieddatasystems.com/"
+    },
+    {
+        "name": "CIQ",
+        "image": "CIQ.svg",
+        "link": "https://ciq.com"
+    },
+    {
+        "name": "UCSD CSE Department",
+        "image": "CSE_dept.svg",
+        "link": "https://cse.ucsd.edu/"
+    },
+    {
+        "name": "Gigabyte",
+        "image": "gigabyte.svg",
+        "link": "https://www.gigabyte.com/"
+    },
+    {
+        "name": "Hewlett Packard",
+        "image": "hewlett_packard.svg",
+        "link": "https://www.hp.com/us-en/home.html"
+    },
+    {
+        "name": "ICC",
+        "image": "icc.svg",
+        "link": "https://www.icc-usa.com/"
+    },
+    {
+        "name": "Net App",
+        "image": "NetApp.svg",
+        "link": "https://www.netapp.com/"
+    },
+    {
+        "name": "Neuvys",
+        "image": "neuvys.svg",
+        "link": "https://neuvys.com/"
+    },
+    {
+        "name": "Pillsbury",
+        "image": "pillsbury.svg",
+        "link": "https://www.pillsburylaw.com/en/"
+    },
+    {
+        "name": "San Diego Supercomputer Center",
+        "image": "SDSC.svg",
+        "link": "https://sdsc.edu"
+    },
+    {
+        "name": "UCSD",
+        "image": "ucsd-seal.svg",
+        "link": "https://ucsd.edu"
+    },
+    {
+        "name": "WHPC",
+        "image": "WHPC.svg",
+        "link": "https://womeninhpc.org/"
+    }
+]

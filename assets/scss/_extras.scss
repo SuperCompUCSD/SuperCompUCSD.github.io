@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .sponsor {
@@ -101,17 +102,20 @@ section {
   border-radius: 10px;
   align-items: stretch;
 
+  padding: 0px 20px;
+
   img {
     width: 30%;
     height: 100%;
     border-radius: 1rem;
     object-fit: contain;
-    margin: 1rem;
   }
 
-  .section-content{
+  .section-content {
     flex: 1; 
     min-width: 50%;
+    text-decoration: none;
+    padding: 0px 20px;
   }
 }
 
@@ -123,8 +127,9 @@ section.link:hover {
   background-color: lightgray;
 }
 
-a.section-link:hover {
+a.section-link {
     text-decoration: none;
+    margin: 0px;
 }
 
 .cards {
