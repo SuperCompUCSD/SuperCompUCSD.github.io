@@ -1,5 +1,5 @@
 ---
-title: IEEE Supercomputing
+title: UCSD IEEE Supercomputing
 author: org
 description: We are Supercomputing @ UCSD!
 ---

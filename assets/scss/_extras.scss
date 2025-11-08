@@ -12,6 +12,21 @@
   box-shadow: 2 2 2 black;
   width: 15%;
   object-fit: contain;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+
+  img {
+    transition: filter 0.3s ease;
+  }
+}
+
+.sponsor:hover {
+  background-color: lightgray;
+
+  img {
+    filter: brightness(83%); /* darken the image */
+  }
 }
 
 .intro-img {
@@ -101,7 +116,7 @@ section {
   padding: 1.25rem;
   border-radius: 10px;
   align-items: stretch;
-
+  transition-duration: 0.3s;
   padding: 0px 20px;
 
   img {
@@ -183,5 +198,9 @@ a.section-link {
 
   .officer-card {
     width: 100% !important;
+  }
+
+  .sponsor {
+    width: 30%;
   }
 }

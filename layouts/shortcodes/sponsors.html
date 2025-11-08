@@ -1,6 +1,8 @@
 <div class="sponsors">
   {{ range .Site.Data.sponsors }}
-    <a class="sponsor" href="{{ .link }}"><img src="/images/current-sponsors/{{ .image }}" /></a>
+    <a class="sponsor" href="{{ .link }}">
+      <img src="/images/current-sponsors/{{ .image }}" />
+    </a>
   {{ end }}
   <!-- 
             past sponsors
