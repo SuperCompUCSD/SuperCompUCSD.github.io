@@ -37,7 +37,7 @@ ucsdsupercomputing@gmail.com
 
 ## 2025 SCC Sponsorship Package
 
-<iframe src="/sponsorship-package.pdf" width="100%" height="700px">
+<iframe src="/scc25-sponsorship.pdf" width="100%" height="700px">
     <!-- <embed src="/sponsorship-package.pdf">
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/sponsorship-package.pdf">Download PDF</a>.</p>
     </embed> -->
