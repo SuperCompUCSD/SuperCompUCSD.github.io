@@ -5,6 +5,22 @@
     justify-content: space-evenly;
 }
 
+.past_sponsor {
+  padding: 1rem;
+  --ring-color: rgb(17 24 39 / 0.05);
+  border-radius: 0.5rem;
+  box-shadow: 2 2 2 black;
+  width: 10%;
+  object-fit: contain;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+
+  img {
+    transition: filter 0.3s ease;
+  }
+}
+
 .sponsor {
   padding: 1rem;
   --ring-color: rgb(17 24 39 / 0.05);

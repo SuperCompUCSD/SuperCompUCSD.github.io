@@ -45,6 +45,10 @@ ucsdsupercomputing@gmail.com
 
 ---
 
-## Our sponsors
+## Our SCC25 Sponsors!
 
 {{< sponsors >}}
+
+## Our Past Sponsors
+
+{{< past_sponsors >}}

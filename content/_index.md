@@ -34,6 +34,10 @@ involving everything from FPGA programming to Linux from Scratch!
 
 {{< sponsors >}}
 
+## Our Past Sponsors
+
+{{< past_sponsors >}}
+
 ## Contact Us
 
 All UCSD students are welcome to join us at our workshops and projects with real applications! To contact us, check out or discord or email us. In addition, We’re located in SDSC Room 404 and 413 just about any time. Feel free to stop by!

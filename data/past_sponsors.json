@@ -1,0 +1,58 @@
+[
+  {
+    "name": "IEEE",
+    "image": "IEEE.png"
+  },
+  {
+    "name": "Liqid",
+    "image": "liqid.png"
+  },
+  {
+    "name": "Intel",
+    "image": "intel.png"
+  },
+  {
+    "name": "Micas Networks",
+    "image": "micas.svg"
+  },
+  {
+    "name": "Aeon",
+    "image": "aeon.png"
+  },
+  {
+    "name": "Dell",
+    "image": "dell.png"
+  },
+  {
+    "name": "Broadcom",
+    "image": "broadcom.svg"
+  },
+  {
+    "name": "Pivotal Optics",
+    "image": "pivotal-optics.png"
+  },
+  {
+    "name": "CloudBank",
+    "image": "cloudbank.png"
+  },
+  {
+    "name": "NVIDIA",
+    "image": "nvidia.png"
+  },
+  {
+    "name": "Microsoft",
+    "image": "microsoft.png"
+  },
+  {
+    "name": "DDN",
+    "image": "ddn.jpg"
+  },
+  {
+    "name": "Supermicro",
+    "image": "supermicro.png"
+  },
+  {
+    "name": "Graid",
+    "image": "graid.png"
+  }
+]
