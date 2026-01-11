@@ -17,4 +17,4 @@ industry-standard high-performance computing benchmarks.
 
 This year, SBCC 2025 is hosted at UCSD, in the San Diego Supercomputing Center Auditorium, between April 3-5.
 
-[Check out more details on the SBCC website!](https://sbcc.io)
+[Check out more details on the SBCC website!](https://single-board-cluster-competition.github.io/new-sbcc-site/main-page.html)
