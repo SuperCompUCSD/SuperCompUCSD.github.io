@@ -5,11 +5,6 @@
         "image": "/images/board/ian.png"
     },
     {
-        "name": "Luiz Gurrola",
-        "position": "System Administrator",
-        "image": "/images/board/placeholder.png"
-    },
-    {
         "name": "Yixuan Li",
         "position": "System Administrator",
         "image": "/images/board/yxli.png"
@@ -43,5 +38,10 @@
         "name": "Young Park",
         "position": "General Officer",
         "image": "/images/board/young.png"
+    },
+    {
+        "name": "Rahul Chandra",
+        "position": "System Administrator",
+        "image": "/images/board/rahul.jpg"
     }
 ]
