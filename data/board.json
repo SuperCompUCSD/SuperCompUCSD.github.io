@@ -2,42 +2,37 @@
     {
         "name": "Ian Webster",
         "position": "President",
-        "image": "/images/board/ian.png"
+        "image": "/images/board/ian.jpg"
     },
     {
         "name": "Yixuan Li",
         "position": "System Administrator",
-        "image": "/images/board/yxli.png"
+        "image": "/images/board/yxli.jpg"
     },
     {
         "name": "Srujam Dave",
         "position": "Marketing Officer",
-        "image": "/images/board/srujam.png"
+        "image": "/images/board/srujam.jpg"
     },
     {
         "name": "Cecilia Li",
         "position": "Logistical Officer",
-        "image": "/images/board/cecilia.png"
+        "image": "/images/board/cecilia.jpg"
     },
     {
         "name": "Gauri Renjith",
         "position": "IEEE Liason",
-        "image": "/images/board/gauri.png"
-    },
-    {
-        "name": "Aarush Mehrotra",
-        "position": "SDSC Liason",
-        "image": "/images/board/aarush.png"
+        "image": "/images/board/gauri.jpg"
     },
     {
         "name": "Ferrari Guan",
         "position": "SBCC Coordinator",
-        "image": "/images/board/ferarri.png"
+        "image": "/images/board/ferrari.jpg"
     },
     {
         "name": "Young Park",
         "position": "General Officer",
-        "image": "/images/board/young.png"
+        "image": "/images/board/young.jpg"
     },
     {
         "name": "Rahul Chandra",
