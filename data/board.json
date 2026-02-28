@@ -38,5 +38,10 @@
         "name": "Rahul Chandra",
         "position": "System Administrator",
         "image": "/images/board/rahul.jpg"
+    },
+    {
+	"name": "Ryan Estanislao",
+	"position": "General Officer",
+	"image": "/images/board/ryan.jpg"
     }
 ]
