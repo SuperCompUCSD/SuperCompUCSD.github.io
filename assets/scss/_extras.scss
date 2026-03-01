@@ -1,3 +1,19 @@
+.ol-tooltip {
+  font-size: 0.75em;
+  opacity: 0;
+
+  transition: opacity 0.15s ease-in-out,
+              transform 0.15s ease-in-out;
+
+  transform: translateY(4px);
+  pointer-events: none;
+}
+
+.ol-tooltip.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .sponsors {
     display: flex;
     flex-direction: row;

@@ -25,31 +25,32 @@ document.addEventListener("DOMContentLoaded", function () {
   const markerStyle = new ol.style.Style({
     image: new ol.style.Circle({
       radius: 6,
-      fill: new ol.style.Fill({ color: 'red' }),
-      stroke: new ol.style.Stroke({ color: 'white', width: 2 })
+      fill: new ol.style.Fill({ color: 'black' }),
+      stroke: new ol.style.Stroke({ color: 'gray', width: 2 })
     })
   });
 
   // 11 universities
   const locations = [
-    { name: "Those Who Node / Penguin Warriors", lat: 32.7157, lng: -117.1611 },
-    { name: "Aalborg Supercomputer Klub", lat: 57.0488, lng: 9.9217 },
-    { name: "Crossroads Coders", lat: 39.1653, lng: -86.5264 },
-    { name: "Gigadawgs", lat: 33.4524, lng: -88.7903 },
-    { name: "Team Brazil Force", lat: -31.3389, lng: -53.1019 },
-    { name: "KU Supercomputing Club", lat: 38.9543, lng: -95.2558 },
-    { name: "Not-So-Slow Slugs", lat: 36.9914, lng: -122.0595 },
-    { name: "NTHU", lat: 24.8138, lng: 120.9675 },
-    { name: "PlumJuice", lat: 41.9022, lng: 12.4962 },
-    { name: "RAMbo Clements", lat: 34.6834, lng: -82.8373 },
-    { name: "Team Kent Ridge", lat: 1.2966, lng: 103.7764 },
-    { name: "Tech Titans", lat: -24.6586, lng: 25.9083 }
+    { name: "Those Who Node / Penguin Warriors", school: "University of California, San Diego", lat: 32.7157, lng: -117.1611 },
+    { name: "Aalborg Supercomputer Klub", school: "Aalborg University", lat: 57.0488, lng: 9.9217 },
+    { name: "Crossroads Coders", school: "Indiana University / Purdue University", lat: 39.1653, lng: -86.5264 },
+    { name: "Gigadawgs", school: "Mississippi State University", lat: 33.4524, lng: -88.7903 },
+    { name: "Team Brazil Force", school: "Federal University of Pampa / Federal University of Rio de Janeiro / UNICAMP / Federal University of Santa Maria", lat: -31.3389, lng: -53.1019 },
+    { name: "KU Supercomputing Club", school: "University of Kansas", lat: 38.9543, lng: -95.2558 },
+    { name: "Not-So-Slow Slugs", school: "University of California, Santa Cruz", lat: 36.9914, lng: -122.0595 },
+    { name: "NTHU", school: "National Tsing Hua University", lat: 24.8138, lng: 120.9675 },
+    { name: "PlumJuice", school: "Sapienza University of Rome", lat: 41.9022, lng: 12.4962 },
+    { name: "RAMbo Clements", school: "Clemson University / Coastal Carolina University", lat: 34.6834, lng: -82.8373 },
+    { name: "Team Kent Ridge", school: "National University of Singapore", lat: 1.2966, lng: 103.7764 },
+    { name: "Tech Titans", school: "University of Botswana", lat: -24.6586, lng: 25.9083 }
   ];
 
   const features = locations.map(loc => {
     const feature = new ol.Feature({
       geometry: new ol.geom.Point([loc.lng, loc.lat]),
-      name: loc.name
+      name: loc.name,
+      school: loc.school
     });
     feature.setStyle(markerStyle);
     return feature;
@@ -67,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Tooltip overlay
   const tooltip = document.createElement('div');
-  tooltip.className = 'ol-tooltip';
+  tooltip.classList.add('ol-tooltip');
   tooltip.style.background = 'white';
   tooltip.style.padding = '2px 6px';
   tooltip.style.borderRadius = '4px';
@@ -86,10 +87,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const feature = map.forEachFeatureAtPixel(evt.pixel, f => f);
     if (feature) {
       overlay.setPosition(evt.coordinate);
-      tooltip.innerHTML = feature.get('name');
-      tooltip.style.display = 'block';
+      tooltip.innerHTML =  `<b>Team: </b>${feature.get('name')} <br \> <b>School: </b>${feature.get('school')}`;
+      tooltip.classList.add("visible");
     } else {
-      tooltip.style.display = 'none';
+      tooltip.classList.remove("visible");
     }
   });
 
