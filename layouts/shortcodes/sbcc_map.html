@@ -50,7 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const feature = new ol.Feature({
       geometry: new ol.geom.Point([loc.lng, loc.lat]),
       name: loc.name,
-      school: loc.school
+      school: loc.school,
+      coord: [loc.lat, loc.lng]
     });
     feature.setStyle(markerStyle);
     return feature;
@@ -89,6 +90,13 @@ document.addEventListener("DOMContentLoaded", function () {
       overlay.setPosition(evt.coordinate);
       tooltip.innerHTML =  `<b>Team: </b>${feature.get('name')} <br \> <b>School: </b>${feature.get('school')}`;
       tooltip.classList.add("visible");
+      if (feature.get("coord")[1] > 0) {
+        overlay.setPositioning('center-right');
+        overlay.setOffset([-12, 0]);
+      } else {
+          overlay.setPositioning('center-left');
+          overlay.setOffset([10, 0]);
+      }
     } else {
       tooltip.classList.remove("visible");
     }
