@@ -11,6 +11,8 @@ menu:
     weight: 2
 ---
 
+*Note: Applications for this year's Student Cluster Competition team are open. See below for more details.*
+
 ## The UCSD/SDSC Team
 
 {{< section image="/images/scc-team-photo.jpeg" position="right" >}}
@@ -37,7 +39,7 @@ This year, the competition has changed the system power limit from 4.5kW to 10kW
 
 ## Student Involvement
 
-Registration for the team is typically open around March-April. Decisions are released in the weeks following the application deadline.
+Team applications are live and can be found [here](https://na.eventscloud.com/scc26). Applications are due on April 15th, 2026 at 11:59 p.m. All skill levels are welcome to apply, and selected team members receive class credit for Fall 2026. 
 
 ![Team Involvement Timeline](/images/scc-involvement-timeline.png)
 
