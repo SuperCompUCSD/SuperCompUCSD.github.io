@@ -39,8 +39,6 @@ This year, the competition has changed the system power limit from 4.5kW to 10kW
 
 ## Student Involvement
 
-Team applications are live and can be found [here](https://na.eventscloud.com/scc26). Applications are due on April 15th, 2026 at 11:59 p.m. All skill levels are welcome to apply, and selected team members receive class credit for Fall 2026. 
-
 ![Team Involvement Timeline](/images/scc-involvement-timeline.png)
 
 if you’re interested in joining, and have questions about the competition, please contact our officers over discord, or @ ucsdsupercomputing@gmail.com. If you have further questions about this program, please contact Mary Thomas (mpthomas@ucsd.edu). 

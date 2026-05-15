@@ -4,8 +4,6 @@ author: org
 description: We are Supercomputing @ UCSD!
 ---
 
-**[*Note: Applications for the 2026 Student Cluster Competition are live. Click here to apply!*](https://na.eventscloud.com/scc26)**
-
 We are a student-run organization dedicated to High Performance Computing! We are supported by the San Diego Supercomputer Center (SDSC), the CSE, and ECE departments. We are a sub-community of the Institute of Electrical and Electronics Engineers (IEEE) branch at UC San Diego. We participate in two annual international competitions and organize projects that teach skills such as hardware design, simulations, and system administration. If you’re interested in any of the following projects or competitions, check out our website and message us on discord or email. Links below!
 
 
