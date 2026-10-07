@@ -11,7 +11,21 @@ menu:
 
 # Current Projects 
 
-## Triton Mega Processor:
+## Raspberry Pi Cluster
+
+Join supercomputing Club officers as they build a mini supercomputing cluster out of Raspberry Pis!
+
+"**Project Leads**: Ferrari Guan
+
+**Meeting Times**: Thursdays at 6 in SDSC 408
+
+---
+
+# Past Projects
+
+## Winter 2026
+
+### Triton Mega Processor:
 
 This is a project led by Professor Bryan Chin of the Computer Science and Engineering department at UCSD. We aim to build a RISC-V CPU that can run simple programs and games. The system in which the CPU is instantiated is implemented in FPGAs for simplicity and flexibility.
 
@@ -19,7 +33,7 @@ This is a project led by Professor Bryan Chin of the Computer Science and Engine
 
 **Meeting Times:** Mondays 6-7 @ SDSC 408
 
-## ML Working Group:
+### ML Working Group:
 
 Led by our officers (Chanyoung Park, Srujam Dave, and Yixuan Li), members will build an open-source LLM inference system on our NVIDIA GPU cluster. The project will focus on efficient model serving, distributed inference, and performance optimization at scale. We also aim to host a website directly on the cluster to showcase the system, documentation, and performance benchmarks. This platform will serve as a public-facing demo while giving members hands-on experience deploying and maintaining services on real GPU-backed infrastructure.
 
@@ -27,7 +41,7 @@ Led by our officers (Chanyoung Park, Srujam Dave, and Yixuan Li), members will b
 
 **Meeting Times:** Saturdays 4-5 @ SDSC 408
 
-## Rust and Raytracing
+### Rust and Raytracing
 
 Led by some of our officers (Chanyoung Park, Srujam Dave), members will implement raytracing using various methods of hardware acceleration. The project will initially focus on the implementation of a basic CPU raytracer in Rust before moving on to GPU acceleration and more advanced raytracing techniques. The project will serve as an introduction to graphics, Rust, and GPU/parallel programming and will help develop participants' technical skills in anticipation of future Supercomputing Club activities.
 
@@ -36,7 +50,7 @@ Led by some of our officers (Chanyoung Park, Srujam Dave), members will implemen
 
 **Meeting Times:** Thursdays 5-6 @ SDSC 408
 
-## Linux from Scratch:
+### Linux from Scratch:
 
 Led by a current LFS editor/core-maintainer (Rahul Chandra) members will build a fully-custom graphical distro from the bare cross-compiled toolchain up. By mastering build systems (CMake, Autotools, Ninja and others) and the Linux boot process, participants gain a granular understanding of how software is linked and deployed. The end result is a fully functional Live ISO with an installer.
 
@@ -44,7 +58,7 @@ Led by a current LFS editor/core-maintainer (Rahul Chandra) members will build a
 
 **Meeting Times:** Saturdays 2-4 @ SDSC 408
 
-## Ansible Workshop:
+### Ansible Workshop:
 
 A collaborated event with Triton Software Engineering Club. An introductory workshop to High Performance Computing focused on exposing participants to Ansible scripting for cluster automation and OpenMPI for running distributed programs like the OSU benchmarks. During the workshop, each participant will get access to and get hands-on experience in an isolated cluster of 4 nodes emulated using Docker swarms on the club’s Rock Pi 5B cluster. 
 
@@ -52,9 +66,6 @@ A collaborated event with Triton Software Engineering Club. An introductory work
 
 **Meeting Times:** Thursday, February 12th 5-6 @ SDSC 408
 
----
-
-# Past Projects
 
 ## Fall 2025
 
